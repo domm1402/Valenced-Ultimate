@@ -17,6 +17,13 @@ jobs:
       - run: npm run build
       - name: Include repository homepage in Pages output
         run: cp index.html dist/index.html
+      - name: Build Valenced installer ZIP with manifest at root
+        run: |
+          mkdir -p package-root
+          cp dist/valenced-ultimate/index.js package-root/index.js
+          cp dist/valenced-ultimate/manifest.json package-root/manifest.json
+          cd package-root
+          zip -q ../dist/Valenced-Ultimate.zip index.js manifest.json
       - name: Publish compiled plugins to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
