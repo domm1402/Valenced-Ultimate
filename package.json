@@ -1,0 +1,15 @@
+{
+  "name": "valenced-ultimate",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "dependencies": {
+    "@rollup/plugin-commonjs": "^28.0.2",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@swc/core": "^1.10.0",
+    "rollup": "^4.30.1",
+    "rollup-plugin-esbuild": "^6.2.1"
+  }
+}
