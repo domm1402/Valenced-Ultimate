@@ -1,4 +1,4 @@
-import { findByStoreName, findByTypeNameAll } from "@vendetta/metro";
+import { findByProps, findByStoreName, findByTypeNameAll } from "@vendetta/metro";
 import { after } from "@vendetta/patcher";
 import { findInReactTree } from "@vendetta/utils";
 import { storage } from "@vendetta/plugin";
@@ -29,9 +29,4 @@ export function installBadgeShowcase() {
     });
   }));
   return () => cleanups.forEach((fn: any) => fn?.());
-}
-
-function findByProps(...props: string[]) {
-  // Resolve the tag component through Revenge's metro cache.
-  return require("@vendetta/metro").findByProps(...props);
 }
