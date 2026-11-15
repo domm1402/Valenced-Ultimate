@@ -1,0 +1,13 @@
+{
+  "name": "Valenced Ultimate",
+  "description": "Unified client-side cosmetic settings and profile showcase.",
+  "authors": [
+    {
+      "name": "Niche Games"
+    }
+  ],
+  "main": "src/index.tsx",
+  "vendetta": {
+    "icon": "ic_settings"
+  }
+}
