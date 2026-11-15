@@ -1,0 +1,7 @@
+{
+  "name": "Show All Badges",
+  "description": "Experimental port of ShowAllBadges: attempts to render every profile badge inline.",
+  "authors": [{ "name": "Niche Games" }],
+  "main": "src/index.ts",
+  "vendetta": { "icon": "ic_badge" }
+}
