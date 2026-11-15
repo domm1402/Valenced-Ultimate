@@ -15,15 +15,30 @@ jobs:
           node-version: "20"
       - run: npm install
       - run: npm run build
+      - name: Package plugins and generate Valenced index.json
+        run: |
+          node --input-type=module <<'NODE'
+          import { readFile, writeFile, mkdir, stat } from 'node:fs/promises';
+          import { createHash } from 'node:crypto';
+          import { execFileSync } from 'node:child_process';
+          const base = 'https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate';
+          const cfg = JSON.parse(await readFile('repo.config.json','utf8'));
+          const plugins = {};
+          for (const dir of ['show-all-badges','valenced-ultimate']) {
+            const source = JSON.parse(await readFile(`plugins/${dir}/manifest.json`,'utf8'));
+            const built = JSON.parse(await readFile(`dist/${dir}/manifest.json`,'utf8'));
+            const id = source.id, version = source.version;
+            const zipName = `${id}@${version}.zip`;
+            await mkdir('dist/pool',{recursive:true});
+            execFileSync('zip',['-q','-j',`dist/pool/${zipName}`,`dist/${dir}/index.js`,`dist/${dir}/manifest.json`]);
+            const bytes = await readFile(`dist/pool/${zipName}`);
+            const info = await stat(`dist/pool/${zipName}`);
+            plugins[id] = {name:source.name,description:source.description,author:source.author,channels:{latest:version},versions:{[version]:{url:`${base}/pool/${zipName}`,sha256:createHash('sha256').update(bytes).digest('hex'),size:info.size,dependencies:source.dependencies}}};
+          }
+          await writeFile('dist/index.json',JSON.stringify({format:1,name:cfg.name,description:cfg.description,plugins},null,2));
+          NODE
       - name: Include repository homepage in Pages output
         run: cp index.html dist/index.html
-      - name: Build Valenced installer ZIP with manifest at root
-        run: |
-          mkdir -p package-root
-          cp dist/valenced-ultimate/index.js package-root/index.js
-          cp dist/valenced-ultimate/manifest.json package-root/manifest.json
-          cd package-root
-          zip -q ../dist/Valenced-Ultimate.zip index.js manifest.json
       - name: Publish compiled plugins to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
