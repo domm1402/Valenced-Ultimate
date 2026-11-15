@@ -1,7 +1,19 @@
 {
+  "format": 1,
+  "id": "niche.show-all-badges",
   "name": "Show All Badges",
-  "description": "Experimental port of ShowAllBadges: attempts to render every profile badge inline.",
-  "authors": [{ "name": "Niche Games" }],
-  "main": "src/index.ts",
-  "vendetta": { "icon": "ic_badge" }
+  "description": "Experimental port of ShowAllBadges for Valenced.",
+  "author": "Niche Games",
+  "version": "1.0.0",
+  "dependencies": {
+    "valenced.api": {
+      "version": ">=1 <2"
+    },
+    "discord": {
+      "version": "*"
+    }
+  },
+  "dist": {
+    "script": "index.js"
+  }
 }
