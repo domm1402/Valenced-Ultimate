@@ -24,7 +24,7 @@ jobs:
           const base = 'https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate';
           const cfg = JSON.parse(await readFile('repo.config.json','utf8'));
           const plugins = {};
-          for (const dir of ['show-all-badges','valenced-ultimate']) {
+          for (const dir of ['show-all-badges']) {
             const source = JSON.parse(await readFile(`plugins/${dir}/manifest.json`,'utf8'));
             const built = JSON.parse(await readFile(`dist/${dir}/manifest.json`,'utf8'));
             const id = source.id, version = source.version;
