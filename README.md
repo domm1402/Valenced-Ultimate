@@ -15,7 +15,7 @@ GitHub Actions builds the plugins, packages individual ZIP files, generates the 
 
 ## Plugin Studio APK
 
-This repository now includes **Valenced Plugin Studio**, an Android app for writing your own Valenced plugins. It includes a TypeScript editor, manifest editor, basic validation, local draft saving, and ZIP export.
+This repository now includes **Valenced Plugin Studio**, an Android app for writing your own Valenced plugins. It now includes an offline TypeScript-to-JavaScript compiler, beginner templates, syntax error messages, manifest validation, local draft saving, ZIP export, and built-in help/tips. Compilation transpiles source code; projects importing external packages still need the Valenced CLI to bundle dependencies.
 
 To get the APK, open the [Actions tab](https://github.com/tiktoknotificationtroll-wq/Valenced-Ultimate/actions/workflows/plugin-studio-apk.yml), run **Build Plugin Studio APK**, then download the **valenced-plugin-studio-apk** artifact from the completed run. See [PLUGIN-STUDIO.md](PLUGIN-STUDIO.md) for details. The app creates source projects; exported plugins still need to be built with the Valenced plugin CLI before installation.
 
