@@ -6,7 +6,9 @@ An Android app for creating Valenced plugin projects with a beginner-friendly Ty
 
 - Offline TypeScript-to-JavaScript transpilation using the TypeScript compiler bundled into the APK.
 - Basic syntax diagnostics with line numbers where available.
-- Starter templates, including Hello World and plugin lifecycle examples.
+- Starter templates, including Hello World, plugin lifecycle, settings, and event-listener examples.
+- Editor productivity tools: find/replace, whitespace cleanup, and insertion of common code snippets.
+- A basic static safety audit for suspicious credential handling, dynamic code execution, network URLs, listeners, and external imports.
 - Plugin details and manifest editor with basic validation.
 - Local draft save/load and ZIP export containing source, compiled JavaScript and manifest.
 - Beginner help covering the build process, common syntax mistakes and safe plugin habits.
