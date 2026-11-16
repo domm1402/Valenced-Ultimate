@@ -67,7 +67,14 @@ jobs:
           test -f plugins/domms-games-presence/build/js/index.js
           cp plugins/domms-games-presence/manifest.json dist/domms-games-presence/manifest.json
           cp plugins/domms-games-presence/build/js/index.js dist/domms-games-presence/index.js
-          "$ANDROID_HOME/build-tools/35.0.0/d8" --lib "$ANDROID_HOME/platforms/android-35/android.jar" --output /tmp/domms-dex /tmp/domms-aar/classes.jar native/domms-games-presence/plugin/libs/discord_partner_sdk.jar
+          cp /tmp/domms-aar/classes.jar /tmp/domms-classes.jar
+          zip -d /tmp/domms-classes.jar \
+            app/valenced/plugins/PluginBuilder.class \
+            app/valenced/plugins/PluginBuilderKt.class \
+            app/valenced/plugins/PluginScope.class \
+            app/valenced/xposed/api/HostScope.class \
+            app/valenced/xposed/api/HostScopeKt.class
+          "$ANDROID_HOME/build-tools/35.0.0/d8" --lib "$ANDROID_HOME/platforms/android-35/android.jar" --output /tmp/domms-dex /tmp/domms-classes.jar native/domms-games-presence/plugin/libs/discord_partner_sdk.jar
           (cd /tmp/domms-dex && zip -q "$GITHUB_WORKSPACE/dist/domms-games-presence/android/plugin.jar" classes.dex)
           for abi in arm64-v8a armeabi-v7a x86_64; do
             mkdir -p "dist/domms-games-presence/lib/$abi"
