@@ -205,5 +205,5 @@ for (const p of plugins) {
   await writeFile(join(dir, 'manifest.json'), manifestFor(p))
   await writeFile(join(dir, 'js/index.tsx'), src)
 }
-if (plugins.length !== 45) throw new Error('Expected 45 plugin definitions; found ' + plugins.length)
+if (plugins.length !== 46) throw new Error('Expected 46 plugin definitions; found ' + plugins.length)
 console.log('Generated ' + plugins.length + ' Valenced plugin folders.')
