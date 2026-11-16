@@ -12,6 +12,5 @@ android {
     externalNativeBuild { cmake { path = file("src/main/cpp/CMakeLists.txt"); version = "3.22.1" } }
 }
 dependencies {
-    compileOnly("app.valenced:api:1.1.0")
     compileOnly(files("libs/discord_partner_sdk.jar"))
 }
