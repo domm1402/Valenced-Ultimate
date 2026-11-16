@@ -15,3 +15,5 @@ The plugin UI build fixes are included in this revision.
 The CI job now builds this plugin independently of the legacy plugin collection.
 
 SDK package installation uses sdkmanager's space-separated package list.
+
+CI installs the Android SDK with non-interactive license acceptance.
