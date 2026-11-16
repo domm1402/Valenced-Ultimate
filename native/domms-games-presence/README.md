@@ -1,7 +1,9 @@
-# Domms Games Presence native bridge
+# Domms Games Presence
 
-Android native half for the Valenced Rich Presence plugin. It uses the Discord Social SDK AAR attached to this repository's `discord-sdk-v1` release.
+A Valenced external Android plugin backed by Discord's Social SDK.
 
-**Discord limitation:** Rich Presence is associated with a registered Discord Application ID. The SDK does not provide a supported way to impersonate an unrelated verified game by swapping its ID. A selected game title can be shown in activity details/state, while the registered application's identity remains controlled by Discord.
+The plugin provides a game search/selection screen, editable activity details and state, persistent settings, Update Presence and Clear Presence actions. The game catalogue selection is presentation text; Discord Rich Presence publishing uses the user's registered Discord Application ID.
 
-The build workflow downloads the attached AAR, compiles a JNI bridge for Android ABIs, and publishes the Android library as a CI artifact. This is native integration source, not yet a verified installable Valenced ZIP. It must still be packaged with the JS settings interface and tested in Valenced.
+The GitHub Actions workflow builds the Kotlin/C++ bridge against the uploaded `discord_partner_sdk.aar`, compiles the Valenced JS settings UI, packages the DEX plugin class and ABI-specific native libraries, and uploads `domms-games-presence.zip`.
+
+Supported Android ABIs: arm64-v8a, armeabi-v7a and x86_64.
