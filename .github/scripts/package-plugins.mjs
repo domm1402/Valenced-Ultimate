@@ -32,5 +32,5 @@ for (const entry of await readdir(root, { withFileTypes: true })) {
   count++
   console.log('Packaged ' + manifest.name + ' -> ' + zipName)
 }
-if (count !== 20) throw new Error('Expected 20 plugin ZIPs, produced ' + count + '. Check the plugin build output.')
+if (count !== 46) throw new Error('Expected 46 plugin ZIPs, produced ' + count + '. Check the plugin build output.')
 console.log('Successfully packaged all 20 plugins.')
