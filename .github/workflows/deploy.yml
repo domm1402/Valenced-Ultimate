@@ -18,8 +18,10 @@ jobs:
           node-version: "22.18.0"
       - name: Install build tools
         run: npm install
-      - name: Generate the 46 plugin source folders
+      - name: Generate plugin source folders
         run: node .github/scripts/generate-plugins.mjs
+      - name: Apply safe Domms Games Presence implementation
+        run: node .github/scripts/fix-domms-presence.mjs
       - name: Build Valenced plugins
         run: npm run build
       - name: Package plugin ZIPs
