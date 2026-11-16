@@ -1,0 +1,51 @@
+name: Build Domms Games Presence native module
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "native/domms-games-presence/**"
+      - ".github/workflows/build-domms-presence.yml"
+permissions:
+  contents: read
+  packages: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "25"
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "9.3.1"
+      - uses: android-actions/setup-android@v3
+      - name: Download Discord Social SDK AAR
+        run: |
+          mkdir -p native/domms-games-presence/plugin/libs
+          curl -fL "https://github.com/tiktoknotificationtroll-wq/Valenced-Ultimate/releases/download/discord-sdk-v1/discord_partner_sdk.aar" -o native/domms-games-presence/plugin/libs/discord_partner_sdk.aar
+      - name: Extract SDK classes, headers and ABI libraries
+        run: |
+          cd native/domms-games-presence/plugin
+          mkdir -p src/main/cpp/sdk src/main/jniLibs
+          unzip -q libs/discord_partner_sdk.aar -d /tmp/discord-aar
+          cp /tmp/discord-aar/libs/discord_partner_sdk.jar libs/discord_partner_sdk.jar
+          for abi in arm64-v8a armeabi-v7a x86_64; do
+            mkdir -p "src/main/cpp/sdk/$abi/include" "src/main/jniLibs/$abi"
+            cp /tmp/discord-aar/prefab/modules/discord_partner_sdk/include/discordpp.h "src/main/cpp/sdk/$abi/include/"
+            cp "/tmp/discord-aar/jni/$abi/libdiscord_partner_sdk.so" "src/main/cpp/sdk/$abi/"
+            cp "/tmp/discord-aar/jni/$abi/libdiscord_partner_sdk.so" "src/main/jniLibs/$abi/"
+          done
+      - name: Build Android library
+        env:
+          GITHUB_ACTOR: ${{ github.actor }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd native/domms-games-presence
+          gradle :plugin:assembleRelease
+      - name: Upload native build outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: domms-games-presence-native-build
+          path: native/domms-games-presence/plugin/build/outputs/aar/*.aar

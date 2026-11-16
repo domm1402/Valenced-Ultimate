@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.22.1)
+project(domms_presence)
+set(SDK_ROOT "${CMAKE_CURRENT_SOURCE_DIR}/sdk/${ANDROID_ABI}")
+add_library(domms_presence SHARED presence.cpp)
+target_include_directories(domms_presence PRIVATE "${SDK_ROOT}/include")
+target_link_libraries(domms_presence PRIVATE "${SDK_ROOT}/libdiscord_partner_sdk.so" log android)
