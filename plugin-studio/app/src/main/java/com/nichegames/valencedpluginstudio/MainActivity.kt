@@ -129,6 +129,9 @@ export default {
         button("Plugin safety audit", false) { runSafetyAudit() }
         button("Settings plugin template", false) { codeField.setText(settingsTemplate()); setStatus("Settings template loaded.") }
         button("Event listener template", false) { codeField.setText(eventTemplate()); setStatus("Event template loaded. Confirm API names first.") }
+        button("Code statistics", false) { showCodeStatistics() }
+        button("Valenced plugin API checklist", false) { showApiChecklist() }
+        button("Clear editor", false) { confirmClearEditor() }
         button("Compile TypeScript") { compileSource() }
         statusView = text("Compiler starting…", 12, muted)
 
@@ -298,6 +301,32 @@ export default {
         AlertDialog.Builder(this).setTitle("Plugin safety audit")
             .setMessage(findings.joinToString("\n\n") { "• " + it })
             .setPositiveButton("Done", null).show()
+    }
+
+
+    private fun showCodeStatistics() {
+        val source = codeField.text.toString()
+        val lines = if (source.isEmpty()) 0 else source.count { it == '\\n' } + 1
+        val words = Regex("\\b\\w+\\b").findAll(source).count()
+        val chars = source.length
+        val bytes = source.toByteArray(Charsets.UTF_8).size
+        AlertDialog.Builder(this).setTitle("Source statistics")
+            .setMessage("Lines: $lines\\nWords: $words\\nCharacters: $chars\\nUTF-8 bytes: $bytes")
+            .setPositiveButton("Done", null).show()
+    }
+
+    private fun showApiChecklist() {
+        AlertDialog.Builder(this).setTitle("Before using a Valenced API")
+            .setMessage("1. Check the API exists in your installed Valenced version.\\n\\n2. Confirm the exact event or module name.\\n\\n3. Register listeners only when the plugin loads.\\n\\n4. Remove listeners and timers in onUnload.\\n\\n5. Handle missing modules safely.\\n\\n6. Never access account tokens or send them to a server.\\n\\n7. Test in a separate account or test environment.")
+            .setPositiveButton("Got it", null).show()
+    }
+
+    private fun confirmClearEditor() {
+        AlertDialog.Builder(this).setTitle("Clear editor?")
+            .setMessage("This clears the current source text. Save a draft first if you need it.")
+            .setNegativeButton("Cancel", null)
+            .setPositiveButton("Clear") { _, _ -> codeField.setText(""); compiledJs = ""; outputView.text = "// Compile to generate JavaScript."; setStatus("Editor cleared.") }
+            .show()
     }
 
     private fun compileSource() {
