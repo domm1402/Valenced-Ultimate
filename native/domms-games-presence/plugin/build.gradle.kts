@@ -4,7 +4,7 @@ plugins {
 }
 android {
     namespace = "com.domms.presence"
-    compileSdk = 37
+    compileSdk = 35
     defaultConfig {
         minSdk = 24
         ndk { abiFilters += listOf("arm64-v8a", "armeabi-v7a", "x86_64") }
