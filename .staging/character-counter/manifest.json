@@ -1,0 +1,19 @@
+{
+  "format": 1,
+  "id": "niche.character-counter",
+  "name": "Character Counter Pro",
+  "description": "Count letters, digits, spaces, punctuation and emoji.",
+  "author": "Niche Games",
+  "version": "1.0.0",
+  "dependencies": {
+    "valenced.api": {
+      "version": ">=1 <2"
+    },
+    "discord": {
+      "version": "*"
+    }
+  },
+  "dist": {
+    "script": "index.js"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "format": 1,
+  "id": "niche.binary-converter",
+  "name": "Binary Converter",
+  "description": "Convert text to UTF-8 binary bytes.",
+  "author": "Niche Games",
+  "version": "1.0.0",
+  "dependencies": {
+    "valenced.api": {
+      "version": ">=1 <2"
+    },
+    "discord": {
+      "version": "*"
+    }
+  },
+  "dist": {
+    "script": "index.js"
+  }
+}

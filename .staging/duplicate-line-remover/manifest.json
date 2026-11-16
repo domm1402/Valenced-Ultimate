@@ -1,0 +1,19 @@
+{
+  "format": 1,
+  "id": "niche.duplicate-line-remover",
+  "name": "Duplicate Line Remover",
+  "description": "Remove repeated lines while preserving first occurrence.",
+  "author": "Niche Games",
+  "version": "1.0.0",
+  "dependencies": {
+    "valenced.api": {
+      "version": ">=1 <2"
+    },
+    "discord": {
+      "version": "*"
+    }
+  },
+  "dist": {
+    "script": "index.js"
+  }
+}

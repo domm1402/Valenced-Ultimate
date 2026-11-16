@@ -1,0 +1,19 @@
+{
+  "format": 1,
+  "id": "niche.rot13",
+  "name": "ROT13 Encoder",
+  "description": "Encode or decode text using ROT13.",
+  "author": "Niche Games",
+  "version": "1.0.0",
+  "dependencies": {
+    "valenced.api": {
+      "version": ">=1 <2"
+    },
+    "discord": {
+      "version": "*"
+    }
+  },
+  "dist": {
+    "script": "index.js"
+  }
+}

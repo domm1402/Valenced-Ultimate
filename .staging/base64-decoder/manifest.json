@@ -1,0 +1,19 @@
+{
+  "format": 1,
+  "id": "niche.base64-decoder",
+  "name": "Base64 Decoder",
+  "description": "Decode Base64 to readable UTF-8 text.",
+  "author": "Niche Games",
+  "version": "1.0.0",
+  "dependencies": {
+    "valenced.api": {
+      "version": ">=1 <2"
+    },
+    "discord": {
+      "version": "*"
+    }
+  },
+  "dist": {
+    "script": "index.js"
+  }
+}

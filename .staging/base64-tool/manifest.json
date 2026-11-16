@@ -1,0 +1,19 @@
+{
+  "format": 1,
+  "id": "niche.base64-tool",
+  "name": "Base64 Encoder",
+  "description": "Encode text to Base64.",
+  "author": "Niche Games",
+  "version": "1.0.0",
+  "dependencies": {
+    "valenced.api": {
+      "version": ">=1 <2"
+    },
+    "discord": {
+      "version": "*"
+    }
+  },
+  "dist": {
+    "script": "index.js"
+  }
+}

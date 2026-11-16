@@ -1,0 +1,19 @@
+{
+  "format": 1,
+  "id": "niche.password-generator",
+  "name": "Password Generator",
+  "description": "Generate a random password draft locally (not cryptographically guaranteed).",
+  "author": "Niche Games",
+  "version": "1.0.0",
+  "dependencies": {
+    "valenced.api": {
+      "version": ">=1 <2"
+    },
+    "discord": {
+      "version": "*"
+    }
+  },
+  "dist": {
+    "script": "index.js"
+  }
+}
