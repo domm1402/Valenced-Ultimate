@@ -1,16 +1,34 @@
 # Valenced Plugin Studio APK
 
-An Android app for editing TypeScript plugin source and Valenced manifests, validating basic metadata, saving drafts locally, and exporting a ZIP with the expected plugin folder structure.
+An Android app for creating Valenced plugin projects with a beginner-friendly TypeScript editor.
+
+## Features
+
+- Offline TypeScript-to-JavaScript transpilation using the TypeScript compiler bundled into the APK.
+- Basic syntax diagnostics with line numbers where available.
+- Starter templates, including Hello World and plugin lifecycle examples.
+- Plugin details and manifest editor with basic validation.
+- Local draft save/load and ZIP export containing source, compiled JavaScript and manifest.
+- Beginner help covering the build process, common syntax mistakes and safe plugin habits.
 
 ## Download
 
-Open the repository Actions tab, run **Build Plugin Studio APK**, then download the **valenced-plugin-studio-apk** artifact from the completed workflow. Changes under plugin-studio also trigger a build. The artifact contains app-debug.apk.
+Open the repository Actions tab, run **Build Plugin Studio APK**, then download the **valenced-plugin-studio-apk** artifact from the completed run. The workflow installs TypeScript 5.9.3 and copies its compiler into the Android assets before building the APK.
+
+## What compilation means here
+
+The in-app compiler transpiles TypeScript syntax into JavaScript. It does not perform full project type-checking, resolve third-party packages, or bundle imports. If your plugin imports Valenced or other packages, build the exported project with the Valenced plugin CLI/repository build so dependencies are bundled correctly. The app does not execute plugin code.
 
 ## Local build
 
-Install JDK 17, Android SDK and Gradle 8.9+, then run:
+Install JDK 17, Android SDK, Gradle 8.9+ and Node.js/npm. Before building, install TypeScript and copy the compiler into the assets folder:
 
+    npm install --prefix /tmp/plugin-studio-ts typescript@5.9.3
+    mkdir -p plugin-studio/app/src/main/assets
+    cp /tmp/plugin-studio-ts/node_modules/typescript/lib/typescript.js plugin-studio/app/src/main/assets/tsc.js
     cd plugin-studio
     gradle assembleDebug
 
-The app is an editor and packager, not a runtime. It does not execute plugin code or bypass Valenced APIs, Discord permissions, Nitro entitlements, or client security controls. Build exported projects with the Valenced plugin CLI before publishing.
+The resulting APK is at `app/build/outputs/apk/debug/app-debug.apk`.
+
+Only install plugin code you understand and trust. Never put your Discord password or account token in a plugin.
