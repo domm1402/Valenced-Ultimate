@@ -18,7 +18,7 @@ jobs:
           node-version: "22.18.0"
       - name: Install build tools
         run: npm install
-      - name: Generate the 20 plugin source folders
+      - name: Generate the 46 plugin source folders
         run: node .github/scripts/generate-plugins.mjs
       - name: Build Valenced plugins
         run: npm run build
