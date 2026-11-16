@@ -2,6 +2,7 @@
 #include <memory>
 #include <string>
 #include <mutex>
+#define DISCORDPP_IMPLEMENTATION
 #include "discordpp.h"
 
 namespace {
