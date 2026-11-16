@@ -21,3 +21,5 @@ CI installs the Android SDK with non-interactive license acceptance.
 The build targets Android API 35 for current SDK package availability.
 
 Gradle is aligned with the Android Gradle Plugin's minimum supported version.
+
+The selected game now pre-fills its catalogue Application ID for the Rich Presence request.
