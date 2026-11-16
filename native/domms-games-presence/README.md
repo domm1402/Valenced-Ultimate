@@ -13,3 +13,5 @@ Build packaging is handled by `.github/workflows/build-domms-presence.yml` on th
 The plugin UI build fixes are included in this revision.
 
 The CI job now builds this plugin independently of the legacy plugin collection.
+
+SDK package installation uses sdkmanager's space-separated package list.
