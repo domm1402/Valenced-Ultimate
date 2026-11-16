@@ -20,7 +20,7 @@ const plugins = [
   { slug: 'embed-preview', id: 'niche.embed-preview', name: 'Embed Preview', description: 'Draft an embed title and description locally. Nothing is sent to a channel.', kind: 'simple', label: 'Embed title', placeholder: 'Announcement title', expression: "value.trim() ? 'EMBED PREVIEW\\n' + value.trim() + '\\nDescription: add your embed text here.' : 'Enter an embed title to see a local preview.'" },
   { slug: 'emoji-previewer', id: 'niche.emoji-previewer', name: 'Emoji Previewer', description: 'Preview emoji, Unicode symbols and emoji combinations in a scratchpad.', kind: 'simple', label: 'Emoji or symbols', placeholder: '✨ 🎮 💜', expression: "value.trim() ? 'Preview: ' + value : 'Enter emoji or symbols to preview them.'" },
   { slug: 'hex-color-converter', id: 'niche.hex-color-converter', name: 'Hex Color Converter', description: 'Convert a six-digit hex color into RGB values.', kind: 'simple', label: 'Hex color', placeholder: '#5865F2', expression: "(() => { const m = value.trim().match(/^#?([0-9a-f]{6})$/i); if (!m) return 'Enter a six-digit hex color, such as #5865F2.'; const n = parseInt(m[1],16); return 'RGB(' + (n>>16) + ', ' + ((n>>8)&255) + ', ' + (n&255) + ')'; })()" },
-  { slug: 'bio-formatter', id: 'niche.bio-formatter', name: 'Bio Formatter', description: 'Clean extra spaces and blank lines from an About Me draft.', kind: 'simple', label: 'About Me draft', placeholder: 'Write your profile bio...', expression: "value.trim() ? value.trim().split(/\\r?\\n/).map(x => x.trim()).filter(Boolean).join('\\n') : 'Enter a bio draft to format it.'" },
+  { slug: 'bio-formatter', id: 'niche.bio-formatter', name: 'Bio Formatter', description: 'Clean extra spaces and blank lines from an About Me draft.', kind: 'simple', label: 'About Me draft', placeholder: 'Write your profile bio...', expression: "value.trim() ? value.trim().split(/\\r?\\n/).map(x => x.trim()).filter(Boolean).join('\n') : 'Enter a bio draft to format it.'" },
   { slug: 'invite-link-builder', id: 'niche.invite-link-builder', name: 'Invite Link Builder', description: 'Format an invite code as a Discord invite URL. It does not join or validate the invite.', kind: 'simple', label: 'Invite code or link', placeholder: 'abc123', expression: "(() => { const code = value.trim().replace(/^https?:\\/\\/(www\\.)?discord\\.gg\\//i,'').replace(/^discord\\.gg\\//i,'').replace(/[^a-zA-Z0-9-]/g,''); return code ? 'https://discord.gg/' + code : 'Enter an invite code.'; })()" },
   { slug: 'date-tag-builder', id: 'niche.date-tag-builder', name: 'Discord Date Tag Builder', description: "Convert a date and time into Discord's full and relative timestamp tags.", kind: 'simple', label: 'Date and time', placeholder: '2026-12-25 18:00', expression: "(() => { const ms = Date.parse(value.trim()); if (!Number.isFinite(ms)) return 'Enter a date such as 2026-12-25 18:00.'; const s = Math.floor(ms/1000); return '<t:' + s + ':F>  ·  <t:' + s + ':R>'; })()" },
   { slug: 'activity-text-templates', id: 'niche.activity-text-templates', name: 'Activity Text Templates', description: 'Draft activity details and state lines for a game card. Local preview only.', kind: 'simple', label: 'Activity details', placeholder: 'In a ranked match', expression: "value.trim() ? 'Playing · ' + value.trim() + '\\nState: Ready to play' : 'Enter the activity details you want to draft.'" },
@@ -30,7 +30,7 @@ const plugins = [
   {"slug":"url-encoder","id":"niche.url-encoder","name":"URL Encoder","description":"Percent-encode text for URLs.","kind":"simple","label":"Text","placeholder":"hello world","expression":"encodeURIComponent(value)"},
   {"slug":"case-converter","id":"niche.case-converter","name":"Case Converter","description":"Convert text to uppercase, lowercase, title case and sentence case.","kind":"simple","label":"Text","placeholder":"Type text here","expression":"'UPPER: ' + value.toUpperCase() + '\\\\nLOWER: ' + value.toLowerCase() + '\\\\nTITLE: ' + value.toLowerCase().replace(/\\\\b\\\\w/g, c => c.toUpperCase()) + '\\\\nSENTENCE: ' + value.replace(/(^|[.!?]\\\\s+)\\\\w/g, c => c.toUpperCase())"},
   {"slug":"line-sorter","id":"niche.line-sorter","name":"Line Sorter","description":"Sort lines alphabetically.","kind":"simple","label":"Lines","placeholder":"One item per line","expression":"value.split(/\\\\r?\\\\n/).sort((a,b)=>a.localeCompare(b)).join('\\\\n')"},
-  {"slug":"duplicate-line-remover","id":"niche.duplicate-line-remover","name":"Duplicate Line Remover","description":"Remove repeated lines while preserving first occurrence.","kind":"simple","label":"Text","placeholder":"Paste lines","expression":"[...new Set(value.split(/\\\\r?\\\\n/))].join('\\n')"},
+  {"slug":"duplicate-line-remover","id":"niche.duplicate-line-remover","name":"Duplicate Line Remover","description":"Remove repeated lines while preserving first occurrence.","kind":"simple","label":"Text","placeholder":"Paste lines","expression":"[...new Set(value.split(/\\\\r?\\\\n/))].join('\n')"},
   {"slug":"text-reverser","id":"niche.text-reverser","name":"Text Reverser","description":"Reverse text by Unicode characters.","kind":"simple","label":"Text","placeholder":"Reverse me","expression":"Array.from(value).reverse().join('')"},
   {"slug":"slug-generator","id":"niche.slug-generator","name":"Slug Generator","description":"Turn a title into a URL-friendly slug.","kind":"simple","label":"Title","placeholder":"My Cool Plugin Name","expression":"value.normalize('NFD').replace(/[\\\\u0300-\\\\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')"},
   {"slug":"word-frequency","id":"niche.word-frequency","name":"Word Frequency","description":"Count word occurrences and rank most common.","kind":"simple","label":"Text","placeholder":"Paste text","expression":"Object.entries(value.toLowerCase().match(/[\\\\p{L}\\\\p{N}']+/gu)?.reduce((a,w)=>(a[w]=(a[w]||0)+1,a),{})||{}).sort((a,b)=>b[1]-a[1]).slice(0,20).map(([w,n])=>w+': '+n).join('\\\\n')||'No words found.'"},
@@ -193,7 +193,7 @@ const presenceSource = [
   '  SettingsComponent: RichPresenceSettings,',
   '})',
   ''
-].join('\\n')
+].join('\n')
 
 const fakeNitroSource = [
   "import { getModules } from '@valenced/modules/finders'",
@@ -224,7 +224,7 @@ const fakeNitroSource = [
   '  },',
   '})',
   ''
-].join('\\n')
+].join('\n')
 
 const noidleSource = [
   "import { onFluxEventDispatched } from '@valenced/discord/flux'",
@@ -235,7 +235,7 @@ const noidleSource = [
   '  },',
   '})',
   ''
-].join('\\n')
+].join('\n')
 
 const silentSource = [
   "import { onFluxEventDispatched } from '@valenced/discord/flux'",
