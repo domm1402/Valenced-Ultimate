@@ -1,5 +1,7 @@
 #include <jni.h>
 #include <memory>
+#include <condition_variable>
+#include <chrono>
 #include <string>
 #include <mutex>
 #define DISCORDPP_IMPLEMENTATION
@@ -32,8 +34,23 @@ Java_com_domms_presence_PresenceNative_update(JNIEnv* env, jobject, jstring appI
         const auto state = fromJava(env, stateValue);
         if (!details.empty()) activity.SetDetails(details);
         if (!state.empty()) activity.SetState(state);
-        client->UpdateRichPresence(std::move(activity), [](discordpp::ClientResult) {});
-        return JNI_TRUE;
+        std::mutex resultMutex;
+        std::condition_variable resultReady;
+        bool completed = false;
+        bool successful = false;
+        client->UpdateRichPresence(std::move(activity), [&](discordpp::ClientResult result) {
+            {
+                std::lock_guard<std::mutex> resultLock(resultMutex);
+                successful = result.Successful();
+                completed = true;
+            }
+            resultReady.notify_one();
+        });
+        std::unique_lock<std::mutex> resultLock(resultMutex);
+        if (!resultReady.wait_for(resultLock, std::chrono::seconds(8), [&] { return completed; })) {
+            return JNI_FALSE;
+        }
+        return successful ? JNI_TRUE : JNI_FALSE;
     } catch (...) {
         return JNI_FALSE;
     }
