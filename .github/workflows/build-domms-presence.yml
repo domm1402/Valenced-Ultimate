@@ -1,4 +1,4 @@
-name: Build Domms Games Presence native module
+name: Build Domms Games Presence
 on:
   workflow_dispatch:
   push:
@@ -21,6 +21,8 @@ jobs:
         with:
           gradle-version: "9.3.1"
       - uses: android-actions/setup-android@v3
+        with:
+          packages: "platform-tools platforms;android-37 build-tools;37.0.0 ndk;27.2.12479018 cmake;3.22.1"
       - name: Download Discord Social SDK AAR
         run: |
           mkdir -p native/domms-games-presence/plugin/libs
@@ -37,13 +39,17 @@ jobs:
             cp "/tmp/discord-aar/jni/$abi/libdiscord_partner_sdk.so" "src/main/cpp/sdk/$abi/"
             cp "/tmp/discord-aar/jni/$abi/libdiscord_partner_sdk.so" "src/main/jniLibs/$abi/"
           done
-      - name: Build Android library
+      - name: Build Android native plugin library
         env:
           GITHUB_ACTOR: ${{ github.actor }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cd native/domms-games-presence
-          gradle :plugin:assembleRelease
+          gradle :plugin:assembleRelease --stacktrace
+      - name: Verify native outputs
+        run: |
+          test -f native/domms-games-presence/plugin/build/outputs/aar/plugin-release.aar
+          unzip -l native/domms-games-presence/plugin/build/outputs/aar/plugin-release.aar
       - name: Upload native build outputs
         uses: actions/upload-artifact@v4
         with:
