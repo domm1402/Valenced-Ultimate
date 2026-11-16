@@ -1,6 +1,6 @@
 # Valenced Ultimate
 
-A collection of 20 standalone plugins for Valenced, the mobile Discord client modification.
+A collection of 45 standalone plugins for Valenced, the mobile Discord client modification.
 
 ## Add this repository in Valenced
 
@@ -11,7 +11,7 @@ A collection of 20 standalone plugins for Valenced, the mobile Discord client mo
 
 GitHub Actions builds the plugins, packages individual ZIP files, generates the repository index, and publishes everything to GitHub Pages.
 
-## The 20 plugins
+## The 45 plugins
 
 | # | Plugin | What it does |
 |---:|---|---|
@@ -35,6 +35,13 @@ GitHub Actions builds the plugins, packages individual ZIP files, generates the 
 | 18 | Invite Link Builder | Format an invite code as a Discord invite URL. |
 | 19 | Discord Date Tag Builder | Create full and relative Discord timestamp tags. |
 | 20 | Activity Text Templates | Draft game-activity details and state text. |
+
+
+### Added utility plugins (25)
+
+JSON Formatter, Base64 Encoder/Decoder, URL Encoder, Case Converter, Line Sorter, Duplicate Line Remover, Text Reverser, Slug Generator, Word Frequency, ROT13 Encoder, Morse Encoder, Binary Converter, Random Picker, Percentage Calculator, Unix Time Converter, CSS Gradient Builder, RGB to Hex, Checklist Builder, Character Counter Pro, Password Generator, HTML Escape Tool, List Numberer, Quote Formatter, Emoji Remover, and Whitespace Cleaner.
+
+These are interactive tools that calculate or transform the text you enter. Password Generator is a convenience generator and is not a cryptographic password manager.
 
 ## Important limitations
 
