@@ -9,6 +9,8 @@ An Android app for creating Valenced plugin projects with a beginner-friendly Ty
 - Starter templates, including Hello World, plugin lifecycle, settings, and event-listener examples.
 - Editor productivity tools: find/replace, whitespace cleanup, and insertion of common code snippets.
 - A basic static safety audit for suspicious credential handling, dynamic code execution, network URLs, listeners, and external imports.
+- Source statistics for lines, words, characters, and UTF-8 size.
+- A Valenced API safety checklist and a guarded editor-clear action.
 - Plugin details and manifest editor with basic validation.
 - Local draft save/load and ZIP export containing source, compiled JavaScript and manifest.
 - Beginner help covering the build process, common syntax mistakes and safe plugin habits.
