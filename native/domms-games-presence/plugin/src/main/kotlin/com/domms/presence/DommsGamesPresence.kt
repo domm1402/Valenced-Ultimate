@@ -15,13 +15,15 @@ private object PresenceNative {
 }
 
 private fun loadSdk(activity: Activity, pluginDir: File) {
-    DiscordSocialSdkInit.setEngineActivity(activity)
     val abi = Build.SUPPORTED_ABIS.firstOrNull { it in setOf("arm64-v8a", "armeabi-v7a", "x86_64") }
         ?: error("This device ABI is not packaged")
     val sdk = File(pluginDir, "lib/$abi/libdiscord_partner_sdk.so")
     val bridge = File(pluginDir, "lib/$abi/libdomms_presence.so")
     require(sdk.isFile && bridge.isFile) { "Discord SDK native libraries are missing for $abi" }
+    // The SDK Java class loads its native library in its static initializer.
+    // Load from the plugin's private directory before touching DiscordSocialSdkInit.
     System.load(sdk.absolutePath)
+    DiscordSocialSdkInit.setEngineActivity(activity)
     System.load(bridge.absolutePath)
 }
 
