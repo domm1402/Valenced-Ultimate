@@ -19,3 +19,5 @@ SDK package installation uses sdkmanager's space-separated package list.
 CI installs the Android SDK with non-interactive license acceptance.
 
 The build targets Android API 35 for current SDK package availability.
+
+Gradle is aligned with the Android Gradle Plugin's minimum supported version.
