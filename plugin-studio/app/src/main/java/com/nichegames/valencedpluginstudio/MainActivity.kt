@@ -1,6 +1,7 @@
 package com.nichegames.valencedpluginstudio
 
 import android.app.Activity
+import android.app.AlertDialog
 import android.os.Bundle
 import android.content.Intent
 import android.graphics.Color
@@ -122,6 +123,9 @@ export default {
             setStatus("Lifecycle template loaded.")
         }
         codeField = input("TypeScript source", helloTemplate, multiline = true, height = 250)
+        button("Find and replace", false) { findAndReplace() }
+        button("Format code", false) { formatCode() }
+        button("Insert code snippet", false) { insertSnippet() }
         button("Compile TypeScript") { compileSource() }
         statusView = text("Compiler starting…", 12, muted)
 
@@ -221,6 +225,43 @@ export default {
         val lp = LinearLayout.LayoutParams(-1, -2)
         lp.topMargin = dp(7)
         (activeSection ?: root).addView(b, lp)
+    }
+
+
+    private fun findAndReplace() {
+        val box = LinearLayout(this).apply { orientation = LinearLayout.VERTICAL; setPadding(dp(18), dp(8), dp(18), 0) }
+        val find = EditText(this).apply { hint = "Find text"; setSingleLine(true) }
+        val replacement = EditText(this).apply { hint = "Replace with"; setSingleLine(true) }
+        box.addView(find)
+        box.addView(replacement)
+        AlertDialog.Builder(this).setTitle("Find and replace").setView(box)
+            .setPositiveButton("Replace all") { _, _ ->
+                val needle = find.text.toString()
+                if (needle.isBlank()) setStatus("Enter text to find.")
+                else { codeField.setText(codeField.text.toString().replace(needle, replacement.text.toString())); setStatus("Replaced all matches.") }
+            }.setNegativeButton("Cancel", null).show()
+    }
+
+    private fun formatCode() {
+        val formatted = codeField.text.toString().lines().joinToString("\n") { it.trimEnd() }
+            .replace(Regex("\n{3,}"), "\n\n")
+        codeField.setText(formatted)
+        setStatus("Removed trailing spaces and excess blank lines.")
+    }
+
+    private fun insertSnippet() {
+        val snippets = arrayOf("Console log", "Settings object", "Lifecycle hooks", "API safety note")
+        AlertDialog.Builder(this).setTitle("Insert snippet").setItems(snippets) { _, which ->
+            val snippet = when (which) {
+                0 -> "\nconsole.log('[Plugin] Ready');\n"
+                1 -> "\nconst settings = { enabled: true, debug: false };\n"
+                2 -> "\nonLoad() {\n  console.log('Plugin loaded');\n},\nonUnload() {\n  console.log('Plugin unloaded');\n}\n"
+                else -> "\n// Use only APIs documented by your installed Valenced version.\n"
+            }
+            val start = codeField.selectionStart.coerceAtLeast(0)
+            val end = codeField.selectionEnd.coerceAtLeast(start)
+            codeField.text.replace(start, end, snippet)
+        }.setNegativeButton("Cancel", null).show()
     }
 
     private fun compileSource() {
