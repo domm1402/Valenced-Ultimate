@@ -1,0 +1,44 @@
+name: Build Domms Games Presence ZIP
+
+on:
+  push:
+    paths:
+      - 'plugins/domms-games-presence/**'
+      - '.github/workflows/build-domms-presence.yml'
+      - 'package.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install dependencies
+        run: npm install
+      - name: Compile Valenced plugin
+        run: npm run build
+      - name: Package installable ZIP
+        run: |
+          set -euo pipefail
+          test -f plugins/domms-games-presence/manifest.json
+          test -f plugins/domms-games-presence/build/js/index.js
+          mkdir -p dist/domms-games-presence
+          cp plugins/domms-games-presence/manifest.json dist/domms-games-presence/manifest.json
+          cp plugins/domms-games-presence/build/js/index.js dist/domms-games-presence/index.js
+          cd dist/domms-games-presence
+          zip -9 ../Domms-Games-Presence.zip manifest.json index.js
+          cd ../..
+          unzip -t dist/Domms-Games-Presence.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Domms-Games-Presence
+          path: dist/Domms-Games-Presence.zip
+          if-no-files-found: error
+          retention-days: 30
