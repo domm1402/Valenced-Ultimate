@@ -4,7 +4,7 @@
   "name": "Discord Game Catalog",
   "description": "Search Discord's public detectable-games catalog and inspect game application IDs.",
   "author": "Niche Games",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "dependencies": {
     "valenced.api": {
       "version": ">=1 <2"

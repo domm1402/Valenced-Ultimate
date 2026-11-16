@@ -4,7 +4,7 @@
   "name": "Emoji Remover",
   "description": "Remove emoji and pictographic symbols from text.",
   "author": "Niche Games",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "dependencies": {
     "valenced.api": {
       "version": ">=1 <2"

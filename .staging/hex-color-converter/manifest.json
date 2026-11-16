@@ -4,7 +4,7 @@
   "name": "Hex Color Converter",
   "description": "Convert a six-digit hex color into RGB values.",
   "author": "Niche Games",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "dependencies": {
     "valenced.api": {
       "version": ">=1 <2"

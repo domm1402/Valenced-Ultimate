@@ -4,7 +4,7 @@
   "name": "Text Reverser",
   "description": "Reverse text by Unicode characters.",
   "author": "Niche Games",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "dependencies": {
     "valenced.api": {
       "version": ">=1 <2"

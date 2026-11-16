@@ -4,7 +4,7 @@
   "name": "Embed Preview",
   "description": "Draft an embed title and description locally. Nothing is sent to a channel.",
   "author": "Niche Games",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "dependencies": {
     "valenced.api": {
       "version": ">=1 <2"

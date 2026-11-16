@@ -1,0 +1,1 @@
+(function(e){return Object.defineProperty(e,Symbol.toStringTag,{value:`Module`}),e.default=plugin({start({cleanup:e}){e(valenced.discord.flux.onFluxEventDispatched(`IDLE`,function(e){return e.idle=!1,e}))}}),e})({});

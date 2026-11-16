@@ -4,7 +4,7 @@
   "name": "Link Cleaner",
   "description": "Remove common advertising and analytics query parameters from a pasted URL.",
   "author": "Niche Games",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "dependencies": {
     "valenced.api": {
       "version": ">=1 <2"

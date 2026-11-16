@@ -1,0 +1,19 @@
+{
+  "format": 1,
+  "id": "niche.fake-nitro",
+  "name": "Fake Nitro",
+  "description": "Enable supported local Nitro-style client features such as client themes, app icons and sticker rendering. Does not grant server entitlements.",
+  "author": "Niche Games",
+  "version": "1.0.1",
+  "dependencies": {
+    "valenced.api": {
+      "version": ">=1 <2"
+    },
+    "discord": {
+      "version": "*"
+    }
+  },
+  "dist": {
+    "script": "index.js"
+  }
+}
