@@ -1,4 +1,4 @@
-name: Build Domms Games Presence (native + JS package) # production build
+name: Build Domms Games Presence (native + JS package) # production build v1.0.1
 on:
   workflow_dispatch:
   push:
