@@ -46,6 +46,7 @@ jobs:
           for abi in arm64-v8a armeabi-v7a x86_64; do
             mkdir -p "src/main/cpp/sdk/$abi/include" "src/main/jniLibs/$abi"
             cp /tmp/discord-aar/prefab/modules/discord_partner_sdk/include/discordpp.h "src/main/cpp/sdk/$abi/include/"
+            cp /tmp/discord-aar/prefab/modules/discord_partner_sdk/include/cdiscord.h "src/main/cpp/sdk/$abi/include/"
             cp "/tmp/discord-aar/jni/$abi/libdiscord_partner_sdk.so" "src/main/cpp/sdk/$abi/"
             cp "/tmp/discord-aar/jni/$abi/libdiscord_partner_sdk.so" "src/main/jniLibs/$abi/"
           done
