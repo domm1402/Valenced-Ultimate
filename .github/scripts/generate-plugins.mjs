@@ -3,6 +3,7 @@ import { join } from 'node:path'
 
 const plugins = [
   { slug: 'fake-nitro-preview', id: 'niche.fake-nitro-preview', name: 'Fake Nitro Preview', description: 'Preview Nitro-style profile visuals locally. This does not unlock paid features or server permissions.', kind: 'simple', label: 'Display name', placeholder: 'Your display name', expression: "value.trim() ? '✨ ' + value.trim() + ' · Nitro-style local preview' : 'Enter a display name to preview the cosmetic profile card.'" },
+  { slug: 'fake-nitro', id: 'niche.fake-nitro', name: 'Fake Nitro', description: 'Enable supported local Nitro-style client features such as client themes, app icons and sticker rendering. Does not grant server entitlements.', kind: 'fakenitro' },
   { slug: 'discord-game-catalog', id: 'niche.discord-game-catalog', name: 'Discord Game Catalog', description: "Search Discord's public detectable-games catalog and inspect game application IDs.", kind: 'catalog' },
   { slug: 'rich-presence-builder', id: 'niche.rich-presence-builder', name: 'Rich Presence Builder', description: 'Pick a game from Discord’s detectable-games catalog and draft a Playing activity with custom details and state.', kind: 'presence' },
   { slug: 'profile-card-preview', id: 'niche.profile-card-preview', name: 'Profile Card Preview', description: 'Preview a display name and short profile card locally.', kind: 'simple', label: 'Display name', placeholder: 'Display name', expression: "value.trim() ? 'PROFILE PREVIEW\\n' + value.trim() + '\\nAdd your bio in Discord settings.' : 'Enter a display name to build a local preview.'" },
@@ -170,6 +171,37 @@ const presenceSource = [
   ''
 ].join('\n')
 
+const fakeNitroSource = [
+  "import { getModules } from '@valenced/modules/finders'",
+  "import { withProps } from '@valenced/modules/finders/filters'",
+  "import { instead } from '@valenced/patcher'",
+  "import { Design } from '@valenced/discord/design'",
+  '',
+  'interface Settings { enabled: boolean; streaming: boolean }',
+  '',
+  'export default plugin<{ jsonStorage: Settings }>({',
+  '  jsonStorage: { load: true, default: { enabled: true, streaming: true } },',
+  '  start({ cleanup, jsonStorage }) {',
+  "    cleanup(getModules(withProps<any>('canUserUse'), Catalog => {",
+  "      cleanup(instead(Catalog, 'canUserUse', function (args, original) {",
+  '        const settings = jsonStorage.cache ?? { enabled: true, streaming: true }',
+  '        if (settings.enabled && (args[0] === this.CLIENT_THEMES || args[0] === this.STICKERS_EVERYWHERE || args[0] === this.APP_ICONS)) return true',
+  '        if (settings.enabled && settings.streaming && (args[0] === this.STREAM_MID_QUALITY || args[0] === this.STREAM_HIGH_QUALITY)) return true',
+  '        return Reflect.apply(original, this, args)',
+  '      }))',
+  '    }))',
+  '  },',
+  '  SettingsComponent({ api }) {',
+  '    const settings = api.jsonStorage.use()',
+  '    return <Design.TableRowGroup title="Fake Nitro (local client)">',
+  '      <Design.TableSwitchRow label="Client-side cosmetic features" subLabel="Enable supported themes, app icons and sticker UI locally." value={settings.enabled} onValueChange={enabled => api.jsonStorage.set({ enabled })} />',
+  '      <Design.TableSwitchRow label="Higher stream quality UI" subLabel="Client-side feature check only. Server restrictions may still apply." value={settings.streaming} onValueChange={streaming => api.jsonStorage.set({ streaming })} />',
+  '    </Design.TableRowGroup>',
+  '  },',
+  '})',
+  ''
+].join('\\n')
+
 const noidleSource = [
   "import { onFluxEventDispatched } from '@valenced/discord/flux'",
   '',
@@ -213,9 +245,9 @@ await mkdir('plugins', { recursive: true })
 for (const p of plugins) {
   const dir = join('plugins', p.slug)
   await mkdir(join(dir, 'js'), { recursive: true })
-  const src = p.kind === 'catalog' ? catalogSource : p.kind === 'presence' ? presenceSource : p.kind === 'silent' ? silentSource : p.kind === 'noidle' ? noidleSource : simpleSource(p)
+  const src = p.kind === 'catalog' ? catalogSource : p.kind === 'presence' ? presenceSource : p.kind === 'silent' ? silentSource : p.kind === 'noidle' ? noidleSource : p.kind === 'fakenitro' ? fakeNitroSource : simpleSource(p)
   await writeFile(join(dir, 'manifest.json'), manifestFor(p))
   await writeFile(join(dir, 'js/index.tsx'), src)
 }
-if (plugins.length !== 47) throw new Error('Expected 47 plugin definitions; found ' + plugins.length)
+if (plugins.length !== 48) throw new Error('Expected 48 plugin definitions; found ' + plugins.length)
 console.log('Generated ' + plugins.length + ' Valenced plugin folders.')
