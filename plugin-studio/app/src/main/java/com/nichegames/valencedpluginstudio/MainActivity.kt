@@ -126,6 +126,9 @@ export default {
         button("Find and replace", false) { findAndReplace() }
         button("Format code", false) { formatCode() }
         button("Insert code snippet", false) { insertSnippet() }
+        button("Plugin safety audit", false) { runSafetyAudit() }
+        button("Settings plugin template", false) { codeField.setText(settingsTemplate()); setStatus("Settings template loaded.") }
+        button("Event listener template", false) { codeField.setText(eventTemplate()); setStatus("Event template loaded. Confirm API names first.") }
         button("Compile TypeScript") { compileSource() }
         statusView = text("Compiler starting…", 12, muted)
 
@@ -262,6 +265,39 @@ export default {
             val end = codeField.selectionEnd.coerceAtLeast(start)
             codeField.text.replace(start, end, snippet)
         }.setNegativeButton("Cancel", null).show()
+    }
+
+
+    private fun settingsTemplate(): String = """// Starter example. Confirm APIs against your Valenced version.
+const settings = { enabled: true, showNotifications: false };
+export default {
+  onLoad() { console.log("Settings plugin loaded", settings); },
+  onUnload() { console.log("Settings plugin unloaded"); }
+};"""
+
+    private fun eventTemplate(): String = """// Register only documented events and remove listeners in onUnload.
+export default {
+  onLoad() { console.log("Ready to register supported event listeners"); },
+  onUnload() { /* Remove listeners registered by this plugin. */ }
+};"""
+
+    private fun runSafetyAudit() {
+        val source = codeField.text.toString()
+        val findings = mutableListOf<String>()
+        if (source.contains("authorization", true) || source.contains("discord token", true))
+            findings.add("Possible credential handling. Never store or transmit Discord account tokens.")
+        if (source.contains("eval(") || source.contains("new Function"))
+            findings.add("Dynamic code execution detected. Avoid eval and Function.")
+        if (source.contains("http://") || source.contains("https://"))
+            findings.add("Network URL found. Verify the destination and data being sent.")
+        if (source.contains("addListener") || source.contains("on("))
+            findings.add("Possible event listener. Remove listeners in onUnload to prevent leaks.")
+        if (source.contains("import ") || source.contains("require("))
+            findings.add("Imports detected. The in-app compiler does not bundle dependencies. Use the Valenced CLI.")
+        if (findings.isEmpty()) findings.add("No common risk patterns detected. This basic scan is not a security guarantee.")
+        AlertDialog.Builder(this).setTitle("Plugin safety audit")
+            .setMessage(findings.joinToString("\n\n") { "• " + it })
+            .setPositiveButton("Done", null).show()
     }
 
     private fun compileSource() {
