@@ -7,3 +7,5 @@ The plugin provides a game search/selection screen, editable activity details an
 The GitHub Actions workflow builds the Kotlin/C++ bridge against the uploaded `discord_partner_sdk.aar`, compiles the Valenced JS settings UI, packages the DEX plugin class and ABI-specific native libraries, and uploads `domms-games-presence.zip`.
 
 Supported Android ABIs: arm64-v8a, armeabi-v7a and x86_64.
+
+Build packaging is handled by `.github/workflows/build-domms-presence.yml` on this branch.
