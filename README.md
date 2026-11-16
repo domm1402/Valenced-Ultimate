@@ -1,5 +1,7 @@
 # Valenced Ultimate
 
+> **Feature rebuild in progress:** the current collection includes mock previews and utility filler. See [REBUILD.md](REBUILD.md) for the useful-plugin scope and hard API limits. Do not treat Rich Presence Builder or Nitro Preview as live features.
+
 A collection of 46 standalone plugins for Valenced, the mobile Discord client modification.
 
 ## Add this repository in Valenced
