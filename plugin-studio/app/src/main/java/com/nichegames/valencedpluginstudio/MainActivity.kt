@@ -55,8 +55,8 @@ class MainActivity : Activity() {
         super.onCreate(savedInstanceState)
         window.statusBarColor = bg
         window.navigationBarColor = bg
-        buildCompiler()
         buildUi()
+        buildCompiler()
         loadDraft(false)
         refreshManifest()
     }
@@ -65,6 +65,7 @@ class MainActivity : Activity() {
     private fun buildCompiler() {
         engine = WebView(this)
         engine.visibility = View.GONE
+        root.addView(engine, 0, LinearLayout.LayoutParams(1, 1))
         engine.settings.javaScriptEnabled = true
         engine.addJavascriptInterface(CompilerBridge(), "AndroidBridge")
         engine.webChromeClient = WebChromeClient()
