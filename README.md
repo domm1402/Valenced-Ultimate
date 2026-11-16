@@ -25,7 +25,7 @@ To get the APK, open the [Actions tab](https://github.com/tiktoknotificationtrol
 |---:|---|---|
 | 1 | Fake Nitro Preview | Local Nitro-style profile mock-up. It does not unlock paid features. |
 | 2 | Discord Game Catalog | Searches Discord's public detectable-games catalog and shows game names and application IDs. |
-| 3 | Rich Presence Builder | Pick a game from that catalog and draft a Playing activity card with details and state. Preview only. |
+| 3 | Rich Presence Builder | Pick a game from that catalog and draft a Playing activity card with details and state. Preview only. |\n| 4 | Domms Games Presence | Select a game, save an activity profile, and prepare details/state. Live publishing requires a supported companion bridge. |
 | 4 | Profile Card Preview | Preview a display name and profile-card text. |
 | 5 | Badge Gallery Preview | Make a local mock badge row. These are not official Discord badges. |
 | 6 | Custom Status Drafts | Draft custom status text. |
@@ -62,11 +62,11 @@ These are interactive tools that calculate or transform the text you enter. Pass
 
 - Fake Nitro Preview is only a cosmetic mock-up. It does not grant Nitro, bypass payment, enable server-side emoji permissions, or change account entitlements.
 - Discord Game Catalog reads Discord's public detectable-games list. A catalog entry gives you the listed name and application ID; it is not a Discord verification badge.
-- Rich Presence Builder lets you search and select a game from that list, then preview the activity card. Valenced's documented mobile plugin API does not expose a supported publisher for a user's game activity, so this plugin does not claim to set a live Playing status or send unofficial Gateway presence packets. Actual Rich Presence must be published through a supported Discord SDK/RPC integration.
+- Rich Presence Builder lets you search and select a game from that list, then preview the activity card. Valenced's documented mobile plugin API does not expose a supported publisher for a user's game activity. Domms Games Presence therefore saves a game/activity profile without loading an unverified native SDK or sending unofficial Gateway presence packets. Live publishing requires a supported companion bridge.
 - The plugins do not ask for your Discord password or authentication token and do not collect telemetry.
 
 ## Development
 
 Requires Node.js 22.18 or newer. Run: npm install, node .github/scripts/generate-plugins.mjs, npm run build, node .github/scripts/package-plugins.mjs, then npm run generate-index with the pool directory and GitHub Pages base URL.
 
-The plugin definitions live in .github/scripts/generate-plugins.mjs. GitHub Actions generates the standard Valenced plugin folders before building and publishing them.
+The plugin definitions live in .github/scripts/generate-plugins.mjs. The Domms Games Presence implementation is applied by .github/scripts/fix-domms-presence.mjs after generation. GitHub Actions then builds and publishes the generated Valenced plugin folders.
