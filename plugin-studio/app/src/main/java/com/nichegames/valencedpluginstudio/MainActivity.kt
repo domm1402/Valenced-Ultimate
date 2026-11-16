@@ -306,12 +306,15 @@ export default {
 
     private fun showCodeStatistics() {
         val source = codeField.text.toString()
-        val lines = if (source.isEmpty()) 0 else source.count { it == '\\n' } + 1
+        val lines = source.lines().size
         val words = Regex("\\b\\w+\\b").findAll(source).count()
         val chars = source.length
         val bytes = source.toByteArray(Charsets.UTF_8).size
         AlertDialog.Builder(this).setTitle("Source statistics")
-            .setMessage("Lines: $lines\\nWords: $words\\nCharacters: $chars\\nUTF-8 bytes: $bytes")
+            .setMessage("""Lines: $lines
+Words: $words
+Characters: $chars
+UTF-8 bytes: $bytes""")
             .setPositiveButton("Done", null).show()
     }
 
