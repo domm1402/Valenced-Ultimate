@@ -9,6 +9,7 @@ const plugins = [
   { slug: 'badge-gallery-preview', id: 'niche.badge-gallery-preview', name: 'Badge Gallery Preview', description: 'Mock up a local badge row for profile design ideas. These are not official Discord badges.', kind: 'simple', label: 'Badge labels', placeholder: 'Early Supporter, HypeSquad', expression: "value.trim() ? value.split(',').map(x => '🏷️ ' + x.trim()).filter(Boolean).join('  ·  ') : 'Add comma-separated labels to preview a badge row.'" },
   { slug: 'status-draft-vault', id: 'niche.status-draft-vault', name: 'Custom Status Drafts', description: 'Draft a custom Discord status line before setting it in the app.', kind: 'simple', label: 'Status text', placeholder: 'Grinding ranked...', expression: "value.trim() ? 'Status draft: ' + value.trim() : 'Type a status draft.'" },
   { slug: 'silent-typing', id: 'niche.silent-typing', name: 'Silent Typing', description: 'Suppress your local typing-start event while enabled.', kind: 'silent' },
+  { slug: 'no-idle', id: 'niche.no-idle', name: 'No Idle', description: 'Prevent Discord from switching your status to idle when the client backgrounds.', kind: 'noidle' },
   { slug: 'file-name-cleaner', id: 'niche.file-name-cleaner', name: 'File Name Cleaner', description: 'Preview a cleaned, upload-friendly file name without changing the original file.', kind: 'simple', label: 'File name', placeholder: 'My cool file (final)!.png', expression: "value.trim() ? value.trim().replace(/[^a-zA-Z0-9._-]/g, '_').replace(/_+/g, '_') : 'Enter a file name to clean it.'" },
   { slug: 'timestamp-generator', id: 'niche.timestamp-generator', name: 'Discord Timestamp Generator', description: 'Convert Unix seconds into Discord relative timestamp syntax.', kind: 'simple', label: 'Unix timestamp (seconds)', placeholder: '1794852000', expression: "(() => { const n = Number(value.trim()); return Number.isFinite(n) && n > 0 ? '<t:' + Math.floor(n) + ':R>' : 'Enter a valid Unix timestamp in seconds.' })()" },
   { slug: 'snowflake-decoder', id: 'niche.snowflake-decoder', name: 'Snowflake Decoder', description: 'Decode a Discord snowflake ID into its creation date.', kind: 'simple', label: 'Discord ID', placeholder: '123456789012345678', expression: "(() => { try { const n = BigInt(value.trim()); if (n <= 0n) return 'Enter a valid Discord ID.'; return new Date(Number((n >> 22n) + 1420070400000n)).toLocaleString(); } catch { return 'Enter a valid numeric Discord ID.'; } })()" },
@@ -169,6 +170,17 @@ const presenceSource = [
   ''
 ].join('\n')
 
+const noidleSource = [
+  "import { onFluxEventDispatched } from '@valenced/discord/flux'",
+  '',
+  'export default plugin({',
+  '  start({ cleanup }) {',
+  "    cleanup(onFluxEventDispatched('IDLE', payload => { payload.idle = false; return payload }))",
+  '  },',
+  '})',
+  ''
+].join('\\n')
+
 const silentSource = [
   "import { onFluxEventDispatched } from '@valenced/discord/flux'",
   "import { Design } from '@valenced/discord/design'",
@@ -179,7 +191,7 @@ const silentSource = [
   '  jsonStorage: { load: true, default: { enabled: true } },',
   '  start({ cleanup, jsonStorage }) {',
   "    cleanup(onFluxEventDispatched('TYPING_START_LOCAL', payload => {",
-  '      if (jsonStorage.cache?.enabled) return',
+  '      if (jsonStorage.cache?.enabled ?? true) return undefined',
   '      return payload',
   '    }))',
   '  },',
@@ -201,9 +213,9 @@ await mkdir('plugins', { recursive: true })
 for (const p of plugins) {
   const dir = join('plugins', p.slug)
   await mkdir(join(dir, 'js'), { recursive: true })
-  const src = p.kind === 'catalog' ? catalogSource : p.kind === 'presence' ? presenceSource : p.kind === 'silent' ? silentSource : simpleSource(p)
+  const src = p.kind === 'catalog' ? catalogSource : p.kind === 'presence' ? presenceSource : p.kind === 'silent' ? silentSource : p.kind === 'noidle' ? noidleSource : simpleSource(p)
   await writeFile(join(dir, 'manifest.json'), manifestFor(p))
   await writeFile(join(dir, 'js/index.tsx'), src)
 }
-if (plugins.length !== 46) throw new Error('Expected 46 plugin definitions; found ' + plugins.length)
+if (plugins.length !== 47) throw new Error('Expected 47 plugin definitions; found ' + plugins.length)
 console.log('Generated ' + plugins.length + ' Valenced plugin folders.')
