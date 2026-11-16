@@ -30,12 +30,7 @@ jobs:
           gradle-version: "9.3.1"
       - uses: android-actions/setup-android@v3
         with:
-          packages: |
-            platform-tools
-            platforms;android-37
-            build-tools;37.0.0
-            ndk;27.2.12479018
-            cmake;3.22.1
+          packages: "platform-tools platforms;android-37 build-tools;37.0.0 ndk;27.2.12479018 cmake;3.22.1"
       - name: Download Discord Social SDK AAR
         run: |
           mkdir -p native/domms-games-presence/plugin/libs
