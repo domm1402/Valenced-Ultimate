@@ -4,6 +4,7 @@
 #include <chrono>
 #include <string>
 #include <mutex>
+#include <thread>
 #define DISCORDPP_IMPLEMENTATION
 #include "discordpp.h"
 
@@ -46,11 +47,16 @@ Java_com_domms_presence_PresenceNative_update(JNIEnv* env, jobject, jstring appI
             }
             resultReady.notify_one();
         });
-        std::unique_lock<std::mutex> resultLock(resultMutex);
-        if (!resultReady.wait_for(resultLock, std::chrono::seconds(8), [&] { return completed; })) {
-            return JNI_FALSE;
+        const auto deadline = std::chrono::steady_clock::now() + std::chrono::seconds(8);
+        while (std::chrono::steady_clock::now() < deadline) {
+            discordpp::RunCallbacks();
+            {
+                std::lock_guard<std::mutex> resultLock(resultMutex);
+                if (completed) return successful ? JNI_TRUE : JNI_FALSE;
+            }
+            std::this_thread::sleep_for(std::chrono::milliseconds(10));
         }
-        return successful ? JNI_TRUE : JNI_FALSE;
+        return JNI_FALSE;
     } catch (...) {
         return JNI_FALSE;
     }
@@ -61,5 +67,9 @@ Java_com_domms_presence_PresenceNative_clear(JNIEnv*, jobject) {
     std::lock_guard<std::mutex> lock(clientMutex);
     if (!client) return JNI_TRUE;
     client->ClearRichPresence();
+    for (int i = 0; i < 10; ++i) {
+        discordpp::RunCallbacks();
+        std::this_thread::sleep_for(std::chrono::milliseconds(10));
+    }
     return JNI_TRUE;
 }
