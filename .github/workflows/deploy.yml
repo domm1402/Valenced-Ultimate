@@ -1,46 +1,36 @@
-name: Build and deploy Valenced Ultimate
+name: Build and publish Valenced plugins
+
 on:
   push:
     branches: [main]
   workflow_dispatch:
+
 permissions:
   contents: write
+
 jobs:
-  deploy:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
-      - run: npm install
-      - run: npm run build
-      - name: Package plugins and generate Valenced index.json
-        run: |
-          node --input-type=module <<'NODE'
-          import { readFile, writeFile, mkdir, stat } from 'node:fs/promises';
-          import { createHash } from 'node:crypto';
-          import { execFileSync } from 'node:child_process';
-          const base = 'https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate';
-          const cfg = JSON.parse(await readFile('repo.config.json','utf8'));
-          const plugins = {};
-          for (const dir of ['show-all-badges']) {
-            const source = JSON.parse(await readFile(`plugins/${dir}/manifest.json`,'utf8'));
-            const built = JSON.parse(await readFile(`dist/${dir}/manifest.json`,'utf8'));
-            const id = source.id, version = source.version;
-            const zipName = `${id}@${version}.zip`;
-            await mkdir('dist/pool',{recursive:true});
-            execFileSync('zip',['-q','-j',`dist/pool/${zipName}`,`dist/${dir}/index.js`,`dist/${dir}/manifest.json`]);
-            const bytes = await readFile(`dist/pool/${zipName}`);
-            const info = await stat(`dist/pool/${zipName}`);
-            plugins[id] = {name:source.name,description:source.description,author:source.author,channels:{latest:version},versions:{[version]:{url:`${base}/pool/${zipName}`,sha256:createHash('sha256').update(bytes).digest('hex'),size:info.size,dependencies:source.dependencies}}};
-          }
-          await writeFile('dist/index.json',JSON.stringify({format:1,name:cfg.name,description:cfg.description,plugins},null,2));
-          NODE
-      - name: Include repository homepage in Pages output
+          node-version: "22.18.0"
+      - name: Install build tools
+        run: npm install
+      - name: Generate the 20 plugin source folders
+        run: node .github/scripts/generate-plugins.mjs
+      - name: Build Valenced plugins
+        run: npm run build
+      - name: Package plugin ZIPs
+        run: node .github/scripts/package-plugins.mjs
+      - name: Generate repository index
+        run: npm run generate-index -- --dist dist/pool --base-url https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool --out dist/index.json
+      - name: Copy landing page
         run: cp index.html dist/index.html
-      - name: Publish compiled plugins to GitHub Pages
+      - name: Publish GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
           publish_dir: ./dist

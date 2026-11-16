@@ -3,13 +3,18 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node build.mjs"
+    "build": "valenced-plugin build",
+    "build:dev": "valenced-plugin build --dev",
+    "generate-index": "valenced-plugin generate-index"
   },
   "dependencies": {
-    "@rollup/plugin-commonjs": "^28.0.2",
-    "@rollup/plugin-node-resolve": "^16.0.0",
-    "@swc/core": "^1.10.0",
-    "rollup": "^4.30.1",
-    "rollup-plugin-esbuild": "^6.2.1"
+    "@valenced/plugin-cli": "git+https://github.com/Valenced/valenced-plugin-cli.git",
+    "@valenced/types": "git+https://github.com/Valenced/valenced-types.git"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.18",
+    "react": "19.1.0",
+    "react-native": "0.81.6",
+    "typescript": "^5.9.3"
   }
 }
