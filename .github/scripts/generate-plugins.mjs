@@ -159,7 +159,7 @@ const presenceSource = [
   '  SettingsComponent: RichPresenceSettings,',
   '})',
   ''
-].join('\\n')
+].join('\n')
 const fakeNitroSource = [
   "import { getModules } from '@valenced/modules/finders'",
   "import { withProps } from '@valenced/modules/finders/filters'",
