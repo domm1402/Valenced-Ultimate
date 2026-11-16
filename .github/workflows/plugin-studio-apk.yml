@@ -16,6 +16,11 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.9'
+      - name: Bundle offline TypeScript compiler
+        run: |
+          npm install --prefix /tmp/plugin-studio-ts typescript@5.9.3
+          mkdir -p plugin-studio/app/src/main/assets
+          cp /tmp/plugin-studio-ts/node_modules/typescript/lib/typescript.js plugin-studio/app/src/main/assets/tsc.js
       - name: Build APK
         working-directory: plugin-studio
         run: gradle --no-daemon assembleDebug
