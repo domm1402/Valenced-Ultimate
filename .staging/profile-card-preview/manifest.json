@@ -1,0 +1,19 @@
+{
+  "format": 1,
+  "id": "niche.profile-card-preview",
+  "name": "Profile Card Preview",
+  "description": "Preview a display name and short profile card locally.",
+  "author": "Niche Games",
+  "version": "1.0.0",
+  "dependencies": {
+    "valenced.api": {
+      "version": ">=1 <2"
+    },
+    "discord": {
+      "version": "*"
+    }
+  },
+  "dist": {
+    "script": "index.js"
+  }
+}

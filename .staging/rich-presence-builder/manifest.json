@@ -1,0 +1,19 @@
+{
+  "format": 1,
+  "id": "niche.rich-presence-builder",
+  "name": "Rich Presence Builder",
+  "description": "Pick a game from Discord’s detectable-games catalog and draft a Playing activity with custom details and state.",
+  "author": "Niche Games",
+  "version": "1.0.0",
+  "dependencies": {
+    "valenced.api": {
+      "version": ">=1 <2"
+    },
+    "discord": {
+      "version": "*"
+    }
+  },
+  "dist": {
+    "script": "index.js"
+  }
+}

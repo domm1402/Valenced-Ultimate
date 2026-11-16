@@ -1,0 +1,467 @@
+{
+  "format": 1,
+  "name": "Valenced Ultimate",
+  "description": "20 standalone Valenced plugins: profile previews, game catalog and activity drafts, plus chat and formatting utilities.",
+  "plugins": {
+    "niche.activity-text-templates": {
+      "name": "Activity Text Templates",
+      "description": "Draft activity details and state lines for a game card. Local preview only.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.0"
+      },
+      "versions": {
+        "1.0.0": {
+          "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.activity-text-templates@1.0.0.zip",
+          "sha256": "7e7b94084d02fd2fbc5c7ae018a243a1e2a8fef7555df4d9b898eed6eb4557f8",
+          "size": 969,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.badge-gallery-preview": {
+      "name": "Badge Gallery Preview",
+      "description": "Mock up a local badge row for profile design ideas. These are not official Discord badges.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.0"
+      },
+      "versions": {
+        "1.0.0": {
+          "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.badge-gallery-preview@1.0.0.zip",
+          "sha256": "112b86a8cd26bd5a9af14f13da11fe0ff1d4887ed38a915ba11a8ccfebede403",
+          "size": 1029,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.bio-formatter": {
+      "name": "Bio Formatter",
+      "description": "Clean extra spaces and blank lines from an About Me draft.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.0"
+      },
+      "versions": {
+        "1.0.0": {
+          "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.bio-formatter@1.0.0.zip",
+          "sha256": "9b8dd24241c7f87ecd1c1287a28daffd337a74b917db032def3312b408989736",
+          "size": 954,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.date-tag-builder": {
+      "name": "Discord Date Tag Builder",
+      "description": "Convert a date and time into Discord's full and relative timestamp tags.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.0"
+      },
+      "versions": {
+        "1.0.0": {
+          "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.date-tag-builder@1.0.0.zip",
+          "sha256": "e3ab524fd2221c780ad10606f0afea4b435182c574fa7ac37d0caea3ee45e2dc",
+          "size": 1001,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.discord-game-catalog": {
+      "name": "Discord Game Catalog",
+      "description": "Search Discord's public detectable-games catalog and inspect game application IDs.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.0"
+      },
+      "versions": {
+        "1.0.0": {
+          "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.discord-game-catalog@1.0.0.zip",
+          "sha256": "3746af865dd9cf6a31ee45165fa9e47b69178da2ca731277e831c619d251b4ea",
+          "size": 1409,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.embed-preview": {
+      "name": "Embed Preview",
+      "description": "Draft an embed title and description locally. Nothing is sent to a channel.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.0"
+      },
+      "versions": {
+        "1.0.0": {
+          "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.embed-preview@1.0.0.zip",
+          "sha256": "eb75da0afdbbf13c18b774d1cdcbddfac8bfa757d9f78dc8b8b01fe506586256",
+          "size": 959,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.emoji-previewer": {
+      "name": "Emoji Previewer",
+      "description": "Preview emoji, Unicode symbols and emoji combinations in a scratchpad.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.0"
+      },
+      "versions": {
+        "1.0.0": {
+          "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.emoji-previewer@1.0.0.zip",
+          "sha256": "eda8abb94085ac9ace7853b1d250f93ff64a69ccbebbf7c401309dda15dbb80e",
+          "size": 933,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.fake-nitro-preview": {
+      "name": "Fake Nitro Preview",
+      "description": "Preview Nitro-style profile visuals locally. This does not unlock paid features or server permissions.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.0"
+      },
+      "versions": {
+        "1.0.0": {
+          "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.fake-nitro-preview@1.0.0.zip",
+          "sha256": "5e5220331cb510b7f62c5b4873ec9e157ab0c740c5c00d210564e3dd4c41c453",
+          "size": 1001,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.file-name-cleaner": {
+      "name": "File Name Cleaner",
+      "description": "Preview a cleaned, upload-friendly file name without changing the original file.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.0"
+      },
+      "versions": {
+        "1.0.0": {
+          "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.file-name-cleaner@1.0.0.zip",
+          "sha256": "8879a2a84d73c9d8431e693b734f606be6306e59112309da494a5d5ef82599c1",
+          "size": 965,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.hex-color-converter": {
+      "name": "Hex Color Converter",
+      "description": "Convert a six-digit hex color into RGB values.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.0"
+      },
+      "versions": {
+        "1.0.0": {
+          "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.hex-color-converter@1.0.0.zip",
+          "sha256": "e9b11633a5fae77eaf46e76481fdfa7c55b87b69ea84fd9405185aeac07a990e",
+          "size": 970,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.invite-link-builder": {
+      "name": "Invite Link Builder",
+      "description": "Format an invite code as a Discord invite URL. It does not join or validate the invite.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.0"
+      },
+      "versions": {
+        "1.0.0": {
+          "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.invite-link-builder@1.0.0.zip",
+          "sha256": "66bd16ed76b87b9f2d6fd22bd8c8735d13f1d74bab3bdebe8949083643dde702",
+          "size": 1001,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.link-cleaner": {
+      "name": "Link Cleaner",
+      "description": "Remove common advertising and analytics query parameters from a pasted URL.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.0"
+      },
+      "versions": {
+        "1.0.0": {
+          "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.link-cleaner@1.0.0.zip",
+          "sha256": "83b9a05c844e6866c2456c43d31bc1155d960778d7bf01f3df6dec4851bf106d",
+          "size": 1049,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.markdown-playground": {
+      "name": "Markdown Playground",
+      "description": "Try common Discord Markdown in a scratchpad without sending a message.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.0"
+      },
+      "versions": {
+        "1.0.0": {
+          "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.markdown-playground@1.0.0.zip",
+          "sha256": "a7b0ee652063c53e4c03f92357ea079ec821ecd9fe78f00f97fba7c355db8b5c",
+          "size": 938,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.profile-card-preview": {
+      "name": "Profile Card Preview",
+      "description": "Preview a display name and short profile card locally.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.0"
+      },
+      "versions": {
+        "1.0.0": {
+          "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.profile-card-preview@1.0.0.zip",
+          "sha256": "4dba615dd6a3f2f09e8152d98f920dda907f9d457adc1d910d085f2b3bc9651c",
+          "size": 933,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.rich-presence-builder": {
+      "name": "Rich Presence Builder",
+      "description": "Pick a game from Discord’s detectable-games catalog and draft a Playing activity with custom details and state.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.0"
+      },
+      "versions": {
+        "1.0.0": {
+          "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.rich-presence-builder@1.0.0.zip",
+          "sha256": "16fdaeb53524c6152fcdfc34e8640c4a237ba513a1e084587f863551ba8e5aad",
+          "size": 1612,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.silent-typing": {
+      "name": "Silent Typing",
+      "description": "Suppress your local typing-start event while enabled.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.0"
+      },
+      "versions": {
+        "1.0.0": {
+          "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.silent-typing@1.0.0.zip",
+          "sha256": "8808c92bb58200da349426cabfb1c863ba67709ed64633361ea401bf7ea0b47b",
+          "size": 980,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.snowflake-decoder": {
+      "name": "Snowflake Decoder",
+      "description": "Decode a Discord snowflake ID into its creation date.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.0"
+      },
+      "versions": {
+        "1.0.0": {
+          "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.snowflake-decoder@1.0.0.zip",
+          "sha256": "28b806ca131dee90d6c8a2ade464f3d24e9a52b4d9883fb0fad7b551e2b16ceb",
+          "size": 973,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.status-draft-vault": {
+      "name": "Custom Status Drafts",
+      "description": "Draft a custom Discord status line before setting it in the app.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.0"
+      },
+      "versions": {
+        "1.0.0": {
+          "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.status-draft-vault@1.0.0.zip",
+          "sha256": "3d03d3a5ebc782072af17d72471e85e81d117b51b773755e08b7f49384ee76c3",
+          "size": 912,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.text-stats": {
+      "name": "Message Text Stats",
+      "description": "Count characters, words, lines and UTF-8 bytes in a message draft.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.0"
+      },
+      "versions": {
+        "1.0.0": {
+          "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.text-stats@1.0.0.zip",
+          "sha256": "4e7029c07b2571195f45419603f3795b5aa543b0f4aa13533528e4a7a3dcbb0f",
+          "size": 991,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.timestamp-generator": {
+      "name": "Discord Timestamp Generator",
+      "description": "Convert Unix seconds into Discord relative timestamp syntax.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.0"
+      },
+      "versions": {
+        "1.0.0": {
+          "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.timestamp-generator@1.0.0.zip",
+          "sha256": "055f361b8ef452629d9ff9e240ac38b7cba30458848b397ffe6afa42b89fee7b",
+          "size": 961,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "format": 1,
+  "id": "niche.invite-link-builder",
+  "name": "Invite Link Builder",
+  "description": "Format an invite code as a Discord invite URL. It does not join or validate the invite.",
+  "author": "Niche Games",
+  "version": "1.0.0",
+  "dependencies": {
+    "valenced.api": {
+      "version": ">=1 <2"
+    },
+    "discord": {
+      "version": "*"
+    }
+  },
+  "dist": {
+    "script": "index.js"
+  }
+}

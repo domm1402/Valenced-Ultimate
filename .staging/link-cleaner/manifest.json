@@ -1,0 +1,19 @@
+{
+  "format": 1,
+  "id": "niche.link-cleaner",
+  "name": "Link Cleaner",
+  "description": "Remove common advertising and analytics query parameters from a pasted URL.",
+  "author": "Niche Games",
+  "version": "1.0.0",
+  "dependencies": {
+    "valenced.api": {
+      "version": ">=1 <2"
+    },
+    "discord": {
+      "version": "*"
+    }
+  },
+  "dist": {
+    "script": "index.js"
+  }
+}

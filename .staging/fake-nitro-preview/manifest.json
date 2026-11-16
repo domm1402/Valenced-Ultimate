@@ -1,0 +1,19 @@
+{
+  "format": 1,
+  "id": "niche.fake-nitro-preview",
+  "name": "Fake Nitro Preview",
+  "description": "Preview Nitro-style profile visuals locally. This does not unlock paid features or server permissions.",
+  "author": "Niche Games",
+  "version": "1.0.0",
+  "dependencies": {
+    "valenced.api": {
+      "version": ">=1 <2"
+    },
+    "discord": {
+      "version": "*"
+    }
+  },
+  "dist": {
+    "script": "index.js"
+  }
+}

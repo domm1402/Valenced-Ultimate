@@ -1,0 +1,3 @@
+(function(e,t){Object.defineProperty(e,Symbol.toStringTag,{value:`Module`});function n(){var[e,n]=valenced.react.React.useState(``),r=e.trim()?`PROFILE PREVIEW
+`+e.trim()+`
+Add your bio in Discord settings.`:`Enter a display name to build a local preview.`;return/*#__PURE__*/ (0,t.jsxs)(valenced.components.Page,{children:[/*#__PURE__*/ (0,t.jsx)(valenced.discord.design.Design.Text,{children:`Preview a display name and short profile card locally.`}),/*#__PURE__*/ (0,t.jsx)(valenced.discord.design.Design.TextInput,{label:`Display name`,placeholder:`Display name`,defaultValue:``,onChange:n}),/*#__PURE__*/ (0,t.jsx)(valenced.discord.design.Design.Text,{children:String(r)})]})}return e.default=plugin({SettingsComponent:n}),e})({},valenced.react.ReactJSXRuntime);
