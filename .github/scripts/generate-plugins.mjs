@@ -183,7 +183,7 @@ const presenceSource = [
   '      <Design.Button text="Update Presence" onPress={updatePresence} />',
   '      <Design.Button text="Clear Presence" onPress={clearPresence} />',
   '      <Design.Text>{status}</Design.Text>',
-  '      <Design.Text>The selected game's catalogue ID is used for the SDK request. Discord may reject applications that are not eligible for Rich Presence.</Design.Text>',
+  '      <Design.Text>The selected game catalogue ID is used for the SDK request. Discord may reject applications that are not eligible for Rich Presence.</Design.Text>',
   '    </Page>',
   '  )',
   '}',
