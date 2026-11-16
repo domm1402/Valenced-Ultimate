@@ -13,6 +13,12 @@ A collection of 48 standalone plugins for Valenced, the mobile Discord client mo
 
 GitHub Actions builds the plugins, packages individual ZIP files, generates the repository index, and publishes everything to GitHub Pages.
 
+## Plugin Studio APK
+
+This repository now includes **Valenced Plugin Studio**, an Android app for writing your own Valenced plugins. It includes a TypeScript editor, manifest editor, basic validation, local draft saving, and ZIP export.
+
+To get the APK, open the [Actions tab](https://github.com/tiktoknotificationtroll-wq/Valenced-Ultimate/actions/workflows/plugin-studio-apk.yml), run **Build Plugin Studio APK**, then download the **valenced-plugin-studio-apk** artifact from the completed run. See [PLUGIN-STUDIO.md](PLUGIN-STUDIO.md) for details. The app creates source projects; exported plugins still need to be built with the Valenced plugin CLI before installation.
+
 ## The 48 plugins
 
 | # | Plugin | What it does |
@@ -37,7 +43,6 @@ GitHub Actions builds the plugins, packages individual ZIP files, generates the 
 | 18 | Invite Link Builder | Format an invite code as a Discord invite URL. |
 | 19 | Discord Date Tag Builder | Create full and relative Discord timestamp tags. |
 | 20 | Activity Text Templates | Draft game-activity details and state text. |
-
 
 ### Added utility plugins (26, legacy)
 
