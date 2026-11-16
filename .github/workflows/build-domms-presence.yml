@@ -13,6 +13,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22.18"
+          cache: npm
+      - name: Build Valenced plugin JavaScript
+        run: |
+          npm install --no-audit --no-fund
+          node .github/scripts/generate-plugins.mjs
+          npm run build
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
@@ -46,12 +55,29 @@ jobs:
         run: |
           cd native/domms-games-presence
           gradle :plugin:assembleRelease --stacktrace
-      - name: Verify native outputs
+      - name: Assemble installable Valenced plugin ZIP
         run: |
-          test -f native/domms-games-presence/plugin/build/outputs/aar/plugin-release.aar
-          unzip -l native/domms-games-presence/plugin/build/outputs/aar/plugin-release.aar
-      - name: Upload native build outputs
+          set -euxo pipefail
+          AAR="native/domms-games-presence/plugin/build/outputs/aar/plugin-release.aar"
+          mkdir -p /tmp/domms-aar /tmp/domms-dex dist/domms-games-presence/android dist/domms-games-presence/lib
+          unzip -q "$AAR" -d /tmp/domms-aar
+          test -f /tmp/domms-aar/classes.jar
+          test -f plugins/rich-presence-builder/build/js/index.js
+          cp plugins/rich-presence-builder/manifest.json dist/domms-games-presence/manifest.json
+          cp plugins/rich-presence-builder/build/js/index.js dist/domms-games-presence/index.js
+          "$ANDROID_HOME/build-tools/37.0.0/d8" --lib "$ANDROID_HOME/platforms/android-37/android.jar" --output /tmp/domms-dex /tmp/domms-aar/classes.jar native/domms-games-presence/plugin/libs/discord_partner_sdk.jar
+          (cd /tmp/domms-dex && zip -q "$GITHUB_WORKSPACE/dist/domms-games-presence/android/plugin.jar" classes.dex)
+          for abi in arm64-v8a armeabi-v7a x86_64; do
+            mkdir -p "dist/domms-games-presence/lib/$abi"
+            cp "/tmp/domms-aar/jni/$abi/libdiscord_partner_sdk.so" "dist/domms-games-presence/lib/$abi/"
+            cp "/tmp/domms-aar/jni/$abi/libdomms_presence.so" "dist/domms-games-presence/lib/$abi/"
+          done
+          (cd dist/domms-games-presence && zip -qr ../domms-games-presence.zip .)
+          unzip -l dist/domms-games-presence.zip
+      - name: Upload installable plugin and native build
         uses: actions/upload-artifact@v4
         with:
-          name: domms-games-presence-native-build
-          path: native/domms-games-presence/plugin/build/outputs/aar/*.aar
+          name: domms-games-presence-installable
+          path: |
+            dist/domms-games-presence.zip
+            native/domms-games-presence/plugin/build/outputs/aar/*.aar
