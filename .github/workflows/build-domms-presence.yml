@@ -32,7 +32,7 @@ jobs:
         run: |
           SDKMANAGER="$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager"
           yes | "$SDKMANAGER" --licenses >/dev/null || true
-          "$SDKMANAGER" "platform-tools" "platforms;android-37" "build-tools;37.0.0" "ndk;27.2.12479018" "cmake;3.22.1"
+          "$SDKMANAGER" "platform-tools" "platforms;android-35" "build-tools;35.0.0" "ndk;27.2.12479018" "cmake;3.22.1"
       - name: Download Discord Social SDK AAR
         run: |
           mkdir -p native/domms-games-presence/plugin/libs
@@ -66,7 +66,7 @@ jobs:
           test -f plugins/domms-games-presence/build/js/index.js
           cp plugins/domms-games-presence/manifest.json dist/domms-games-presence/manifest.json
           cp plugins/domms-games-presence/build/js/index.js dist/domms-games-presence/index.js
-          "$ANDROID_HOME/build-tools/37.0.0/d8" --lib "$ANDROID_HOME/platforms/android-37/android.jar" --output /tmp/domms-dex /tmp/domms-aar/classes.jar native/domms-games-presence/plugin/libs/discord_partner_sdk.jar
+          "$ANDROID_HOME/build-tools/35.0.0/d8" --lib "$ANDROID_HOME/platforms/android-35/android.jar" --output /tmp/domms-dex /tmp/domms-aar/classes.jar native/domms-games-presence/plugin/libs/discord_partner_sdk.jar
           (cd /tmp/domms-dex && zip -q "$GITHUB_WORKSPACE/dist/domms-games-presence/android/plugin.jar" classes.dex)
           for abi in arm64-v8a armeabi-v7a x86_64; do
             mkdir -p "dist/domms-games-presence/lib/$abi"
