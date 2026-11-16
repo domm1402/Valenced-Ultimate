@@ -2,7 +2,7 @@
 
 > **Feature rebuild in progress:** the current collection includes mock previews and utility filler. See [REBUILD.md](REBUILD.md) for the useful-plugin scope and hard API limits. Do not treat Rich Presence Builder or Nitro Preview as live features.
 
-A collection of 46 standalone plugins for Valenced, the mobile Discord client modification.
+A collection of 48 standalone plugins for Valenced, the mobile Discord client modification.
 
 ## Add this repository in Valenced
 
@@ -13,7 +13,7 @@ A collection of 46 standalone plugins for Valenced, the mobile Discord client mo
 
 GitHub Actions builds the plugins, packages individual ZIP files, generates the repository index, and publishes everything to GitHub Pages.
 
-## The 46 plugins
+## The 48 plugins
 
 | # | Plugin | What it does |
 |---:|---|---|
@@ -39,11 +39,19 @@ GitHub Actions builds the plugins, packages individual ZIP files, generates the 
 | 20 | Activity Text Templates | Draft game-activity details and state text. |
 
 
-### Added utility plugins (26)
+### Added utility plugins (26, legacy)
+
+These are retained for compatibility but are not the focus of the feature rebuild.
 
 JSON Formatter, Base64 Encoder/Decoder, URL Encoder, Case Converter, Line Sorter, Duplicate Line Remover, Text Reverser, Slug Generator, Word Frequency, ROT13 Encoder, Morse Encoder, Binary Converter, Random Picker, Percentage Calculator, Unix Time Converter, CSS Gradient Builder, RGB to Hex, Checklist Builder, Character Counter Pro, Password Generator, HTML Escape Tool, List Numberer, Quote Formatter, Emoji Remover, and Whitespace Cleaner.
 
 These are interactive tools that calculate or transform the text you enter. Password Generator is a convenience generator and is not a cryptographic password manager.
+
+## Newly added client features
+
+- **Fake Nitro**: uses Valenced module hooks to expose supported client-side cosmetic/theme/app-icon/sticker UI and stream-quality checks. It does not grant Nitro, upload permissions, server-side emoji permissions, or paid account entitlements.
+- **No Idle**: prevents the local IDLE event from switching the client to idle.
+- **Silent Typing**: suppresses the local typing-start event while enabled.
 
 ## Important limitations
 
