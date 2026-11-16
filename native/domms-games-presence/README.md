@@ -11,3 +11,5 @@ Supported Android ABIs: arm64-v8a, armeabi-v7a and x86_64.
 Build packaging is handled by `.github/workflows/build-domms-presence.yml` on this branch.
 
 The plugin UI build fixes are included in this revision.
+
+The CI job now builds this plugin independently of the legacy plugin collection.
