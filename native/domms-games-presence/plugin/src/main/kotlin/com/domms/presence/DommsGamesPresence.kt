@@ -3,6 +3,7 @@ package com.domms.presence
 
 import android.app.Activity
 import android.os.Build
+import android.util.Log
 import app.valenced.plugins.plugin
 import app.valenced.xposed.api.registerNativeMethod
 import com.discord.socialsdk.DiscordSocialSdkInit
@@ -42,10 +43,9 @@ val dommsGamesPresence = plugin {
                     check(PresenceNative.clear()) { "Could not clear Rich Presence" }
                     mapOf("ok" to true)
                 }
-                log.i("Discord Social SDK native bridge loaded.")
+                Log.i("DommsGamesPresence", "Discord Social SDK native bridge loaded.")
             } catch (t: Throwable) {
-                errors.tryEmit(t)
-                log.e("Failed to initialize Discord Social SDK", t)
+                Log.e("DommsGamesPresence", "Failed to initialize Discord Social SDK", t)
             }
         }
     }
