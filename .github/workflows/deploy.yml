@@ -73,7 +73,7 @@ jobs:
       - name: Package plugin ZIPs
         run: node .github/scripts/package-plugins.mjs
       - name: Generate repository index
-        run: npm run generate-index -- --dist dist/pool --base-url https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool --out dist/index.json
+        run: npm run generate-index -- --dist dist/pool --base-url https://domm1402.github.io/Valenced-Ultimate/pool --out dist/index.json
       - name: Copy landing page
         run: cp index.html dist/index.html
       - name: Publish GitHub Pages
