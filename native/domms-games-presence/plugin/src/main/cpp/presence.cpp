@@ -22,7 +22,7 @@ std::string fromJava(JNIEnv* env, jstring value) {
 }
 
 extern "C" JNIEXPORT jboolean JNICALL
-Java_com_domms_presence_PresenceNative_update(JNIEnv* env, jobject, jstring appIdValue, jstring detailsValue, jstring stateValue) {
+Java_com_domms_presence_PresenceNative_update(JNIEnv* env, jobject, jstring appIdValue, jstring gameNameValue, jstring detailsValue, jstring stateValue) {
     std::lock_guard<std::mutex> lock(clientMutex);
     try {
         const auto appId = std::stoull(fromJava(env, appIdValue));
@@ -31,8 +31,10 @@ Java_com_domms_presence_PresenceNative_update(JNIEnv* env, jobject, jstring appI
         client->SetApplicationId(appId);
         discordpp::Activity activity{};
         activity.SetType(discordpp::ActivityTypes::Playing);
+        const auto gameName = fromJava(env, gameNameValue);
         const auto details = fromJava(env, detailsValue);
         const auto state = fromJava(env, stateValue);
+        if (!gameName.empty()) activity.SetName(gameName);
         if (!details.empty()) activity.SetDetails(details);
         if (!state.empty()) activity.SetState(state);
         std::mutex resultMutex;
