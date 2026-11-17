@@ -10,7 +10,7 @@ import com.discord.socialsdk.DiscordSocialSdkInit
 import java.io.File
 
 private object PresenceNative {
-    external fun update(applicationId: String, details: String, state: String): Boolean
+    external fun update(applicationId: String, gameName: String, details: String, state: String): Boolean
     external fun clear(): Boolean
 }
 
