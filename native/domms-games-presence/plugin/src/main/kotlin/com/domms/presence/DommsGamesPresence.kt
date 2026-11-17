@@ -10,7 +10,7 @@ import com.discord.socialsdk.DiscordSocialSdkInit
 import java.io.File
 
 private object PresenceNative {
-    external fun update(applicationId: String, gameName: String, details: String, state: String): Boolean
+    external fun update(applicationId: String, gameName: String, details: String, state: String, imageKey: String, startTime: Long): Boolean
     external fun clear(): Boolean
 }
 
@@ -49,10 +49,12 @@ val dommsGamesPresence = plugin {
             val gameName = args.getOrNull(1)?.toString()?.trim().orEmpty()
             val details = args.getOrNull(2)?.toString().orEmpty()
             val state = args.getOrNull(3)?.toString().orEmpty()
+            val imageKey = args.getOrNull(4)?.toString().orEmpty()
+            val startTime = (args.getOrNull(5) as? Number)?.toLong() ?: System.currentTimeMillis()
             require(appId.matches(Regex("[0-9]{17,20}"))) { "Enter a valid registered Discord Application ID" }
             require(gameName.isNotBlank() && gameName.length <= 128) { "Game name must be 1–128 characters" }
             require(details.length <= 128 && state.length <= 128) { "Details and state must be 128 characters or fewer" }
-            check(PresenceNative.update(appId, gameName, details, state)) {
+            check(PresenceNative.update(appId, gameName, details, state, imageKey, startTime)) {
                 "Discord did not accept the Rich Presence update. Check that Discord is installed, signed in, and the Application ID is valid."
             }
             mapOf("ok" to true)
