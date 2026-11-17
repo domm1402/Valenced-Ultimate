@@ -204,7 +204,7 @@ const notesSource = [
   '}',
   'export default plugin<{ jsonStorage: Store }>({ jsonStorage: { load: true, default: { notes: [] } }, SettingsComponent: NotesSettings })',
   ''
-].join('\\n')
+].join('\n')
 
 const presetsSource = [
   "import { Design } from '@valenced/discord/design'",
@@ -227,7 +227,7 @@ const presetsSource = [
   '}',
   'export default plugin<{ jsonStorage: Store }>({ jsonStorage: { load: true, default: { presets: [] } }, SettingsComponent: PresetSettings })',
   ''
-].join('\\n')
+].join('\n')
 
 const noidleSource = [
   "import { onFluxEventDispatched } from '@valenced/discord/flux'",
