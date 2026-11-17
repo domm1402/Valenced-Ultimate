@@ -4,7 +4,7 @@
   "name": "No Idle",
   "description": "Prevent Discord from switching your status to idle when the client backgrounds.",
   "author": "Niche Games",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "dependencies": {
     "valenced.api": {
       "version": ">=1 <2"

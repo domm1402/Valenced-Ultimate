@@ -4,7 +4,7 @@
   "name": "Activity Text Templates",
   "description": "Draft activity details and state lines for a game card. Local preview only.",
   "author": "Niche Games",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "dependencies": {
     "valenced.api": {
       "version": ">=1 <2"

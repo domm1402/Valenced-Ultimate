@@ -4,7 +4,7 @@
   "name": "Emoji Previewer",
   "description": "Preview emoji, Unicode symbols and emoji combinations in a scratchpad.",
   "author": "Niche Games",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "dependencies": {
     "valenced.api": {
       "version": ">=1 <2"

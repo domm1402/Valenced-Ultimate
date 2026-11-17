@@ -4,7 +4,7 @@
   "name": "Custom Status Drafts",
   "description": "Draft a custom Discord status line before setting it in the app.",
   "author": "Niche Games",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "dependencies": {
     "valenced.api": {
       "version": ">=1 <2"
