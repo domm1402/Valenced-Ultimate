@@ -1,5 +1,7 @@
-import { mkdir, rm, writeFile } from 'node:fs/promises'
+import { mkdir, readFile, rm, writeFile } from 'node:fs/promises'
 import { join } from 'node:path'
+
+const eskimoSources = JSON.parse(await readFile('vendor/eskimo-rich-presence-sources.json', 'utf8'))
 
 const plugins = [
   { slug: 'fake-nitro-preview', id: 'niche.fake-nitro-preview', name: 'Fake Nitro Preview', description: 'Preview Nitro-style profile visuals locally. This does not unlock paid features or server permissions.', kind: 'simple', label: 'Display name', placeholder: 'Your display name', expression: "value.trim() ? '✨ ' + value.trim() + ' · Nitro-style local preview' : 'Enter a display name to preview the cosmetic profile card.'" },
@@ -66,9 +68,9 @@ const plugins = [
 function manifestFor(p) {
   return JSON.stringify({
     format: 1, id: p.id, name: p.name, description: p.description,
-    author: 'Niche Games', version: p.kind === 'presence' ? '1.1.0' : '1.0.2',
+    author: p.kind === 'presence' ? 'MarkLong0467 / Niche Games' : 'Niche Games', version: p.kind === 'presence' ? '2.1.3' : '1.0.2',
     dependencies: { 'valenced.api': { version: '>=1 <2' }, discord: { version: '*' } },
-    dist: p.kind === 'presence' ? { script: 'index.js', android: { path: 'android/plugin.jar', class: 'com.domms.presence.DommsGamesPresence' } } : { script: 'index.js' }
+    dist: { script: 'index.js' }
   }, null, 2) + '\n'
 }
 
@@ -1377,9 +1379,15 @@ await mkdir('plugins', { recursive: true })
 for (const p of plugins) {
   const dir = join('plugins', p.slug)
   await mkdir(join(dir, 'js'), { recursive: true })
-  const src = p.kind === 'catalog' ? catalogSource : p.kind === 'presence' ? presenceSource : p.kind === 'silent' ? silentSource : p.kind === 'noidle' ? noidleSource : p.kind === 'fakenitro' ? fakeNitroSource : p.kind === 'notes' ? notesSource : p.kind === 'presets' ? presetsSource : simpleSource(p)
   await writeFile(join(dir, 'manifest.json'), manifestFor(p))
-  await writeFile(join(dir, 'js/index.tsx'), src)
+  if (p.kind === 'presence') {
+    for (const [file, content] of Object.entries(eskimoSources)) {
+      await writeFile(join(dir, 'js', file), content)
+    }
+  } else {
+    const src = p.kind === 'catalog' ? catalogSource : p.kind === 'silent' ? silentSource : p.kind === 'noidle' ? noidleSource : p.kind === 'fakenitro' ? fakeNitroSource : p.kind === 'notes' ? notesSource : p.kind === 'presets' ? presetsSource : simpleSource(p)
+    await writeFile(join(dir, 'js/index.tsx'), src)
+  }
 }
 if (plugins.length !== 168) throw new Error('Expected 168 plugin definitions; found ' + plugins.length)
 console.log('Generated ' + plugins.length + ' Valenced plugin folders.')
