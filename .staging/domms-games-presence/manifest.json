@@ -4,7 +4,7 @@
   "name": "Domms Games Presence",
   "description": "Select a game, customise activity details and state, then publish or clear Discord Rich Presence through the Discord Social SDK.",
   "author": "Niche Games",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "dependencies": {
     "valenced.api": {
       "version": ">=1 <2"
@@ -14,10 +14,6 @@
     }
   },
   "dist": {
-    "script": "index.js",
-    "android": {
-      "path": "android/plugin.jar",
-      "class": "com.domms.presence.DommsGamesPresence"
-    }
+    "script": "index.js"
   }
 }
