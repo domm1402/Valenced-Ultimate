@@ -95,6 +95,7 @@ const catalogSource = [
   'function GameCatalogSettings() {',
   '  const [games, setGames] = useState<Game[]>([])',
   '  const [selectedIcon, setSelectedIcon] = useState<string | null>(null)',
+  '  const [selectedIcon, setSelectedIcon] = useState<string | null>(null)',
   "  const [query, setQuery] = useState('')",
   '  const [selected, setSelected] = useState<Game | null>(null)',
   "  const [status, setStatus] = useState('Loading Discord game catalog…')",
@@ -175,7 +176,7 @@ const presenceSource = [
   "    <Design.TextInput label=\"Selected game's Discord Application ID\" placeholder=\"Auto-filled when you select a catalog game\" defaultValue={applicationId} onChange={setApplicationId} />',
   '    <Design.Text>Pick a listed game to use its own Discord Application ID and show its game icon. For a custom activity, keep your ID 1571988102912675900 and enter any game name. You can edit the ID manually.</Design.Text>',
   '    {selectedIcon && applicationId ? <img src={"https://cdn.discordapp.com/app-icons/" + applicationId + "/" + selectedIcon + ".png?size=256"} alt={game + " icon"} style={{ width: 112, height: 112, borderRadius: 18, objectFit: "cover" }} /> : null}',
-  '    <Design.TextInput label="Details" placeholder="In a ranked match" defaultValue={details} onChange={setDetails} />'
+  '    <Design.TextInput label="Details" placeholder="In a ranked match" defaultValue={details} onChange={setDetails} />',
   '    <Design.TextInput label="State" placeholder="2v2 · Diamond" defaultValue={state} onChange={setState} />',
   '    <Design.Button text="Save Activity Profile" onPress={save} />',
   '    <Design.Button text={busy ? "Please wait…" : "Update Discord Presence"} onPress={update} />',
