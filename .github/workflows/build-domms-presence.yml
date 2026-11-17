@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - "native/domms-games-presence/**"
+      - ".github/scripts/generate-plugins.mjs"
+      - ".github/workflows/deploy.yml"
       - ".github/workflows/build-domms-presence.yml"
 permissions:
   contents: read
@@ -36,14 +38,14 @@ jobs:
       - name: Download Discord Social SDK AAR
         run: |
           mkdir -p native/domms-games-presence/plugin/libs
-          curl -fL "https://github.com/tiktoknotificationtroll-wq/Valenced-Ultimate/releases/download/discord-sdk-v1/discord_partner_sdk.aar" -o native/domms-games-presence/plugin/libs/discord_partner_sdk.aar
+          curl -fL "https://github.com/domm1402/Valenced-Ultimate/releases/download/discord-sdk-v1/discord_partner_sdk.aar" -o native/domms-games-presence/plugin/libs/discord_partner_sdk.aar
       - name: Extract SDK classes, headers and ABI libraries
         run: |
           cd native/domms-games-presence/plugin
           mkdir -p src/main/cpp/sdk src/main/jniLibs
           unzip -q libs/discord_partner_sdk.aar -d /tmp/discord-aar
           cp /tmp/discord-aar/libs/discord_partner_sdk.jar libs/discord_partner_sdk.jar
-          for abi in arm64-v8a armeabi-v7a x86_64; do
+          for abi in arm64-v8a; do
             mkdir -p "src/main/cpp/sdk/$abi/include" "src/main/jniLibs/$abi"
             cp /tmp/discord-aar/prefab/modules/discord_partner_sdk/include/discordpp.h "src/main/cpp/sdk/$abi/include/"
             cp /tmp/discord-aar/prefab/modules/discord_partner_sdk/include/cdiscord.h "src/main/cpp/sdk/$abi/include/"
@@ -76,7 +78,7 @@ jobs:
             app/valenced/xposed/api/HostScopeKt.class
           "$ANDROID_HOME/build-tools/35.0.0/d8" --lib "$ANDROID_HOME/platforms/android-35/android.jar" --output /tmp/domms-dex /tmp/domms-classes.jar native/domms-games-presence/plugin/libs/discord_partner_sdk.jar
           (cd /tmp/domms-dex && zip -q "$GITHUB_WORKSPACE/dist/domms-games-presence/android/plugin.jar" classes.dex)
-          for abi in arm64-v8a armeabi-v7a x86_64; do
+          for abi in arm64-v8a; do
             mkdir -p "dist/domms-games-presence/lib/$abi"
             cp "/tmp/domms-aar/jni/$abi/libdiscord_partner_sdk.so" "dist/domms-games-presence/lib/$abi/"
             cp "/tmp/domms-aar/jni/$abi/libdomms_presence.so" "dist/domms-games-presence/lib/$abi/"
