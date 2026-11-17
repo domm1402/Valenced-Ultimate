@@ -55,7 +55,7 @@ const plugins = [
 function manifestFor(p) {
   return JSON.stringify({
     format: 1, id: p.id, name: p.name, description: p.description,
-    author: 'Niche Games', version: '1.0.2',
+    author: 'Niche Games', version: p.kind === 'presence' ? '1.0.3' : '1.0.2',
     dependencies: { 'valenced.api': { version: '>=1 <2' }, discord: { version: '*' } },
     dist: { script: 'index.js', ...(p.kind === 'presence' ? { android: { path: 'android/plugin.jar', class: 'com.domms.presence.DommsGamesPresence' } } : {}) }
   }, null, 2) + '\n'
