@@ -56,7 +56,7 @@ const plugins = [
   { slug: 'message-splitter', id: 'niche.message-splitter', name: 'Message Splitter', description: 'Split a long draft into chunks that fit a 2,000-character message limit. Does not bypass upload or server limits.', kind: 'simple', label: 'Message draft', placeholder: 'Paste a long message...', expression: "(() => { const limit=2000; const out=[]; let rest=value; while(rest.length>limit){let cut=rest.lastIndexOf(' ',limit);if(cut<limit*0.55)cut=limit;out.push(rest.slice(0,cut));rest=rest.slice(cut).trimStart();}if(rest)out.push(rest);return out.map((x,i)=>'PART '+(i+1)+' ('+x.length+' chars)\\n'+x).join('\\n\\n')||'Paste a message to split.'; })()" },
   { slug: 'status-presets-draft', id: 'niche.status-presets-draft', name: 'Status Presets Draft', description: 'Prepare multiple custom status lines to copy into Discord. Does not change account status automatically.', kind: 'simple', label: 'Status presets', placeholder: 'Gaming\nAt work\nAway for a bit', expression: "value.split(/\\r?\\n/).map((x,i)=>x.trim()?((i+1)+'. '+x.trim()):'').filter(Boolean).join('\\n') || 'Add one status per line.'" },
   { slug: 'timestamp-locale-tool', id: 'niche.timestamp-locale-tool', name: 'Timestamp Locale Tool', description: 'Preview a date in a chosen locale and create a Discord timestamp tag. Does not alter Discord globally.', kind: 'simple', label: 'Date, locale (optional)', placeholder: '2026-12-25 18:00, en-GB', expression: "(() => { const [raw,locale='en-GB']=value.split(',').map(x=>x.trim());const d=new Date(raw);if(isNaN(d.getTime()))return 'Enter a valid date and optional locale.';return d.toLocaleString(locale)+'\\nDiscord tag: <t:'+Math.floor(d.getTime()/1000)+':F>'; })()" },
-  { slug: 'server-notes-scratchpad', id: 'niche.server-notes-scratchpad', name: 'Server Notes Scratchpad', description: 'A local notes scratchpad for server reminders. Notes are not automatically linked to a selected server.', kind: 'simple', label: 'Notes', placeholder: 'Rules, reminders, useful links...', expression: "value.trim() ? value.trim() : 'Write a note or reminder here.'" },
+  { slug: 'server-notes-scratchpad', id: 'niche.server-notes-scratchpad', name: 'Server Notes Scratchpad', description: 'A local notes scratchpad for server reminders. Notes are not automatically linked to a selected server.', kind: 'notes', label: 'Notes', placeholder: 'Rules, reminders, useful links...', expression: "value.trim() ? value.trim() : 'Write a note or reminder here.'" },
   { slug: 'media-favourites-organizer', id: 'niche.media-favourites-organizer', name: 'Media Favourites Organizer', description: 'Organize pasted media URLs into a simple list. Does not fetch or download media.', kind: 'simple', label: 'Media URLs', placeholder: 'https://example.com/image.gif', expression: "value.split(/\\r?\\n/).map(x=>x.trim()).filter(x=>/^https?:\\/\\//i.test(x)).map((x,i)=>(i+1)+'. '+x).join('\\n') || 'Paste one http(s) media URL per line.'" },
   { slug: 'gif-tag-organizer', id: 'niche.gif-tag-organizer', name: 'GIF Tag Organizer', description: 'Create a tagged list of GIF links for organizing your own collection. Does not modify Discord GIF search.', kind: 'simple', label: 'Tag | GIF URL', placeholder: 'reaction | https://example.com/reaction.gif', expression: "value.split(/\\r?\\n/).map(x=>x.trim()).filter(Boolean).map((x,i)=>{const p=x.split('|');return (i+1)+'. ['+(p[0]||'untagged').trim()+'] '+(p.slice(1).join('|')||'No URL').trim()}).join('\\n') || 'Add entries as tag | URL.'" },
   { slug: 'fire-text-converter', id: 'niche.fire-text-converter', name: 'Fire Text Converter', description: 'Create a fire-style text draft using emoji decoration. Preview only.', kind: 'simple', label: 'Text', placeholder: 'That was incredible', expression: "value.trim() ? '🔥 '+value.trim().split(/\\s+/).join(' 🔥 ')+' 🔥' : 'Enter text to decorate.'" },
@@ -170,6 +170,65 @@ const fakeNitroSource = [
   ''
 ].join('\n')
 
+const notesSource = [
+  "import { Design } from '@valenced/discord/design'",
+  "import { useState } from 'react'",
+  '',
+  'type Note = { title: string; body: string; updatedAt: number }',
+  'type Store = { notes: Note[] }',
+  'function NotesSettings({ api }: { api: any }) {',
+  '  const saved = api.jsonStorage.use() as Store | undefined',
+  '  const notes = saved?.notes ?? []',
+  "  const [title, setTitle] = useState('')",
+  "  const [body, setBody] = useState('')",
+  "  const [status, setStatus] = useState('Notes are saved locally on this device.')",
+  '  const save = () => {',
+  "    if (!title.trim() && !body.trim()) { setStatus('Enter a title or note first.'); return }",
+  '    api.jsonStorage.set({ notes: [{ title: title.trim() || "Untitled", body, updatedAt: Date.now() }, ...notes].slice(0, 100) })',
+  "    setTitle(''); setBody(''); setStatus('Note saved.')",
+  '  }',
+  '  const remove = (index: number) => api.jsonStorage.set({ notes: notes.filter((_, i) => i !== index) })',
+  '  return <Design.TableRowGroup title="Saved server notes">',
+  '    <Design.Text>Persistent local notes. They are not uploaded or automatically associated with a server.</Design.Text>',
+  '    <Design.TextInput label="Note title" placeholder="Server rules" defaultValue={title} onChange={setTitle} />',
+  '    <Design.TextInput label="Note" placeholder="Add reminders, links or details…" defaultValue={body} onChange={setBody} />',
+  '    <Design.Button text="Save note" onPress={save} />',
+  '    <Design.Text>{status}</Design.Text>',
+  '    {notes.map((note, index) => <Design.TableRowGroup key={index} title={note.title}>',
+  '      <Design.Text>{note.body}</Design.Text>',
+  '      <Design.Text>{new Date(note.updatedAt).toLocaleString()}</Design.Text>',
+  '      <Design.Button text="Delete note" onPress={() => remove(index)} />',
+  '    </Design.TableRowGroup>)}',
+  '    {!notes.length ? <Design.Text>No saved notes yet.</Design.Text> : null}',
+  '  </Design.TableRowGroup>',
+  '}',
+  'export default plugin<{ jsonStorage: Store }>({ jsonStorage: { load: true, default: { notes: [] } }, SettingsComponent: NotesSettings })',
+  ''
+].join('\\n')
+
+const presetsSource = [
+  "import { Design } from '@valenced/discord/design'",
+  "import { useState } from 'react'",
+  'type Store = { presets: string[] }',
+  'function PresetSettings({ api }: { api: any }) {',
+  '  const saved = api.jsonStorage.use() as Store | undefined',
+  '  const presets = saved?.presets ?? []',
+  "  const [draft, setDraft] = useState('')",
+  "  const [status, setStatus] = useState('Presets are stored locally.')",
+  '  const add = () => { if (!draft.trim()) { setStatus("Enter a status first."); return }; api.jsonStorage.set({ presets: [...presets, draft.trim()].slice(-50) }); setDraft(""); setStatus("Preset saved.") }',
+  '  const remove = (index: number) => api.jsonStorage.set({ presets: presets.filter((_, i) => i !== index) })',
+  '  return <Design.TableRowGroup title="Saved status presets">',
+  '    <Design.TextInput label="Status text" placeholder="Playing with friends…" defaultValue={draft} onChange={setDraft} />',
+  '    <Design.Button text="Save preset" onPress={add} />',
+  '    <Design.Text>{status}</Design.Text>',
+  '    {presets.map((item, index) => <Design.TableRowGroup key={index} title={"Preset " + (index + 1)}><Design.Text>{item}</Design.Text><Design.Button text="Delete" onPress={() => remove(index)} /></Design.TableRowGroup>)}',
+  '    {!presets.length ? <Design.Text>No presets saved yet.</Design.Text> : null}',
+  '  </Design.TableRowGroup>',
+  '}',
+  'export default plugin<{ jsonStorage: Store }>({ jsonStorage: { load: true, default: { presets: [] } }, SettingsComponent: PresetSettings })',
+  ''
+].join('\\n')
+
 const noidleSource = [
   "import { onFluxEventDispatched } from '@valenced/discord/flux'",
   '',
@@ -213,7 +272,7 @@ await mkdir('plugins', { recursive: true })
 for (const p of plugins) {
   const dir = join('plugins', p.slug)
   await mkdir(join(dir, 'js'), { recursive: true })
-  const src = p.kind === 'catalog' ? catalogSource : p.kind === 'presence' ? presenceSource : p.kind === 'silent' ? silentSource : p.kind === 'noidle' ? noidleSource : p.kind === 'fakenitro' ? fakeNitroSource : simpleSource(p)
+  const src = p.kind === 'catalog' ? catalogSource : p.kind === 'presence' ? presenceSource : p.kind === 'silent' ? silentSource : p.kind === 'noidle' ? noidleSource : p.kind === 'fakenitro' ? fakeNitroSource : p.kind === 'notes' ? notesSource : p.kind === 'presets' ? presetsSource : simpleSource(p)
   await writeFile(join(dir, 'manifest.json'), manifestFor(p))
   await writeFile(join(dir, 'js/index.tsx'), src)
 }
