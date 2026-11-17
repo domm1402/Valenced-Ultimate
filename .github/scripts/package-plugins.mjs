@@ -1,4 +1,4 @@
-import { access, copyFile, mkdir, readdir, readFile, rm } from 'node:fs/promises'
+import { access, copyFile, cp, mkdir, readdir, readFile, rm } from 'node:fs/promises'
 import { join, resolve } from 'node:path'
 import { execFileSync } from 'node:child_process'
 
@@ -26,11 +26,24 @@ for (const entry of await readdir(root, { withFileTypes: true })) {
   const stage = join(stagingRoot, entry.name)
   await mkdir(stage, { recursive: true })
   await copyFile(manifestPath, join(stage, 'manifest.json'))
+  await mkdir(join(stage, manifest.dist.script, '..'), { recursive: true })
   await copyFile(builtScript, join(stage, manifest.dist.script))
-  const zipName = manifest.id + '@' + manifest.version + '.zip'
-  execFileSync('zip', ['-q', '-j', join(pool, zipName), 'manifest.json', manifest.dist.script], { cwd: stage })
+
+  const zipArgs = ['-q', '-r', join(pool, manifest.id + '@' + manifest.version + '.zip'), 'manifest.json', manifest.dist.script]
+  if (manifest.dist.android) {
+    const androidPath = manifest.dist.android.path
+    const androidArtifact = join(folder, androidPath)
+    const nativeLibraries = join(folder, 'lib')
+    await access(androidArtifact)
+    await access(nativeLibraries)
+    await mkdir(join(stage, androidPath, '..'), { recursive: true })
+    await copyFile(androidArtifact, join(stage, androidPath))
+    await cp(nativeLibraries, join(stage, 'lib'), { recursive: true })
+    zipArgs.push(androidPath, 'lib')
+  }
+  execFileSync('zip', zipArgs, { cwd: stage })
   count++
-  console.log('Packaged ' + manifest.name + ' -> ' + zipName)
+  console.log('Packaged ' + manifest.name + ' -> ' + manifest.id + '@' + manifest.version + '.zip')
 }
 if (count === 0) throw new Error('No valid plugin ZIPs were produced.')
 console.log('Successfully packaged ' + count + ' plugins.')
