@@ -1,8 +1,8 @@
 {
   "format": 1,
   "id": "niche.status-draft-vault",
-  "name": "Custom Status Drafts",
-  "description": "Save reusable custom status text presets locally. Copy them into Discord when needed.",
+  "name": "Status Draft Vault",
+  "description": "Status Draft Vault is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
   "author": "Niche Games",
   "version": "1.0.2",
   "dependencies": {

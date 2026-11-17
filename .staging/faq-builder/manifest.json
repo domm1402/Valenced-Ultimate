@@ -1,0 +1,19 @@
+{
+  "format": 1,
+  "id": "niche.faq-builder",
+  "name": "FAQ Builder",
+  "description": "FAQ Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+  "author": "Niche Games",
+  "version": "1.0.2",
+  "dependencies": {
+    "valenced.api": {
+      "version": ">=1 <2"
+    },
+    "discord": {
+      "version": "*"
+    }
+  },
+  "dist": {
+    "script": "index.js"
+  }
+}

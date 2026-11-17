@@ -13,8 +13,77 @@
       "versions": {
         "1.1.0": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/domms.games.presence@1.1.0.zip",
-          "sha256": "7d5e7acf5d04d143672f6f61f0830bbf3c36efd85271e4b7b10b0d43df8df334",
+          "sha256": "bb55f42fbf0565209d901fba0e172d233193a202bf329c56189d41dc0dd18833",
           "size": 6641779,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.about-me-outline": {
+      "name": "About Me Outline",
+      "description": "About Me Outline is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.about-me-outline@1.0.2.zip",
+          "sha256": "889a0fa8132ec0e550a6b3bbd68223540433850d5172e60e1fe8c35116e4f5d6",
+          "size": 1051,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.accessibility-checklist": {
+      "name": "Accessibility Checklist",
+      "description": "Accessibility Checklist is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.accessibility-checklist@1.0.2.zip",
+          "sha256": "4b7e44c606bfd8298256aac0db70e4930ce547ea2aae49b34aefaa8c403b1e09",
+          "size": 1080,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.action-item-extractor": {
+      "name": "Action Item Extractor",
+      "description": "Action Item Extractor is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.action-item-extractor@1.0.2.zip",
+          "sha256": "eaf3d601f74015cecd6e3d210d6f3088f3db12289cccf25d0129b50faf6a8d41",
+          "size": 1079,
           "dependencies": {
             "valenced.api": {
               "version": ">=1 <2"
@@ -36,8 +105,123 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.activity-text-templates@1.0.2.zip",
-          "sha256": "c5fd2023447bb9ea9ee7923e224da8c2d38d745b49f5ccb4e1a48d65adb078a2",
+          "sha256": "d46c6e0afcee0d31edab7febc7c191a247de7c078bc1894117c48cdb7d7d3a39",
           "size": 969,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.announcement-drafts": {
+      "name": "Announcement Drafts",
+      "description": "Announcement Drafts is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.announcement-drafts@1.0.2.zip",
+          "sha256": "c5d6d7a82184c6865b329c2dbd0c34724ac3c54fed688144fde1abfee6075000",
+          "size": 1065,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.apology-draft-helper": {
+      "name": "Apology Draft Helper",
+      "description": "Apology Draft Helper is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.apology-draft-helper@1.0.2.zip",
+          "sha256": "7b418317c6d55df69148c87622becd63713c43b030c6dc2c0f2d8593e41daf1d",
+          "size": 1070,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.appeal-draft-helper": {
+      "name": "Appeal Draft Helper",
+      "description": "Appeal Draft Helper is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.appeal-draft-helper@1.0.2.zip",
+          "sha256": "799325cce247c4c612c9fff13f96878d2606b9b3d98fdcb396c3b04591f67c4d",
+          "size": 1076,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.attendance-list-formatter": {
+      "name": "Attendance List Formatter",
+      "description": "Attendance List Formatter is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.attendance-list-formatter@1.0.2.zip",
+          "sha256": "7f887735e7d5cb4ba0c2e6117ff2bcdd07671aec4bc5f3043bba2557378f66be",
+          "size": 1066,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.backup-checklist": {
+      "name": "Backup Checklist",
+      "description": "Backup Checklist is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.backup-checklist@1.0.2.zip",
+          "sha256": "08a0eacf589a7c05022c87f3baf48a1d89ac96d8831b5118f0f8d2bf95ccd35f",
+          "size": 1049,
           "dependencies": {
             "valenced.api": {
               "version": ">=1 <2"
@@ -59,7 +243,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.badge-gallery-preview@1.0.2.zip",
-          "sha256": "b20981334e64859f0fc448c237a939fcb522bc7297e7e52eeda668af5cb475a6",
+          "sha256": "a1c6e4c4a21450f450efaa55c31b294b3c802df5c0733dbb9659c84ef05bca44",
           "size": 1029,
           "dependencies": {
             "valenced.api": {
@@ -82,7 +266,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.base64-decoder@1.0.2.zip",
-          "sha256": "e31edf96d8337bf7affcd3469fe805c81999b83d70743ff09cff37d67ffb7c09",
+          "sha256": "4b754d9d3160468a21553fb5d3f71c9b82a383f9093b7ec5dfdf0ad3e87b47c8",
           "size": 899,
           "dependencies": {
             "valenced.api": {
@@ -105,7 +289,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.base64-tool@1.0.2.zip",
-          "sha256": "55a85cf42c93f1ecd7081fd0fde93d73498a017becaa6ec754cb09c8a85d3548",
+          "sha256": "c2e2bf8a63cba9a82796984f5fe3f4515ae3ad0aa2c84f4aec63b51e1763cccb",
           "size": 840,
           "dependencies": {
             "valenced.api": {
@@ -128,7 +312,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.binary-converter@1.0.2.zip",
-          "sha256": "46439e97d33b58abbf77beb24f0d3898e3d5818499fea408e1b85ba3bb5c4520",
+          "sha256": "9e6d7d64395014513e48c371e8b1e8122dd04d696c180c4c86c683ebd403f7e4",
           "size": 899,
           "dependencies": {
             "valenced.api": {
@@ -151,8 +335,77 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.bio-formatter@1.0.2.zip",
-          "sha256": "57452513b031151638f3e657ea75db7c927774d6090b9d78a3ad46fd860b31c6",
+          "sha256": "283d9dcab006bd2024bbad467410d6e99cbe51170efd6bb37d6ccce72aba9f8f",
           "size": 952,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.boundary-message-helper": {
+      "name": "Boundary Message Helper",
+      "description": "Boundary Message Helper is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.boundary-message-helper@1.0.2.zip",
+          "sha256": "46b764f41b2c894d3bc36a27fa6a6b0ace6306e9ca1524d0010dc2d18603f6c0",
+          "size": 1076,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.budget-planner": {
+      "name": "Budget Planner",
+      "description": "Budget Planner is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.budget-planner@1.0.2.zip",
+          "sha256": "a823c0f52254446dd74fca86220ff9f6e0bb959ed53b56b50af7fbe813d8c5a3",
+          "size": 1092,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.bug-report-builder": {
+      "name": "Bug Report Builder",
+      "description": "Bug Report Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.bug-report-builder@1.0.2.zip",
+          "sha256": "f5601d6b87d8a22818a78971a3f17582b1e4a535af3acef2263a3387b4d2391c",
+          "size": 1055,
           "dependencies": {
             "valenced.api": {
               "version": ">=1 <2"
@@ -174,8 +427,54 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.case-converter@1.0.2.zip",
-          "sha256": "5cf77e55aa0bebccc9779ef97452925779a48a995ee5662b84ac912568375db9",
+          "sha256": "1b5110341fc100a33e80f92db50ee8dc79dd34565026fd318fa076a35dd9e42b",
           "size": 956,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.channel-cleanup-planner": {
+      "name": "Channel Cleanup Planner",
+      "description": "Channel Cleanup Planner is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.channel-cleanup-planner@1.0.2.zip",
+          "sha256": "d598782273e3a5a134a2abe1b66c6f6851e033754ee048d3a995f25bebc5858c",
+          "size": 1073,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.channel-topic-builder": {
+      "name": "Channel Topic Builder",
+      "description": "Channel Topic Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.channel-topic-builder@1.0.2.zip",
+          "sha256": "69c77d447fecacfdde8432a0c3f3a20b67ad5d8bc13396047c8489cc25afc4ae",
+          "size": 1061,
           "dependencies": {
             "valenced.api": {
               "version": ">=1 <2"
@@ -197,8 +496,123 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.character-counter@1.0.2.zip",
-          "sha256": "e02100ee8b4f74f072257e80f78187a2f5025c6a24a8d39ae3650dfd4bb159a8",
+          "sha256": "5f435a07662307097f829507060e4c48b492eacc288ff370333026564fa5c005",
           "size": 950,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.clip-caption-builder": {
+      "name": "Clip Caption Builder",
+      "description": "Clip Caption Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.clip-caption-builder@1.0.2.zip",
+          "sha256": "266026fb838be263c53a1cff9510522b4c0d2ba134a479ec33533a8c6a0d7189",
+          "size": 1090,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.community-calendar": {
+      "name": "Community Calendar",
+      "description": "Community Calendar is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.community-calendar@1.0.2.zip",
+          "sha256": "fb8becded9a03f3a3957cc899e7dc7f2ea71193642e659ac8554896063d39ed8",
+          "size": 1041,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.community-prompt-builder": {
+      "name": "Community Prompt Builder",
+      "description": "Community Prompt Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.community-prompt-builder@1.0.2.zip",
+          "sha256": "830eb14b74c5a9fc44056d14c9803ae121c715a1c7c4d30c128e30e62fd3e4e1",
+          "size": 1074,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.community-survey-builder": {
+      "name": "Community Survey Builder",
+      "description": "Community Survey Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.community-survey-builder@1.0.2.zip",
+          "sha256": "37c8da26def3a84a24a118875130a30b802eb25c433e9d8cbed2d1606a10740a",
+          "size": 1079,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.creator-bio-builder": {
+      "name": "Creator Bio Builder",
+      "description": "Creator Bio Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.creator-bio-builder@1.0.2.zip",
+          "sha256": "b7d33fc2f5e67a823de1495cb93ab5a6b8735d1fa19b2b20dd3fc21be9e223cb",
+          "size": 1078,
           "dependencies": {
             "valenced.api": {
               "version": ">=1 <2"
@@ -220,8 +634,54 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.css-gradient-builder@1.0.2.zip",
-          "sha256": "199aa10e3fcde4f382e9467de391cad97584ac0879a4a351975d38673fc392f3",
+          "sha256": "97bac408f73dbbac5325ff1dc2cf0b527d754c15073f2caeb9e95ad67e21dccd",
           "size": 1034,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.daily-question-builder": {
+      "name": "Daily Question Builder",
+      "description": "Daily Question Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.daily-question-builder@1.0.2.zip",
+          "sha256": "99f124717db532e15350581d9db61a19655ef60650a5a23c3cb2fa4210073c34",
+          "size": 1076,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.daily-standup-formatter": {
+      "name": "Daily Standup Formatter",
+      "description": "Daily Standup Formatter is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.daily-standup-formatter@1.0.2.zip",
+          "sha256": "59e28487c31d672bfa6635c00b16b40a137b3de79bf09ba03902470880119f22",
+          "size": 1094,
           "dependencies": {
             "valenced.api": {
               "version": ">=1 <2"
@@ -243,8 +703,77 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.date-tag-builder@1.0.2.zip",
-          "sha256": "e7f31fa34e1c8f5b92d4d25d9b56b016183ff33712a6f08f93ced0aa1fb22d31",
+          "sha256": "606936a70f3e20b1602cd8484bda0287ecfe810e17ef557bea0b63b71126827b",
           "size": 1001,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.de-escalation-helper": {
+      "name": "De-escalation Helper",
+      "description": "De-escalation Helper is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.de-escalation-helper@1.0.2.zip",
+          "sha256": "d740606b96908a6346c592717e2a788fc38c62aeb1caeb9f68fff26d4fecf6af",
+          "size": 1053,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.deadline-reminder-builder": {
+      "name": "Deadline Reminder Builder",
+      "description": "Deadline Reminder Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.deadline-reminder-builder@1.0.2.zip",
+          "sha256": "298e094427f73c777eff8bb15067b39596c762070ed789a05afac3a840501630",
+          "size": 1085,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.decision-log-builder": {
+      "name": "Decision Log Builder",
+      "description": "Decision Log Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.decision-log-builder@1.0.2.zip",
+          "sha256": "e69d69810a4a4265f8f2e0aba99154c5d5ed15600521a0f872d0643687fb5017",
+          "size": 1115,
           "dependencies": {
             "valenced.api": {
               "version": ">=1 <2"
@@ -266,7 +795,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.discord-game-catalog@1.0.2.zip",
-          "sha256": "b55070216c5b4fe9ff3805b442858b0a854a2483c7e81bed704958c56f569405",
+          "sha256": "68cb7809fb2179e436fe95747ffdf15ec9573d6cc99da331526b4843d7a3c7cc",
           "size": 1409,
           "dependencies": {
             "valenced.api": {
@@ -289,7 +818,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.duplicate-line-remover@1.0.2.zip",
-          "sha256": "e6d4bd6b8fe696ca178f5e83210af0b04314160a5539f7967c2d9e9dfb977b8a",
+          "sha256": "078f084434858789c842795f15d846bf40a1be42c9eed1303bde98c3297501ec",
           "size": 907,
           "dependencies": {
             "valenced.api": {
@@ -312,7 +841,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.embed-preview@1.0.2.zip",
-          "sha256": "e8ed318b4ac0a3d22604358e6755c6e10218c78d809c69b2384485dfb1f8b6d9",
+          "sha256": "2bfb25e6d9db54821b4fdd5cdb50471147f990b0368e269e47e0907e08f8a78d",
           "size": 959,
           "dependencies": {
             "valenced.api": {
@@ -335,7 +864,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.emoji-previewer@1.0.2.zip",
-          "sha256": "175b7d681b0dfdb3f9b67a58fe1ad78bd9c3a359504cdeba349fe0f52c344139",
+          "sha256": "3d1bd9d771e295513d8080bdb6225916f68316d763ab1000faef5ecaea46da7e",
           "size": 933,
           "dependencies": {
             "valenced.api": {
@@ -358,8 +887,77 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.emoji-remover@1.0.2.zip",
-          "sha256": "9201d929bd7b98699fb75d7c4c97a7e3dc487dbd3187116fe9c6a2fb51ea3e5b",
+          "sha256": "a6aa4ab7faa16d3e935ff4c4b5d3b575049df2aa08e07947a195fe28b631631a",
           "size": 907,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.event-feedback-form": {
+      "name": "Event Feedback Form",
+      "description": "Event Feedback Form is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.event-feedback-form@1.0.2.zip",
+          "sha256": "49b23843d01e6fe9d9cb624e399871743f9f421005411c81a59eab302d53a760",
+          "size": 1031,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.event-planner": {
+      "name": "Event Planner",
+      "description": "Event Planner is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.event-planner@1.0.2.zip",
+          "sha256": "88fad6bcbb67f4a2eeec303b484f72cfe36c20a78fa8359158827679466f2dba",
+          "size": 1049,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.expense-list-formatter": {
+      "name": "Expense List Formatter",
+      "description": "Expense List Formatter is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.expense-list-formatter@1.0.2.zip",
+          "sha256": "eca27171cdc94bc09d0c01bec330d1b6cbd3f203c2385342a6654204f49cbde0",
+          "size": 1061,
           "dependencies": {
             "valenced.api": {
               "version": ">=1 <2"
@@ -381,7 +979,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.fake-nitro-preview@1.0.2.zip",
-          "sha256": "6ac46a177034406baa8f39ac51fd90e313b9dddf0099aff9fd76a22bbcd19b7b",
+          "sha256": "b74978de7ef3be2c4d9241021b2d5cbb441b46de33cc72851af1ac8e487d1a3d",
           "size": 1001,
           "dependencies": {
             "valenced.api": {
@@ -404,8 +1002,54 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.fake-nitro@1.0.2.zip",
-          "sha256": "39a1dca3df0f3089308e143f0ac84c37300005dadab3c6331e29618daa3eeb66",
+          "sha256": "9ef1465ccb3c563c793c80a77462817b5d03b3c389aedf1d57ce55b71bc23cda",
           "size": 1250,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.faq-builder": {
+      "name": "FAQ Builder",
+      "description": "FAQ Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.faq-builder@1.0.2.zip",
+          "sha256": "e4d7e9f15a2a2cd7cbece753ecc5c4bd52ff48c54fc350487a880d7aeeceae6a",
+          "size": 1053,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.farewell-message-builder": {
+      "name": "Farewell Message Builder",
+      "description": "Farewell Message Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.farewell-message-builder@1.0.2.zip",
+          "sha256": "c69922cbe24e0b278b324544b60fd440e01f7d6a92931ebea9a749216d19cdf0",
+          "size": 1075,
           "dependencies": {
             "valenced.api": {
               "version": ">=1 <2"
@@ -427,7 +1071,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.file-name-cleaner@1.0.2.zip",
-          "sha256": "fc71d8be7c3dca4e87677027101c5556e91dbddddd72f3d8601a0145ea2b9b7e",
+          "sha256": "4a574161499862912614997a2e276dd156436e0e3cd99d5e69511ebfd834f7f2",
           "size": 965,
           "dependencies": {
             "valenced.api": {
@@ -450,8 +1094,100 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.fire-text-converter@1.0.2.zip",
-          "sha256": "2cbcd7c330a784619100a370b2e38894a22daba706229bd66d5c784e8d420639",
+          "sha256": "1420b6b83e049022939c3965238e2318803e6f3269a909358672f1e018807d36",
           "size": 953,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.game-backlog-organiser": {
+      "name": "Game Backlog Organiser",
+      "description": "Game Backlog Organiser is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.game-backlog-organiser@1.0.2.zip",
+          "sha256": "607e4bfddbeac38d07bfe7be8160fd74c77f0ca7cb1780fb01f0a51afdb8ef9f",
+          "size": 1061,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.game-night-planner": {
+      "name": "Game Night Planner",
+      "description": "Game Night Planner is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.game-night-planner@1.0.2.zip",
+          "sha256": "bc26225ebc71adf03f5c33352079ca25a180e3062ebc31dcb3b1e739e92d9be8",
+          "size": 1076,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.game-session-log": {
+      "name": "Game Session Log",
+      "description": "Game Session Log is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.game-session-log@1.0.2.zip",
+          "sha256": "a18082112ca7b00b5d932cec6dce2ca9d0a83e9dff5247b7d8f34f868a1e2868",
+          "size": 1083,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.gaming-goals-tracker": {
+      "name": "Gaming Goals Tracker",
+      "description": "Gaming Goals Tracker is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.gaming-goals-tracker@1.0.2.zip",
+          "sha256": "fbdd414d487da267784c52087530a4ef9e281a6e32829e4f91338735985b0688",
+          "size": 1065,
           "dependencies": {
             "valenced.api": {
               "version": ">=1 <2"
@@ -473,8 +1209,77 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.gif-tag-organizer@1.0.2.zip",
-          "sha256": "10a82de90db8e7714485c76a9494e7d4ddd5d751e235d90b21ee68b111aed4df",
+          "sha256": "a0d82614002d8fb5c0c936ef4b49800bfe24f1d8989e3db6b608899d146ee88c",
           "size": 1080,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.giveaway-planner": {
+      "name": "Giveaway Planner",
+      "description": "Giveaway Planner is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.giveaway-planner@1.0.2.zip",
+          "sha256": "6e0ce923e7e8cacdd15d89056b9cb5ac1f7b28a741afe5326581a8800132bbfd",
+          "size": 1072,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.goal-breakdown-helper": {
+      "name": "Goal Breakdown Helper",
+      "description": "Goal Breakdown Helper is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.goal-breakdown-helper@1.0.2.zip",
+          "sha256": "8a5b77ec3004461c5fc71b2d2d31435ae3d6f2cbf10f80f8760664a55672ef48",
+          "size": 1064,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.habit-checklist-builder": {
+      "name": "Habit Checklist Builder",
+      "description": "Habit Checklist Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.habit-checklist-builder@1.0.2.zip",
+          "sha256": "16e941736510a2c5727368617eb480935542c21b0cc1548a7c8edce59a1a5dbd",
+          "size": 1049,
           "dependencies": {
             "valenced.api": {
               "version": ">=1 <2"
@@ -496,7 +1301,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.hex-color-converter@1.0.2.zip",
-          "sha256": "560a1ecbb51d66531bb58e963b04f42a51bd0aa652958756b5f4dbe0961f082a",
+          "sha256": "cf9860346896e71a6dd9dcd316d5adb9e384e36afb9c9095421df90b49107696",
           "size": 970,
           "dependencies": {
             "valenced.api": {
@@ -519,8 +1324,54 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.html-entity-encoder@1.0.2.zip",
-          "sha256": "82671be196a764f24ef37c03e71bdcf77f1df5ba99357c16ff24cc5ba3a63063",
+          "sha256": "b5becc6c97d1b537d152c3cd00e96c48f2110876fa0327d71d2783ca4ccc81ae",
           "size": 909,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.icebreaker-generator": {
+      "name": "Icebreaker Generator",
+      "description": "Icebreaker Generator is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.icebreaker-generator@1.0.2.zip",
+          "sha256": "9d71944154eea6c3e838fd6a02d262ce0d611a9d3d5362931e9d28e4b48fc58c",
+          "size": 1068,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.incident-timeline": {
+      "name": "Incident Timeline",
+      "description": "Incident Timeline is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.incident-timeline@1.0.2.zip",
+          "sha256": "45d2ff56dbf3d99d6aae807b187fa7ddeb871c535d95ea2db62b4c7ddb4374bb",
+          "size": 1066,
           "dependencies": {
             "valenced.api": {
               "version": ">=1 <2"
@@ -542,7 +1393,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.invite-link-builder@1.0.2.zip",
-          "sha256": "08f6eb6ef99e194853ec4b110a4141d171aa8865c3d3950392b3a440f1b77d36",
+          "sha256": "fc1cca51516add7ac4d64629f7173342e2a65562584d9ff9c96e5b3abf7b7b21",
           "size": 1001,
           "dependencies": {
             "valenced.api": {
@@ -565,8 +1416,31 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.json-formatter@1.0.2.zip",
-          "sha256": "e1fad4357573539cac6178ec90de53fc24411e9e18124b4734a5d7e8e357e2d2",
+          "sha256": "feef557d16832bd4dbe6cd79215f2c8b36359547dfedf0bdfa4a1c3ec7a1d116",
           "size": 898,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.kanban-board-formatter": {
+      "name": "Kanban Board Formatter",
+      "description": "Kanban Board Formatter is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.kanban-board-formatter@1.0.2.zip",
+          "sha256": "323a403a0176fa512cbb77649f63ec3251ade788ddeb54a670804a604c0ae37c",
+          "size": 1076,
           "dependencies": {
             "valenced.api": {
               "version": ">=1 <2"
@@ -588,7 +1462,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.line-sorter@1.0.2.zip",
-          "sha256": "02a49b518e66306578f4ee94b578623ec6ee90ac9a0b52779f78ff96b591f6eb",
+          "sha256": "6b8939573ff0815dfe7840cad727aede96d46b002674eec4ff4ceb346d409c14",
           "size": 866,
           "dependencies": {
             "valenced.api": {
@@ -611,7 +1485,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.link-cleaner@1.0.2.zip",
-          "sha256": "7d9548115825a0b73ce07f05b184f0a5148037274c7650359a1935dfe4392025",
+          "sha256": "46bdfbbfce6a9b1cf5f2ef8bac72f17f0c640aab220b1754d8234ff4175e3e44",
           "size": 1049,
           "dependencies": {
             "valenced.api": {
@@ -634,8 +1508,31 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.list-numberer@1.0.2.zip",
-          "sha256": "81a08ce7fcbe0497d227eb9585bf6aecfc207dbc959037101b527fc629d06f5d",
+          "sha256": "0b18f8f98c17b2175741794acb2d4792bdb953476f9b314685a29eb20f4e1daf",
           "size": 894,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.looking-for-group-builder": {
+      "name": "Looking For Group Builder",
+      "description": "Looking For Group Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.looking-for-group-builder@1.0.2.zip",
+          "sha256": "45b5acad8546a2383da5d0c1d4682b9eaa0e55bfed4ea74433781348ba1fbd8f",
+          "size": 1094,
           "dependencies": {
             "valenced.api": {
               "version": ">=1 <2"
@@ -657,7 +1554,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.markdown-checklist@1.0.2.zip",
-          "sha256": "70726f94301c78a3737c89d523bbd66cb762e27f4381809503ded2688ae1e8ea",
+          "sha256": "3d19e3dd16b0f86a058cec26cf6d11fd581cc5b6fd4f20479f03e9a751a08d8d",
           "size": 918,
           "dependencies": {
             "valenced.api": {
@@ -680,8 +1577,54 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.markdown-playground@1.0.2.zip",
-          "sha256": "7d61a312887d659c84be374d8dcd0386bc3f046856e741f569328d454864daab",
+          "sha256": "f066522b2021c7df3787c12ddc3c7125b194bb6d2b79f598ea07183eb3628ffa",
           "size": 938,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.match-report-formatter": {
+      "name": "Match Report Formatter",
+      "description": "Match Report Formatter is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.match-report-formatter@1.0.2.zip",
+          "sha256": "747fd68aac2e47724fb24f447ad3b1e37920b5dc259c4faa94291e59e5b73e31",
+          "size": 1114,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.meal-plan-formatter": {
+      "name": "Meal Plan Formatter",
+      "description": "Meal Plan Formatter is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.meal-plan-formatter@1.0.2.zip",
+          "sha256": "5a3a929b2c7c3c52c25a4ad22bb973bf86059bfdeb2a96771ddceeb98224c52d",
+          "size": 1073,
           "dependencies": {
             "valenced.api": {
               "version": ">=1 <2"
@@ -703,8 +1646,77 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.media-favourites-organizer@1.0.2.zip",
-          "sha256": "8745a32fdd4270e65fd4f0c04cfddc335183944af7d7ef00f44ea1dac1fce3b0",
+          "sha256": "31583beeb3201a4bbd010a347a39e783983399c0d32aae8775872351c3f33701",
           "size": 1018,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.meeting-agenda-builder": {
+      "name": "Meeting Agenda Builder",
+      "description": "Meeting Agenda Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.meeting-agenda-builder@1.0.2.zip",
+          "sha256": "ebd057397806b753f8eb78c02532c2967da76cb2804ee0676d6bbfe253fb2f99",
+          "size": 1080,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.meeting-notes-formatter": {
+      "name": "Meeting Notes Formatter",
+      "description": "Meeting Notes Formatter is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.meeting-notes-formatter@1.0.2.zip",
+          "sha256": "be4336c4119464da6c302a61705ddc8a3278c4a0c131c15c78027def05ce412b",
+          "size": 1080,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.member-shoutout-builder": {
+      "name": "Member Shoutout Builder",
+      "description": "Member Shoutout Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.member-shoutout-builder@1.0.2.zip",
+          "sha256": "00fee4b06d4bdbb5566e8665c9f1e72e6955a15eb96ec075958128cb52005ecc",
+          "size": 1086,
           "dependencies": {
             "valenced.api": {
               "version": ">=1 <2"
@@ -726,8 +1738,77 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.message-splitter@1.0.2.zip",
-          "sha256": "d6bc3f14349b6bb9fed2b62ed24d0c777c9eccdbdbfd1d98ff21f8b8a01170d8",
+          "sha256": "45c30284c5385f0d1f94657c4a7a6864121b015e18be6ef778ff62ece5350b09",
           "size": 1098,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.message-template-vault": {
+      "name": "Message Template Vault",
+      "description": "Message Template Vault is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.message-template-vault@1.0.2.zip",
+          "sha256": "27c96ed75ce00bcab299942ee3d2f8946f18b69143276a292b14ab0d0278a734",
+          "size": 1072,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.mobile-ui-review": {
+      "name": "Mobile UI Review",
+      "description": "Mobile UI Review is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.mobile-ui-review@1.0.2.zip",
+          "sha256": "72de9dd488aeb8c19c3b799874a7019251a34866bcf50c24f71b5d542e6ec9ba",
+          "size": 1031,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.moderator-notes": {
+      "name": "Moderator Notes",
+      "description": "Moderator Notes is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.moderator-notes@1.0.2.zip",
+          "sha256": "1a9bcc1421b72f3b2a7b60644ac9a0f6a8869b242e7cfc010dc7868dd3b4d3a7",
+          "size": 1069,
           "dependencies": {
             "valenced.api": {
               "version": ">=1 <2"
@@ -749,8 +1830,31 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.morse-encoder@1.0.2.zip",
-          "sha256": "55833e87dcfaed6adacd7caf74c7f60c266ff2ab65a4f7829000d8cf627ce344",
+          "sha256": "007f97e3a7290143d9d9e49b72c481cae3066fbb72d0711d7f64f6a234127e95",
           "size": 1052,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.nickname-generator": {
+      "name": "Nickname Generator",
+      "description": "Nickname Generator is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.nickname-generator@1.0.2.zip",
+          "sha256": "ce544e80ddde27c492e4af36a35353dd0cbc6db00d745982d06c2e320ef9038a",
+          "size": 1065,
           "dependencies": {
             "valenced.api": {
               "version": ">=1 <2"
@@ -772,8 +1876,54 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.no-idle@1.0.2.zip",
-          "sha256": "8451f37203d41d9fb0303c242941641fe703541b6bee8cf15fe2e41a1e8c69c8",
+          "sha256": "25c683d07b7fc29aa0fa1c7a4c8ab85d99d77dd0f7b67c4d139a3b4650a21ea8",
           "size": 707,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.onboarding-guide": {
+      "name": "Onboarding Guide",
+      "description": "Onboarding Guide is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.onboarding-guide@1.0.2.zip",
+          "sha256": "194fa66eb8eb2802451e551a0902d43aa3e8ddbe497ff65f5969e7e2aedb14a8",
+          "size": 1056,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.packing-checklist-builder": {
+      "name": "Packing Checklist Builder",
+      "description": "Packing Checklist Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.packing-checklist-builder@1.0.2.zip",
+          "sha256": "3f6b3238f0e7188d589b11f3ad63ac1f4d9167e4f32fb728977c23bcc2134dea",
+          "size": 1092,
           "dependencies": {
             "valenced.api": {
               "version": ">=1 <2"
@@ -795,7 +1945,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.password-generator@1.0.2.zip",
-          "sha256": "e9c690a3b539fc14cb6c55c944406e89a3cfc26e89063b6a8541adbfa47307b0",
+          "sha256": "3e973b18894549590beea88ccd9a72f107e5b7110d9c94eb186b6fa7935d30e6",
           "size": 1046,
           "dependencies": {
             "valenced.api": {
@@ -818,7 +1968,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.pastel-name-generator@1.0.2.zip",
-          "sha256": "03bba7e4943e1048d5ca50b038f5941237253ab8ff2e0fc77db9f3bd06402899",
+          "sha256": "9adeb42e8b73dc5106e341d689cf8ac41f338bc4a1aaf0acc11aa3ec26c87c4a",
           "size": 990,
           "dependencies": {
             "valenced.api": {
@@ -841,8 +1991,445 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.percentage-calculator@1.0.2.zip",
-          "sha256": "f3e85b660f3be71df0b3f991b03bf0a03d500c8b1c13b0c347611b0b5949b8bd",
+          "sha256": "ad3aecfd3798a56add44a21a11ad5456200953d431e6ff1099f6bfb576ff1e85",
           "size": 935,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.performance-checklist": {
+      "name": "Performance Checklist",
+      "description": "Performance Checklist is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.performance-checklist@1.0.2.zip",
+          "sha256": "ad1857c4ed87c76905efe6d6b3a8b70e9702b19cff88ddc1b961f67a2c2c25e4",
+          "size": 1060,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.permission-review-notes": {
+      "name": "Permission Review Notes",
+      "description": "Permission Review Notes is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.permission-review-notes@1.0.2.zip",
+          "sha256": "bbba2a6cd0a60c09357ba5a676a1284c7bcd27ee3cf10a66007640813bf39613",
+          "size": 1068,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.personal-notes-formatter": {
+      "name": "Personal Notes Formatter",
+      "description": "Personal Notes Formatter is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.personal-notes-formatter@1.0.2.zip",
+          "sha256": "edf155540bfbc080e62cd0b2a9cdafd375cd93d38e7df69345faf9e6fdaec112",
+          "size": 1055,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.plugin-description-writer": {
+      "name": "Plugin Description Writer",
+      "description": "Plugin Description Writer is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.plugin-description-writer@1.0.2.zip",
+          "sha256": "fc0445fccf4c09ac38073458a0f4f1088a4477fe919aa55111ebad5e46d49d7b",
+          "size": 1083,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.plugin-feature-list": {
+      "name": "Plugin Feature List",
+      "description": "Plugin Feature List is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.plugin-feature-list@1.0.2.zip",
+          "sha256": "27732e715899ce3e016b4645cf3a48e01a64a0ab32e61a93fa8e19c543a185e1",
+          "size": 1092,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.plugin-install-guide": {
+      "name": "Plugin Install Guide",
+      "description": "Plugin Install Guide is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.plugin-install-guide@1.0.2.zip",
+          "sha256": "fbddebac0952c703c238a8ad446a60aca76f9386abee6ecdcfc11716b9eafd95",
+          "size": 1114,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.plugin-qa-checklist": {
+      "name": "Plugin QA Checklist",
+      "description": "Plugin QA Checklist is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.plugin-qa-checklist@1.0.2.zip",
+          "sha256": "ec13be9b0b2853f05a23e5c1fd2c68cdfa67ea0cd8f7c09b332b29d727707ce0",
+          "size": 1064,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.plugin-readme-builder": {
+      "name": "Plugin README Builder",
+      "description": "Plugin README Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.plugin-readme-builder@1.0.2.zip",
+          "sha256": "1ed2750e875427d75bf1cdc05f538cef26118cae4cbd52651fd7ba9cd0198f04",
+          "size": 1090,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.plugin-release-notes": {
+      "name": "Plugin Release Notes",
+      "description": "Plugin Release Notes is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.plugin-release-notes@1.0.2.zip",
+          "sha256": "1cdd8b3d4e1155f5ce8dfd253ff82a92ff83267476bc6c5affa63e9df730866c",
+          "size": 1080,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.plugin-roadmap-builder": {
+      "name": "Plugin Roadmap Builder",
+      "description": "Plugin Roadmap Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.plugin-roadmap-builder@1.0.2.zip",
+          "sha256": "1a6d3f8c5538d981658bc81daad691d95412f9efcc48204e31a5f5cfdeb76aac",
+          "size": 1106,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.plugin-support-reply": {
+      "name": "Plugin Support Reply",
+      "description": "Plugin Support Reply is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.plugin-support-reply@1.0.2.zip",
+          "sha256": "3ec9751f66defe5be72ce9fedb811332e4cf7bbc7c52ee3f291bdb076b38b102",
+          "size": 1066,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.plugin-test-plan": {
+      "name": "Plugin Test Plan",
+      "description": "Plugin Test Plan is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.plugin-test-plan@1.0.2.zip",
+          "sha256": "3943e225a2ecf8d8f06d68eeb80bc237cf0528d74676f68f2f9fd1efd780d982",
+          "size": 1083,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.plugin-troubleshooting-guide": {
+      "name": "Plugin Troubleshooting Guide",
+      "description": "Plugin Troubleshooting Guide is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.plugin-troubleshooting-guide@1.0.2.zip",
+          "sha256": "1fff48e08617457414e226be6f2fd73022acfe42632c093c7c4843a40dc40468",
+          "size": 1088,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.poll-builder": {
+      "name": "Poll Builder",
+      "description": "Poll Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.poll-builder@1.0.2.zip",
+          "sha256": "e6a8ed5a38019e719cc5dcd7d3799be3f1673e1b715696bae8a1f8252abdee97",
+          "size": 1065,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.pomodoro-planner": {
+      "name": "Pomodoro Planner",
+      "description": "Pomodoro Planner is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.pomodoro-planner@1.0.2.zip",
+          "sha256": "fa434116421e9e317c866d0cfe5df8e3bfc6b672e9b3e0883d1cd4d195c9a3be",
+          "size": 1056,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.priority-sorter": {
+      "name": "Priority Sorter",
+      "description": "Priority Sorter is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.priority-sorter@1.0.2.zip",
+          "sha256": "9b07101ab3eb9bd80a8b9045805fc1c39577098ff4e1031a44a7ea3d1e5020dd",
+          "size": 1063,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.privacy-checklist": {
+      "name": "Privacy Checklist",
+      "description": "Privacy Checklist is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.privacy-checklist@1.0.2.zip",
+          "sha256": "f77f7557657056c32a9f778e17baa6813db06869cca04592c75124c27ec5639e",
+          "size": 1073,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.profile-bio-cleaner": {
+      "name": "Profile Bio Cleaner",
+      "description": "Profile Bio Cleaner is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.profile-bio-cleaner@1.0.2.zip",
+          "sha256": "78057c9b905d19fc7631fb64c1b974a299d2e89ac9c72a35d8250dff1085f774",
+          "size": 1041,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.profile-bio-helper": {
+      "name": "Profile Bio Helper",
+      "description": "Profile Bio Helper is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.profile-bio-helper@1.0.2.zip",
+          "sha256": "96baa26eb4995164fff100fbd8fb2cfa361b5de8651682955697344d05dcb459",
+          "size": 1050,
           "dependencies": {
             "valenced.api": {
               "version": ">=1 <2"
@@ -864,8 +2451,123 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.profile-card-preview@1.0.2.zip",
-          "sha256": "2fda4f482812c60c4953f8f02afa034e209c4bb7e8922fc939f4006517ced3c0",
+          "sha256": "5ae0ed80ba663afc1d24b9903d96f7ca792b254870e2f47218c27f5a02c040fe",
           "size": 933,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.profile-link-directory": {
+      "name": "Profile Link Directory",
+      "description": "Profile Link Directory is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.profile-link-directory@1.0.2.zip",
+          "sha256": "b965ad5c841d7ef81fc4345a872ee2b87edd41086115a646606c8aeb6157b8e4",
+          "size": 1078,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.progress-report-formatter": {
+      "name": "Progress Report Formatter",
+      "description": "Progress Report Formatter is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.progress-report-formatter@1.0.2.zip",
+          "sha256": "36936e4d7155402c70df352bba4b4c661e0d128b31d643c2877556dc98c88974",
+          "size": 1069,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.project-brief-builder": {
+      "name": "Project Brief Builder",
+      "description": "Project Brief Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.project-brief-builder@1.0.2.zip",
+          "sha256": "4700fe46d7a395d4556819a445e0963a9d52be3f6aa5e5b020364cad823d15c4",
+          "size": 1078,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.project-roadmap": {
+      "name": "Project Roadmap",
+      "description": "Project Roadmap is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.project-roadmap@1.0.2.zip",
+          "sha256": "a8d71cc8185b2776206f05d2bd6d5c0f5fa25405153cee257aeb799a425eaa51",
+          "size": 1080,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.quick-reply-builder": {
+      "name": "Quick Reply Builder",
+      "description": "Quick Reply Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.quick-reply-builder@1.0.2.zip",
+          "sha256": "ef86ec6aa05e1a4e2220a4f95be15c14e9c4bd23ced1790c8ffbbbd01d6312ca",
+          "size": 1075,
           "dependencies": {
             "valenced.api": {
               "version": ">=1 <2"
@@ -887,7 +2589,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.quote-formatter@1.0.2.zip",
-          "sha256": "8ee1a18e9326e27440ddd0d35de8af47127e3229d8522a8e3b91872b118c5459",
+          "sha256": "3112db81912f85f12f3575dc1987c0d9e7bfb0c2b7deb0d1a678fa93db748caa",
           "size": 882,
           "dependencies": {
             "valenced.api": {
@@ -910,8 +2612,54 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.random-picker@1.0.2.zip",
-          "sha256": "efe96118e8948a081bcde4a9146e1d909e41b997e7943ecb02b41e8e83099d9f",
+          "sha256": "407f0d6197c278135b20208147aaa3de8b75d0e82465f85628fb98c879a324ce",
           "size": 972,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.release-readiness-checklist": {
+      "name": "Release Readiness Checklist",
+      "description": "Release Readiness Checklist is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.release-readiness-checklist@1.0.2.zip",
+          "sha256": "fc6d4dc77940f44fa5e6f70a6d0b0fb9b7db1c022e4195d2e590284ca8f9c2dc",
+          "size": 1052,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.reminder-message-builder": {
+      "name": "Reminder Message Builder",
+      "description": "Reminder Message Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.reminder-message-builder@1.0.2.zip",
+          "sha256": "67a62ec45b41e8bdcb21ffd55bcb1671438c9bca1733542447e830a261b09204",
+          "size": 1064,
           "dependencies": {
             "valenced.api": {
               "version": ">=1 <2"
@@ -933,8 +2681,54 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.rgb-to-hex@1.0.2.zip",
-          "sha256": "59728302e2b83d53c03d74100ff7ab18c00362dd1b01e0fd0d3d273bdbb88708",
+          "sha256": "a447e8a400ae7f6324a7d7bd2ec21b1376ff532940eecbe98ee5cb2c806817b1",
           "size": 983,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.role-audit-checklist": {
+      "name": "Role Audit Checklist",
+      "description": "Role Audit Checklist is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.role-audit-checklist@1.0.2.zip",
+          "sha256": "163f0fcaf7e71e65b2098eeac2bcec055c28786acbde67437bb55f268fdf92a2",
+          "size": 1076,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.role-description-builder": {
+      "name": "Role Description Builder",
+      "description": "Role Description Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.role-description-builder@1.0.2.zip",
+          "sha256": "8d2d55666c93abeafd1fc16312cea4447c53ffc36cc25a90eafcc0a0305be7e4",
+          "size": 1094,
           "dependencies": {
             "valenced.api": {
               "version": ">=1 <2"
@@ -956,8 +2750,100 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.rot13@1.0.2.zip",
-          "sha256": "8839a0a0a27e761c50a58b49bb3899047120f29de8ee9dc055cca5edabea8868",
+          "sha256": "207ead9dba90edfd3357bae41340532808f21d7aa123f7c25a5bbfc4326c0af8",
           "size": 901,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.routine-planner": {
+      "name": "Routine Planner",
+      "description": "Routine Planner is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.routine-planner@1.0.2.zip",
+          "sha256": "945b41bd35395a7ffce4fe9e24a58aacfbdf77cc328b8a0638ac6efe6781ef37",
+          "size": 1067,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.scoreboard-builder": {
+      "name": "Scoreboard Builder",
+      "description": "Scoreboard Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.scoreboard-builder@1.0.2.zip",
+          "sha256": "0fb3c2ead94d4e2754e48ccb48f2fe008efafc0e15664f253427540cadf49c3d",
+          "size": 1068,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.server-directory": {
+      "name": "Server Directory",
+      "description": "Server Directory is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.server-directory@1.0.2.zip",
+          "sha256": "dfeabf8afc6598c3962450e07a04dfb2100dddac436ec55dfab730c6fbba5172",
+          "size": 1078,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.server-maintenance-plan": {
+      "name": "Server Maintenance Plan",
+      "description": "Server Maintenance Plan is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.server-maintenance-plan@1.0.2.zip",
+          "sha256": "fa2577020b0a018469ca85613dc3ad19241ac24789589864bf2b124ee27ad820",
+          "size": 1074,
           "dependencies": {
             "valenced.api": {
               "version": ">=1 <2"
@@ -979,8 +2865,100 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.server-notes-scratchpad@1.0.2.zip",
-          "sha256": "d97a4053f78dc5dd8b6dd889705d23386e8a48e26b2add73ebf979dfea56d955",
+          "sha256": "3802f22008e104df49418eadd30550861cb1971543477c8d7b579ea6af9fc742",
           "size": 1296,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.server-rules-builder": {
+      "name": "Server Rules Builder",
+      "description": "Server Rules Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.server-rules-builder@1.0.2.zip",
+          "sha256": "3aef5d50cdc9bf11311e1660a4df0e4af9707eb9ab0517e5f55aed4924f0b9a4",
+          "size": 1031,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.server-setup-checklist": {
+      "name": "Server Setup Checklist",
+      "description": "Server Setup Checklist is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.server-setup-checklist@1.0.2.zip",
+          "sha256": "85761cd1de9fae84ae8dd52e004f66d9f412b6a57707db41228633eccae669a5",
+          "size": 1104,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.shared-cost-splitter": {
+      "name": "Shared Cost Splitter",
+      "description": "Shared Cost Splitter is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.shared-cost-splitter@1.0.2.zip",
+          "sha256": "b2b669d805e1d5c5799d43fa5745c079a4fae7591b3fb4b092635fdb46ee8010",
+          "size": 1091,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.shopping-list-organiser": {
+      "name": "Shopping List Organiser",
+      "description": "Shopping List Organiser is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.shopping-list-organiser@1.0.2.zip",
+          "sha256": "503a94d947778d620acdb8df38207b20af097b66ef6a8ab601b74f20a330bff9",
+          "size": 1082,
           "dependencies": {
             "valenced.api": {
               "version": ">=1 <2"
@@ -1002,7 +2980,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.silent-typing@1.0.2.zip",
-          "sha256": "eaa709dd824b33fb7e6b0993fb8b5332069a704e6e27ea0493b137f710df43c6",
+          "sha256": "4237c4c55db3c87a4fcd2833c32913052431c6524e29a8b6e044d86a39b496c8",
           "size": 983,
           "dependencies": {
             "valenced.api": {
@@ -1025,7 +3003,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.slug-generator@1.0.2.zip",
-          "sha256": "b2d28395614c9b204120db87aff95c84819f61e0374227d6728b05aad8dc7cfd",
+          "sha256": "80aa536919059288f4c07ea2dac35418c32fb500f06e2b1688f6fd7f98fe8c02",
           "size": 924,
           "dependencies": {
             "valenced.api": {
@@ -1048,7 +3026,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.snowflake-decoder@1.0.2.zip",
-          "sha256": "e2cb8292cc872f2529ab9d1fbc0759603a9f02cef7c4a6cbda1607a720733db0",
+          "sha256": "0d272cbd421282e979eca62a291d856777e1f7084698a32c18725d9acbeddceb",
           "size": 973,
           "dependencies": {
             "valenced.api": {
@@ -1061,9 +3039,101 @@
         }
       }
     },
+    "niche.social-bio-drafts": {
+      "name": "Social Bio Drafts",
+      "description": "Social Bio Drafts is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.social-bio-drafts@1.0.2.zip",
+          "sha256": "a62eb88af3490bffdec5c2c4334638884fc8de6345576c8789e9d53cb1418a03",
+          "size": 1027,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.sprint-planner": {
+      "name": "Sprint Planner",
+      "description": "Sprint Planner is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.sprint-planner@1.0.2.zip",
+          "sha256": "fad9f2984c400e1896d4cf0e41eadcdb3a3bf013c50dbad88ba42016f5510cab",
+          "size": 1050,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.staff-handover-notes": {
+      "name": "Staff Handover Notes",
+      "description": "Staff Handover Notes is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.staff-handover-notes@1.0.2.zip",
+          "sha256": "9925436f0d854a918df87df7aeb03acbc778c4d1ab3a3ac3dc641660f211bb67",
+          "size": 1082,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.staff-rota-formatter": {
+      "name": "Staff Rota Formatter",
+      "description": "Staff Rota Formatter is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.staff-rota-formatter@1.0.2.zip",
+          "sha256": "46574e02e4dd3c3f3c05be40b7664f3737bbf98c8ae23f0daa473a8d2ea30094",
+          "size": 1111,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
     "niche.status-draft-vault": {
-      "name": "Custom Status Drafts",
-      "description": "Save reusable custom status text presets locally. Copy them into Discord when needed.",
+      "name": "Status Draft Vault",
+      "description": "Status Draft Vault is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
       "author": "Niche Games",
       "channels": {
         "latest": "1.0.2"
@@ -1071,8 +3141,31 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.status-draft-vault@1.0.2.zip",
-          "sha256": "bcc54ad8f93702622397e8b48d52fc950797a4eeb256c4f804d2ab2bd17e2f23",
-          "size": 1143,
+          "sha256": "12d9c7771e64a55a50336f5f12838ae58eb52b53fcb956982d76e81688d19f29",
+          "size": 1038,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.status-length-checker": {
+      "name": "Status Length Checker",
+      "description": "Status Length Checker is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.status-length-checker@1.0.2.zip",
+          "sha256": "332cb6bc5d1f71630ce216aedf9585b9a4fd758bd7af90288b8c1886ab2df990",
+          "size": 1067,
           "dependencies": {
             "valenced.api": {
               "version": ">=1 <2"
@@ -1094,8 +3187,169 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.status-presets-draft@1.0.2.zip",
-          "sha256": "6164a1bd3379afd97588a1d3ae839f6b0d93ddd4ef04f4a0ebde5d68f4419efa",
+          "sha256": "cf71596fb34d22f4863bb03cd4fc662afaa33181372143aad3a081b7ba9ab20b",
           "size": 1019,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.stream-schedule-planner": {
+      "name": "Stream Schedule Planner",
+      "description": "Stream Schedule Planner is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.stream-schedule-planner@1.0.2.zip",
+          "sha256": "79d82c6130e118207215e98404e49bd643176cb52b16a6e3bd6af9e77f57c59f",
+          "size": 1106,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.streamer-about-builder": {
+      "name": "Streamer About Builder",
+      "description": "Streamer About Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.streamer-about-builder@1.0.2.zip",
+          "sha256": "3bdb2d05140d214471816ce4391b30e19bb03b5c83000e3091f769a39ab89734",
+          "size": 1082,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.study-session-planner": {
+      "name": "Study Session Planner",
+      "description": "Study Session Planner is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.study-session-planner@1.0.2.zip",
+          "sha256": "0364f93b20016ae9ea2461fba83ca2d843a1d912cedb74908b4931f58704ec08",
+          "size": 1031,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.subscription-tracker-draft": {
+      "name": "Subscription Tracker Draft",
+      "description": "Subscription Tracker Draft is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.subscription-tracker-draft@1.0.2.zip",
+          "sha256": "6e1d73f7f0359649e4e8d5318cf6dd93676382ddbbeba5f60f042c3aba6f107b",
+          "size": 1069,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.support-ticket-template": {
+      "name": "Support Ticket Template",
+      "description": "Support Ticket Template is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.support-ticket-template@1.0.2.zip",
+          "sha256": "abc23ce059a8d281941e49b34ad366b4974b9a115c6d03a76c58254a40ca5b06",
+          "size": 1047,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.tagline-builder": {
+      "name": "Tagline Builder",
+      "description": "Tagline Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.tagline-builder@1.0.2.zip",
+          "sha256": "8d5ac37bf9fa12d2d1fb0cac2796c5db711440f465dc1eeb83262752fbe94c1a",
+          "size": 1053,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.task-checklist-builder": {
+      "name": "Task Checklist Builder",
+      "description": "Task Checklist Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.task-checklist-builder@1.0.2.zip",
+          "sha256": "0f5479747df0456f8d1b1cc8055540c56cd25447f08f27d9b8c4e7bc6ac55cf6",
+          "size": 1078,
           "dependencies": {
             "valenced.api": {
               "version": ">=1 <2"
@@ -1117,7 +3371,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.text-replacer@1.0.2.zip",
-          "sha256": "7e4ebfe6094b05a40288ca4ccba10276895b4de6042e01f80e9ea217fbd028b9",
+          "sha256": "3d19060aee2ff3e0b577172f2e2b10927babc41b539bc509b6902c2b7578cabe",
           "size": 1078,
           "dependencies": {
             "valenced.api": {
@@ -1140,7 +3394,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.text-reverser@1.0.2.zip",
-          "sha256": "10be6f1082231ff0f13f11f61f3353dee7cfbb36e98ad7479ee4a7fe6db7a8ca",
+          "sha256": "01c1225d09cffea5083782a6c74aeeb4037c654e9a6d2243208c71e0b2c4304f",
           "size": 848,
           "dependencies": {
             "valenced.api": {
@@ -1163,8 +3417,31 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.text-stats@1.0.2.zip",
-          "sha256": "8d58a0e9b1a2bfbf8a50a8cb9d16dedf6ba5d60079f06cb3a5860d4064b75716",
+          "sha256": "ffd8734ad4d7bd1908d713fc28ff9c416f06a02a84bb5366925d2402735529df",
           "size": 991,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.thank-you-note-builder": {
+      "name": "Thank You Note Builder",
+      "description": "Thank You Note Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.thank-you-note-builder@1.0.2.zip",
+          "sha256": "3ace93a9358c7240013f852a50b72b1d094a1922f8245a258eafa858743cbf1d",
+          "size": 1088,
           "dependencies": {
             "valenced.api": {
               "version": ">=1 <2"
@@ -1186,7 +3463,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.timestamp-generator@1.0.2.zip",
-          "sha256": "f12e6fa74f56bd0351106f7ac6950a37dbe10d6ef73c36d712b12217900c4b49",
+          "sha256": "8e6e687bc8f22f070713c1cc23a4863f5f96574cc854053ddca2c9e6c1d8b4ca",
           "size": 961,
           "dependencies": {
             "valenced.api": {
@@ -1209,8 +3486,77 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.timestamp-locale-tool@1.0.2.zip",
-          "sha256": "0250c28cb5354105e47e58757d2002016313c62d08ca9bd6203f8480c3cce5d5",
+          "sha256": "d3cd4d647603002f061bf19497f4d3bcdf7fbf9c354cde022667c502f816a258",
           "size": 1067,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.tournament-planner": {
+      "name": "Tournament Planner",
+      "description": "Tournament Planner is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.tournament-planner@1.0.2.zip",
+          "sha256": "69919ca8f65e06f71cb5fc5fbf3181690b603cbe1a2021a1445889d9829d433e",
+          "size": 1074,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.travel-itinerary-formatter": {
+      "name": "Travel Itinerary Formatter",
+      "description": "Travel Itinerary Formatter is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.travel-itinerary-formatter@1.0.2.zip",
+          "sha256": "a95ecf54a779276ce0890d518fa6461642655ad3cdb20bfa01ce4db09b611180",
+          "size": 1088,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.trip-recap-builder": {
+      "name": "Trip Recap Builder",
+      "description": "Trip Recap Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.trip-recap-builder@1.0.2.zip",
+          "sha256": "947d1348853bcd6499b198fc00edc8336a9280525b468e2a30c853dc7f2d2ee6",
+          "size": 1113,
           "dependencies": {
             "valenced.api": {
               "version": ">=1 <2"
@@ -1232,7 +3578,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.unix-time-converter@1.0.2.zip",
-          "sha256": "ebeb5e809ca5817431d6c7147399c1dc0533404615e54a980a80ee07f8e48365",
+          "sha256": "0582ad6125878f8b465117d2f806da40fbf6718f10c2489a744551e7c1adb019",
           "size": 968,
           "dependencies": {
             "valenced.api": {
@@ -1255,8 +3601,31 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.url-encoder@1.0.2.zip",
-          "sha256": "1c1fd53f3ae450785c5e5e396afcbcbf525f121f751dc6ec5a2b3acb59650775",
+          "sha256": "068195a1e8256c6d8ed39ad1b5bf6faf7883da51185af55fd052ba74aef50911",
           "size": 837,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.username-idea-builder": {
+      "name": "Username Idea Builder",
+      "description": "Username Idea Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.username-idea-builder@1.0.2.zip",
+          "sha256": "bf69a1489c4a09fbff24febf748834aeb828dbc5fd86c5eebafdf88dda6161c3",
+          "size": 1071,
           "dependencies": {
             "valenced.api": {
               "version": ">=1 <2"
@@ -1278,8 +3647,123 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.uwu-text-converter@1.0.2.zip",
-          "sha256": "c941d2a006d01d60895c3de7ab7c065c19511ae8b3f73db119202ec0529f3f36",
+          "sha256": "3c684d24e981700236461f9ea765c05ac1e7ad10641e4bdf5a9ecaea432dc62f",
           "size": 976,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.volunteer-signup-builder": {
+      "name": "Volunteer Signup Builder",
+      "description": "Volunteer Signup Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.volunteer-signup-builder@1.0.2.zip",
+          "sha256": "c38f4b2d78e2e06781bef4fb71f11078c95a51460b7f43990ba108c403c9001e",
+          "size": 1049,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.weekly-challenge-planner": {
+      "name": "Weekly Challenge Planner",
+      "description": "Weekly Challenge Planner is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.weekly-challenge-planner@1.0.2.zip",
+          "sha256": "b47090eaab26aaf34fc12448ebd81fe28a90bb88359aaf61d7f6f067fc2d8ace",
+          "size": 1069,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.weekly-review-builder": {
+      "name": "Weekly Review Builder",
+      "description": "Weekly Review Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.weekly-review-builder@1.0.2.zip",
+          "sha256": "e99610d9f54dd133e584c757b8c0fcfa49d681b922a51b3a21133ab3a6476af9",
+          "size": 1110,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.welcome-dm-builder": {
+      "name": "Welcome DM Builder",
+      "description": "Welcome DM Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.welcome-dm-builder@1.0.2.zip",
+          "sha256": "002d546efa939e0faa0a6d15d9ad5d1c7ac326a3d777b2a627f81d0d725e06ae",
+          "size": 1031,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.welcome-message-builder": {
+      "name": "Welcome Message Builder",
+      "description": "Welcome Message Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.welcome-message-builder@1.0.2.zip",
+          "sha256": "82a2ffd714c738194156c75ee69f24d7fbe395c296c67774d7f41d4176e36251",
+          "size": 1073,
           "dependencies": {
             "valenced.api": {
               "version": ">=1 <2"
@@ -1301,7 +3785,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.whitespace-cleaner@1.0.2.zip",
-          "sha256": "6974508b7894143257478f05a17a7a5c7f6761255d5626621f08dc5101238833",
+          "sha256": "da5a7377e9358b5eee0993219c2c916e30a13b3f80c13de6cc4d3ba3b921b054",
           "size": 894,
           "dependencies": {
             "valenced.api": {
@@ -1324,8 +3808,31 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.word-frequency@1.0.2.zip",
-          "sha256": "41f35527ec85e9d2e1bd17286d8c211368e63db2435cb8946bb30ff852ed629f",
+          "sha256": "7d60cca7edd7be113d769e8ff537b7c42887c641ef1f58fe3d8eb71006832ce9",
           "size": 987,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "niche.workout-log-builder": {
+      "name": "Workout Log Builder",
+      "description": "Workout Log Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+      "author": "Niche Games",
+      "channels": {
+        "latest": "1.0.2"
+      },
+      "versions": {
+        "1.0.2": {
+          "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.workout-log-builder@1.0.2.zip",
+          "sha256": "34f726b2eda7bafcb4079c25c99f9e8a55056e94d6a06383cb7175318c29c588",
+          "size": 1091,
           "dependencies": {
             "valenced.api": {
               "version": ">=1 <2"
