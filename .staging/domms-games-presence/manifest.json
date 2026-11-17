@@ -14,6 +14,10 @@
     }
   },
   "dist": {
-    "script": "index.js"
+    "script": "index.js",
+    "android": {
+      "path": "android/plugin.jar",
+      "class": "com.domms.presence.DommsGamesPresence"
+    }
   }
 }
