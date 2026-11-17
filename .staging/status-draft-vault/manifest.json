@@ -2,7 +2,7 @@
   "format": 1,
   "id": "niche.status-draft-vault",
   "name": "Custom Status Drafts",
-  "description": "Draft a custom Discord status line before setting it in the app.",
+  "description": "Save reusable custom status text presets locally. Copy them into Discord when needed.",
   "author": "Niche Games",
   "version": "1.0.2",
   "dependencies": {
