@@ -1,0 +1,19 @@
+{
+  "format": 1,
+  "id": "niche.server-notes-scratchpad",
+  "name": "Server Notes Scratchpad",
+  "description": "A local notes scratchpad for server reminders. Notes are not automatically linked to a selected server.",
+  "author": "Niche Games",
+  "version": "1.0.2",
+  "dependencies": {
+    "valenced.api": {
+      "version": ">=1 <2"
+    },
+    "discord": {
+      "version": "*"
+    }
+  },
+  "dist": {
+    "script": "index.js"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "format": 1,
+  "id": "niche.uwu-text-converter",
+  "name": "Uwu Text Converter",
+  "description": "Convert pasted text into an uwu-style version. Preview only; it does not intercept messages you send.",
+  "author": "Niche Games",
+  "version": "1.0.2",
+  "dependencies": {
+    "valenced.api": {
+      "version": ">=1 <2"
+    },
+    "discord": {
+      "version": "*"
+    }
+  },
+  "dist": {
+    "script": "index.js"
+  }
+}

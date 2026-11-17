@@ -1,0 +1,4 @@
+(function(e,t){Object.defineProperty(e,Symbol.toStringTag,{value:`Module`});function n(){var[e,n]=valenced.react.React.useState(``),r=e.split(/\r?\n/).map(function(e,t){return e.trim()?t+1+`. `+e.trim():``}).filter(Boolean).join(`
+`)||`Add one status per line.`;return/*#__PURE__*/ (0,t.jsxs)(valenced.components.Page,{children:[/*#__PURE__*/ (0,t.jsx)(valenced.discord.design.Design.Text,{children:`Prepare multiple custom status lines to copy into Discord. Does not change account status automatically.`}),/*#__PURE__*/ (0,t.jsx)(valenced.discord.design.Design.TextInput,{label:`Status presets`,placeholder:`Gaming
+At work
+Away for a bit`,defaultValue:``,onChange:n}),/*#__PURE__*/ (0,t.jsx)(valenced.discord.design.Design.Text,{children:String(r)})]})}return e.default=plugin({SettingsComponent:n}),e})({},valenced.react.ReactJSXRuntime);

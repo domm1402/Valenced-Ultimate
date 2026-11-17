@@ -1,0 +1,19 @@
+{
+  "format": 1,
+  "id": "niche.gif-tag-organizer",
+  "name": "GIF Tag Organizer",
+  "description": "Create a tagged list of GIF links for organizing your own collection. Does not modify Discord GIF search.",
+  "author": "Niche Games",
+  "version": "1.0.2",
+  "dependencies": {
+    "valenced.api": {
+      "version": ">=1 <2"
+    },
+    "discord": {
+      "version": "*"
+    }
+  },
+  "dist": {
+    "script": "index.js"
+  }
+}

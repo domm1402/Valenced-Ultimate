@@ -1,0 +1,3 @@
+(function(e,t){Object.defineProperty(e,Symbol.toStringTag,{value:`Module`});function n(){var[e,n]=valenced.react.React.useState(``),r=e.trim()?`୨୧ `+e.trim()+` ୨୧
+♡ `+e.trim()+` ♡
+✿ `+e.trim()+` ✿`:`Enter a name to preview variants.`;return/*#__PURE__*/ (0,t.jsxs)(valenced.components.Page,{children:[/*#__PURE__*/ (0,t.jsx)(valenced.discord.design.Design.Text,{children:`Generate pastel-style name variants for a profile preview. Does not recolor other users in Discord.`}),/*#__PURE__*/ (0,t.jsx)(valenced.discord.design.Design.TextInput,{label:`Name`,placeholder:`Your name`,defaultValue:``,onChange:n}),/*#__PURE__*/ (0,t.jsx)(valenced.discord.design.Design.Text,{children:String(r)})]})}return e.default=plugin({SettingsComponent:n}),e})({},valenced.react.ReactJSXRuntime);

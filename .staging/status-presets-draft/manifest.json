@@ -1,0 +1,19 @@
+{
+  "format": 1,
+  "id": "niche.status-presets-draft",
+  "name": "Status Presets Draft",
+  "description": "Prepare multiple custom status lines to copy into Discord. Does not change account status automatically.",
+  "author": "Niche Games",
+  "version": "1.0.2",
+  "dependencies": {
+    "valenced.api": {
+      "version": ">=1 <2"
+    },
+    "discord": {
+      "version": "*"
+    }
+  },
+  "dist": {
+    "script": "index.js"
+  }
+}

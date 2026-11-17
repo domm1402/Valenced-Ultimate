@@ -1,0 +1,19 @@
+{
+  "format": 1,
+  "id": "niche.message-splitter",
+  "name": "Message Splitter",
+  "description": "Split a long draft into chunks that fit a 2,000-character message limit. Does not bypass upload or server limits.",
+  "author": "Niche Games",
+  "version": "1.0.2",
+  "dependencies": {
+    "valenced.api": {
+      "version": ">=1 <2"
+    },
+    "discord": {
+      "version": "*"
+    }
+  },
+  "dist": {
+    "script": "index.js"
+  }
+}

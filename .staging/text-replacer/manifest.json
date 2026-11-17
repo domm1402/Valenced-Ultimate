@@ -1,0 +1,19 @@
+{
+  "format": 1,
+  "id": "niche.text-replacer",
+  "name": "Text Replacer",
+  "description": "Apply find=>replace rules to pasted text. One rule per line; local text tool.",
+  "author": "Niche Games",
+  "version": "1.0.2",
+  "dependencies": {
+    "valenced.api": {
+      "version": ">=1 <2"
+    },
+    "discord": {
+      "version": "*"
+    }
+  },
+  "dist": {
+    "script": "index.js"
+  }
+}

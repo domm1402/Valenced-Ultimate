@@ -1,0 +1,19 @@
+{
+  "format": 1,
+  "id": "niche.timestamp-locale-tool",
+  "name": "Timestamp Locale Tool",
+  "description": "Preview a date in a chosen locale and create a Discord timestamp tag. Does not alter Discord globally.",
+  "author": "Niche Games",
+  "version": "1.0.2",
+  "dependencies": {
+    "valenced.api": {
+      "version": ">=1 <2"
+    },
+    "discord": {
+      "version": "*"
+    }
+  },
+  "dist": {
+    "script": "index.js"
+  }
+}

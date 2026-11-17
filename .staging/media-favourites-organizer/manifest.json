@@ -1,0 +1,19 @@
+{
+  "format": 1,
+  "id": "niche.media-favourites-organizer",
+  "name": "Media Favourites Organizer",
+  "description": "Organize pasted media URLs into a simple list. Does not fetch or download media.",
+  "author": "Niche Games",
+  "version": "1.0.2",
+  "dependencies": {
+    "valenced.api": {
+      "version": ">=1 <2"
+    },
+    "discord": {
+      "version": "*"
+    }
+  },
+  "dist": {
+    "script": "index.js"
+  }
+}

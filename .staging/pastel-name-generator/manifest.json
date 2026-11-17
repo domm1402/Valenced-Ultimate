@@ -1,0 +1,19 @@
+{
+  "format": 1,
+  "id": "niche.pastel-name-generator",
+  "name": "Pastel Name Generator",
+  "description": "Generate pastel-style name variants for a profile preview. Does not recolor other users in Discord.",
+  "author": "Niche Games",
+  "version": "1.0.2",
+  "dependencies": {
+    "valenced.api": {
+      "version": ">=1 <2"
+    },
+    "discord": {
+      "version": "*"
+    }
+  },
+  "dist": {
+    "script": "index.js"
+  }
+}

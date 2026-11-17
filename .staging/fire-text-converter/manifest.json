@@ -1,0 +1,19 @@
+{
+  "format": 1,
+  "id": "niche.fire-text-converter",
+  "name": "Fire Text Converter",
+  "description": "Create a fire-style text draft using emoji decoration. Preview only.",
+  "author": "Niche Games",
+  "version": "1.0.2",
+  "dependencies": {
+    "valenced.api": {
+      "version": ">=1 <2"
+    },
+    "discord": {
+      "version": "*"
+    }
+  },
+  "dist": {
+    "script": "index.js"
+  }
+}
