@@ -2,7 +2,7 @@
   "format": 1,
   "id": "domms.games.presence",
   "name": "Game Spoofing",
-  "description": "Choose a game, customise its Discord Rich Presence activity and elapsed timer, then publish or clear it through the supported bridge.",
+  "description": "Eskimo Rich Presence engine with multiple activities, timers, schedules, live previews, SoundCloud support, and 44 game templates with artwork.",
   "author": "MarkLong0467 / Niche Games",
   "version": "2.1.3",
   "dependencies": {
