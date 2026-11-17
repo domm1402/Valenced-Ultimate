@@ -1,14 +1,14 @@
 # Valenced Ultimate
 
-> **Feature rebuild in progress:** the current collection includes mock previews and utility filler. See [REBUILD.md](REBUILD.md) for the useful-plugin scope and hard API limits. Do not treat Rich Presence Builder or Nitro Preview as live features.
+> **Valenced Ultimate** is an expanding collection of practical Valenced plugins: Discord-focused quality-of-life tools, local organisers, text and media helpers, developer utilities, and optional native integrations. Each plugin is packaged separately. Features that require unsupported Discord APIs are labelled honestly, and paid/server-side entitlements are not bypassed.
 
-A collection of 48 standalone plugins for Valenced, the mobile Discord client modification.
+A growing catalogue of 58 standalone plugins for Valenced, the mobile Discord client modification.
 
 ## Add this repository in Valenced
 
 1. Open Settings → Valenced → Plugins.
 2. Tap the repository settings gear.
-3. Add this URL: https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/index.json
+3. Add this URL: https://domm1402.github.io/Valenced-Ultimate/index.json
 4. Return to the plugin browser and install the plugins you want.
 
 GitHub Actions builds the plugins, packages individual ZIP files, generates the repository index, and publishes everything to GitHub Pages.
@@ -17,9 +17,9 @@ GitHub Actions builds the plugins, packages individual ZIP files, generates the 
 
 This repository now includes **Valenced Plugin Studio**, an Android app for writing your own Valenced plugins. It now includes an offline TypeScript-to-JavaScript compiler, beginner templates, syntax error messages, manifest validation, local draft saving, ZIP export, and built-in help/tips. Compilation transpiles source code; projects importing external packages still need the Valenced CLI to bundle dependencies.
 
-To get the APK, open the [Actions tab](https://github.com/tiktoknotificationtroll-wq/Valenced-Ultimate/actions/workflows/plugin-studio-apk.yml), run **Build Plugin Studio APK**, then download the **valenced-plugin-studio-apk** artifact from the completed run. See [PLUGIN-STUDIO.md](PLUGIN-STUDIO.md) for details. The app creates source projects; exported plugins still need to be built with the Valenced plugin CLI before installation.
+To get the APK, open the [Actions tab](https://github.com/domm1402/Valenced-Ultimate/actions/workflows/plugin-studio-apk.yml), run **Build Plugin Studio APK**, then download the **valenced-plugin-studio-apk** artifact from the completed run. See [PLUGIN-STUDIO.md](PLUGIN-STUDIO.md) for details. The app creates source projects; exported plugins still need to be built with the Valenced plugin CLI before installation.
 
-## The 48 plugins
+## Plugin catalogue
 
 | # | Plugin | What it does |
 |---:|---|---|
@@ -44,7 +44,7 @@ To get the APK, open the [Actions tab](https://github.com/tiktoknotificationtrol
 | 19 | Discord Date Tag Builder | Create full and relative Discord timestamp tags. |
 | 20 | Activity Text Templates | Draft game-activity details and state text. |
 
-### Added utility plugins (26, legacy)
+### Additional utility plugins
 
 These are retained for compatibility but are not the focus of the feature rebuild.
 
