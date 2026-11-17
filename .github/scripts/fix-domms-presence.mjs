@@ -6,10 +6,10 @@ await mkdir(dir + '/js', { recursive: true })
 const manifest = {
   format: 1,
   id: 'domms.games.presence',
-  name: 'Domms Games Presence',
-  description: 'Select a Discord game and save a Rich Presence activity profile. Live publishing requires a supported companion bridge.',
+  name: 'Game Spoofing',
+  description: 'Choose a game, customise its Discord Rich Presence activity and elapsed timer, then publish or clear it through the supported bridge.',
   author: 'Niche Games',
-  version: '1.0.2',
+  version: '1.1.0',
   dependencies: {
     'valenced.api': { version: '>=1 <2' },
     discord: { version: '*' },
@@ -124,5 +124,5 @@ export default plugin<{ jsonStorage: PresenceSettings }>({
 `
 
 await writeFile(dir + '/manifest.json', JSON.stringify(manifest, null, 2) + '\\n')
-await writeFile(dir + '/js/index.tsx', source)
+// Keep the generated Game Spoofing source intact. The legacy preview source above is retained only for historical reference.
 console.log('Installed safe Domms Games Presence source overlay.')
