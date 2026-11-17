@@ -22,7 +22,7 @@ std::string fromJava(JNIEnv* env, jstring value) {
 }
 
 extern "C" JNIEXPORT jboolean JNICALL
-Java_com_domms_presence_PresenceNative_update(JNIEnv* env, jobject, jstring appIdValue, jstring gameNameValue, jstring detailsValue, jstring stateValue) {
+Java_com_domms_presence_PresenceNative_update(JNIEnv* env, jobject, jstring appIdValue, jstring gameNameValue, jstring detailsValue, jstring stateValue, jstring imageKeyValue, jlong startTime) {
     std::lock_guard<std::mutex> lock(clientMutex);
     try {
         const auto appId = std::stoull(fromJava(env, appIdValue));
@@ -34,9 +34,18 @@ Java_com_domms_presence_PresenceNative_update(JNIEnv* env, jobject, jstring appI
         const auto gameName = fromJava(env, gameNameValue);
         const auto details = fromJava(env, detailsValue);
         const auto state = fromJava(env, stateValue);
-        if (!gameName.empty()) activity.SetName(gameName);
-        if (!details.empty()) activity.SetDetails(details);
+        const auto imageKey = fromJava(env, imageKeyValue);
+        const auto activityDetails = details.empty() ? gameName : gameName + " | " + details;
+        if (!activityDetails.empty()) activity.SetDetails(activityDetails);
         if (!state.empty()) activity.SetState(state);
+        if (!imageKey.empty()) {
+            discordpp::ActivityAssets assets{};
+            assets.SetLargeImage(imageKey);
+            activity.SetAssets(assets);
+        }
+        discordpp::ActivityTimestamps timestamps{};
+        timestamps.SetStart(static_cast<uint64_t>(startTime > 0 ? startTime : std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count()));
+        activity.SetTimestamps(timestamps);
         std::mutex resultMutex;
         std::condition_variable resultReady;
         bool completed = false;
