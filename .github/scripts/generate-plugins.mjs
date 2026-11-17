@@ -129,7 +129,7 @@ const catalogSource = [
 const presenceSource = [
   "import { Design } from '@valenced/discord/design'",
   "import Page from '@valenced/components/Page'",
-  "import { useMemo, useState } from 'react'",
+  "import { useState } from 'react'",
   "",
   "const APPLICATION_ID = '1571988102912675900'",
   "type Template = { name: string; details: string; state: string; imageKey: string }",
@@ -187,7 +187,7 @@ const presenceSource = [
   "  SettingsComponent: RichPresenceSettings,",
   "})",
   ""
-].join('\\n')
+].join('\n')
 const fakeNitroSource = [
   "import { getModules } from '@valenced/modules/finders'",
   "import { withProps } from '@valenced/modules/finders/filters'",
