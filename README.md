@@ -2,7 +2,7 @@
 
 > **Valenced Ultimate** is an expanding collection of practical Valenced plugins: Discord-focused quality-of-life tools, local organisers, text and media helpers, developer utilities, and optional native integrations. Each plugin is packaged separately. Features that require unsupported Discord APIs are labelled honestly, and paid/server-side entitlements are not bypassed.
 
-A growing catalogue of 58 standalone plugins for Valenced, the mobile Discord client modification.
+A catalogue of 168 standalone plugins for Valenced, including 110 new practical Discord community, gaming, planning, moderation-drafting and productivity helpers. No new encoding utilities are included.
 
 ## Add this repository in Valenced
 
@@ -70,3 +70,17 @@ These are interactive tools that calculate or transform the text you enter. Pass
 Requires Node.js 22.18 or newer. Run: npm install, node .github/scripts/generate-plugins.mjs, npm run build, node .github/scripts/package-plugins.mjs, then npm run generate-index with the pool directory and GitHub Pages base URL.
 
 The plugin definitions live in .github/scripts/generate-plugins.mjs. The Domms Games Presence implementation is applied by .github/scripts/fix-domms-presence.mjs after generation. GitHub Actions then builds and publishes the generated Valenced plugin folders.
+
+
+### 110 new practical helpers
+
+The latest expansion adds 110 standalone local tools across these areas:
+
+- **Community and server:** welcome/farewell drafts, announcements, polls, giveaways, rules, FAQs, onboarding, channel directories, role descriptions, event calendars and maintenance checklists.
+- **Messaging and profiles:** reusable replies, apology and de-escalation drafts, reminders, status drafts, bio helpers, creator profiles and link directories.
+- **Gaming:** game-night and LFG planners, tournament schedules, match reports, scoreboards, session logs, backlogs, clip captions and stream schedules.
+- **Moderation support:** private staff notes, appeal drafts, incident timelines, handovers, permission reviews and safety checklists. These tools prepare text; they do not perform moderation actions.
+- **Planning and productivity:** meeting agendas, notes, action items, decision logs, task boards, priorities, study plans, routines, travel lists, budgets and personal notes.
+- **Plugin development support:** README and release-note drafts, install and troubleshooting guides, test plans, QA checklists, roadmaps, support replies and release readiness.
+
+These additions are local drafting and formatting tools. They do not claim to send messages, grant account entitlements, or modify server configuration. Existing encoding-focused utilities were not expanded.
