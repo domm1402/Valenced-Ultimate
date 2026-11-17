@@ -1,8 +1,8 @@
 {
   "format": 1,
   "id": "domms.games.presence",
-  "name": "Domms Games Presence",
-  "description": "Select a Discord game, save its application ID and configure an activity preview.",
+  "name": "Game Spoofing",
+  "description": "Select a game, customise its activity details and elapsed timer, and publish or clear Discord Rich Presence.",
   "author": "Niche Games",
   "version": "1.0.0",
   "dependencies": {
