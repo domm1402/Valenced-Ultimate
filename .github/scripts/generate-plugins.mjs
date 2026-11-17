@@ -153,7 +153,7 @@ const presenceSource = [
   '  return <Page>',
   '    <Design.Text>Configure and save your activity profile. This safe build does not load native Discord SDK code, avoiding the unverified native startup path.</Design.Text>',
   '    <Design.TextInput label="Search or enter a game" placeholder="Minecraft, Fortnite, Roblox…" defaultValue={game} onChange={setGame} />',
-  '    {matches.map((g, i) => <Design.Button key={g.id ?? g.name + i} text={g.name + " · " + g.id} onPress={() => { setGame(g.name); setApplicationId(g.id ?? "1571988102912675900"); setSelectedIcon(g.icon ?? null); }} />)}',
+  '    {matches.map((g, i) => <Design.Button key={g.id ?? g.name + i} text={g.name + " · " + g.id} onPress={() => { setGame(g.name); setApplicationId(g.id ?? "1571988102912675900"); }} />)}',
   '    <Design.TextInput label="Selected game\'s Discord Application ID" placeholder="Auto-filled when you select a catalog game" defaultValue={applicationId} onChange={setApplicationId} />',
   '    <Design.Text>Pick a listed game to fill its application ID. For a custom activity, use your ID 1571988102912675900. You can edit the ID manually. Game icons are omitted in this safe build.</Design.Text>',
   '    <Design.TextInput label="Details" placeholder="In a ranked match" defaultValue={details} onChange={setDetails} />',
