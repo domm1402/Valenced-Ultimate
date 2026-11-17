@@ -25,7 +25,7 @@ To get the APK, open the [Actions tab](https://github.com/domm1402/Valenced-Ulti
 |---:|---|---|
 | 1 | Fake Nitro Preview | Local Nitro-style profile mock-up. It does not unlock paid features. |
 | 2 | Discord Game Catalog | Searches Discord's public detectable-games catalog and shows game names and application IDs. |
-| 3 | Rich Presence Builder | Pick a game from that catalog and draft a Playing activity card with details and state. Preview only. |\n| 4 | Game Spoofing | Select a game, customise its activity and elapsed timer, and publish or clear Rich Presence through the companion bridge. |
+| 3 | Rich Presence Builder | Pick a game from that catalog and draft a Playing activity card with details and state. Preview only. |\n| 4 | Game Spoofing | Eskimo Rich Presence engine with multiple activities, timers, schedules, live previews, SoundCloud support, and 44 game templates with artwork. |
 | 4 | Profile Card Preview | Preview a display name and profile-card text. |
 | 5 | Badge Gallery Preview | Make a local mock badge row. These are not official Discord badges. |
 | 6 | Custom Status Drafts | Draft custom status text. |
@@ -62,14 +62,14 @@ These are interactive tools that calculate or transform the text you enter. Pass
 
 - Fake Nitro Preview is only a cosmetic mock-up. It does not grant Nitro, bypass payment, enable server-side emoji permissions, or change account entitlements.
 - Discord Game Catalog reads Discord's public detectable-games list. A catalog entry gives you the listed name and application ID; it is not a Discord verification badge.
-- Rich Presence Builder lets you search and select a game from that list, then preview the activity card. Valenced's documented mobile plugin API does not expose a supported publisher for a user's game activity. Game Spoofing therefore saves a game/activity profile without loading an unverified native SDK or sending unofficial Gateway presence packets. Live publishing requires a supported companion bridge.
+- Game Spoofing is based on the Rich Presence implementation from MarkLong0467's EskimoPlugins repository. It uses Valenced's Discord activity internals, not the previous custom native Social SDK bridge. Game templates prefill activity text and game artwork; the full editor supports multiple profiles, timers, schedules, buttons, image links, and SoundCloud.
 - The plugins do not ask for your Discord password or authentication token and do not collect telemetry.
 
 ## Development
 
 Requires Node.js 22.18 or newer. Run: npm install, node .github/scripts/generate-plugins.mjs, npm run build, node .github/scripts/package-plugins.mjs, then npm run generate-index with the pool directory and GitHub Pages base URL.
 
-The plugin definitions live in .github/scripts/generate-plugins.mjs. The Game Spoofing implementation is applied by .github/scripts/fix-domms-presence.mjs after generation. GitHub Actions then builds and publishes the generated Valenced plugin folders.
+The plugin definitions live in .github/scripts/generate-plugins.mjs. Game Spoofing sources are vendored from Eskimo Rich Presence in vendor/eskimo-rich-presence-sources.json and copied into the generated plugin folder. GitHub Actions then builds and publishes the generated Valenced plugin folders.
 
 
 ### 110 new practical helpers
