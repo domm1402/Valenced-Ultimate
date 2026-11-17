@@ -131,7 +131,6 @@ const presenceSource = [
   "import Page from '@valenced/components/Page'",
   "import { useEffect, useState } from 'react'",
   "",
-  "}",
   '',
   'type PresenceSettings = { game: string; applicationId: string; details: string; state: string }',
   'type Game = { name: string; id?: string; icon?: string | null; aliases?: string[] }',
