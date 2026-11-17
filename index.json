@@ -13,8 +13,8 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/domms.games.presence@1.0.1.zip",
-          "sha256": "29a90d513ac2386f671cbbc20dcd583e227043c8b1faf588e8da2a952b730e65",
-          "size": 1942,
+          "sha256": "897cd4e7dac3d02a11a95a3b0863a7d8cf176e4c52328eb12065db0d63465c90",
+          "size": 18582035,
           "dependencies": {
             "valenced.api": {
               "version": ">=1 <2"
@@ -36,7 +36,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.activity-text-templates@1.0.1.zip",
-          "sha256": "9bb0606ab28ea8532ad9747eeb2e238149726a246ece34f87bcb9b79cc1295bc",
+          "sha256": "cc56c2257d8b3ed6b7a48b715641701db4f0dc0cdcc2c87fc812a80a6d2696e7",
           "size": 969,
           "dependencies": {
             "valenced.api": {
@@ -59,7 +59,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.badge-gallery-preview@1.0.1.zip",
-          "sha256": "24b7e4c5973775eb27df18451c46030ccce0cb0178c7ae2250470bdf4926d867",
+          "sha256": "3d8ad7ef7f2034c4fee74cc746f1d51d8b43260289baa38d26027891770b69cb",
           "size": 1029,
           "dependencies": {
             "valenced.api": {
@@ -82,7 +82,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.base64-decoder@1.0.1.zip",
-          "sha256": "09c07b61d7f5e3f6686cff78a9b5281246cdc3ace6320d63f9d0ecec94197c5b",
+          "sha256": "656517da1d43a01d0c6a366f3f580675ad251395e8b5c8a8d6248943dee9080d",
           "size": 899,
           "dependencies": {
             "valenced.api": {
@@ -105,7 +105,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.base64-tool@1.0.1.zip",
-          "sha256": "42f0a7ac31c5adbb333cfac7994bb921accdb8c6b99d6f277395750937162611",
+          "sha256": "9cf30387f1308bb9862ac7d0b488ca1d55a72ed49d981dcfe0c26baf164fc745",
           "size": 840,
           "dependencies": {
             "valenced.api": {
@@ -128,7 +128,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.binary-converter@1.0.1.zip",
-          "sha256": "be0698c8289b98d14ca92edb748d223210ce92ca4520eb9148f98bf2aa115c80",
+          "sha256": "ca7260579ca49460efe762c310c0b511c1bb630f24398248fb24bd3f22a3a945",
           "size": 899,
           "dependencies": {
             "valenced.api": {
@@ -151,7 +151,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.bio-formatter@1.0.1.zip",
-          "sha256": "17e3d21a644970e0d3d1667d0f0f3c45474d1581d97235a8c37ddd8acefee930",
+          "sha256": "77f56a7dd18215d1eb752978984cd29f3e25c9fd5acbad91935af9c9c4761da5",
           "size": 952,
           "dependencies": {
             "valenced.api": {
@@ -174,7 +174,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.case-converter@1.0.1.zip",
-          "sha256": "8be6f040a7feb000dd66e58b9738e75e2cf59715f6c8203f415c44134b6e2916",
+          "sha256": "a22d7f9237d9145895a0136f6dfcee1323331b8e58def7e9ad9214f6364067c7",
           "size": 956,
           "dependencies": {
             "valenced.api": {
@@ -197,7 +197,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.character-counter@1.0.1.zip",
-          "sha256": "fe827ba20b8bca3a949e1685de8cf1f2840a4db49e29890a626f2ccbcc132d4b",
+          "sha256": "380947af54d28bc9f72b1c3a2c14d000c0c2e51e79d14667839c8037f68147a9",
           "size": 950,
           "dependencies": {
             "valenced.api": {
@@ -220,7 +220,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.css-gradient-builder@1.0.1.zip",
-          "sha256": "8a88cf8d3a874642db1f79459f52f1adf6043d73fddad606a38cbbb53a646b80",
+          "sha256": "28dc4632c5e94fea60725372a9a904468efe512bb61ab12ebce9281fc0297885",
           "size": 1034,
           "dependencies": {
             "valenced.api": {
@@ -243,7 +243,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.date-tag-builder@1.0.1.zip",
-          "sha256": "6f3ef6b95d8255fea659445b09b0158d02ea030b97acc5406a4d455889813edf",
+          "sha256": "d0d7f2537131de45b1dadc2cc0e4be35e123d2a8927a815b4aac525cb803f49e",
           "size": 1001,
           "dependencies": {
             "valenced.api": {
@@ -266,7 +266,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.discord-game-catalog@1.0.1.zip",
-          "sha256": "09ef0156e4458c681b16d322703ce581f568a1b79ca71b385472b4a5b7569607",
+          "sha256": "0bb4312befe4a0d8674ad5b0ce3714fa0491645b5a4a83708faace546b32d169",
           "size": 1409,
           "dependencies": {
             "valenced.api": {
@@ -289,7 +289,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.duplicate-line-remover@1.0.1.zip",
-          "sha256": "3b4cc8a120bb7f4596dea77ca61f6d90c1e2015ce38922737e0a61798e972d3f",
+          "sha256": "dfbfe0975a5873b93c51b2aea17408743cd99eeab3b8ade1b2f656f1fd542d56",
           "size": 906,
           "dependencies": {
             "valenced.api": {
@@ -312,7 +312,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.embed-preview@1.0.1.zip",
-          "sha256": "1080596665b4c223fdaf56bdd4ca166960b3c09267cf42dae4246f156c233a4f",
+          "sha256": "bb97e3c2e98405d38476d1505172f23ebadec113be5352ddf2a5b4c0958b9006",
           "size": 959,
           "dependencies": {
             "valenced.api": {
@@ -335,7 +335,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.emoji-previewer@1.0.1.zip",
-          "sha256": "021028b457c3af65fc26eaef88091746fbbf5fbdc87adfe96988a586c8d40664",
+          "sha256": "b12cbac348cf7275d86e0f3416af031abf64f7969ec66da45eef6815f3bec4ce",
           "size": 932,
           "dependencies": {
             "valenced.api": {
@@ -358,7 +358,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.emoji-remover@1.0.1.zip",
-          "sha256": "602a0c065bc1feb2bdfdbafb997ee0f8a4f64d3774b81ff00746f43a3dc3fe3d",
+          "sha256": "ec62acebea76c8f78f8d9821dfd4fb7492fefe652f7cfb2a5a23e81cb076f6f1",
           "size": 908,
           "dependencies": {
             "valenced.api": {
@@ -381,7 +381,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.fake-nitro-preview@1.0.1.zip",
-          "sha256": "83cbf0d84d2e48ef54ff4cd89da5e8c9fd96b73ec55ab49d5311840e7cb4b2cb",
+          "sha256": "26ea697e1e9aa5af1425b29b56d96a6c989871a1d13d2994155f577cd99daf38",
           "size": 1001,
           "dependencies": {
             "valenced.api": {
@@ -404,7 +404,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.fake-nitro@1.0.1.zip",
-          "sha256": "e9d2d83c7e19487aa101b6bc6af75d40f05d23d507f54fd9d3ac04006bce1863",
+          "sha256": "c01d6d35f27e7c481db406e75b55b2c6294b4c2d0242c33e9db17afc247d999a",
           "size": 1250,
           "dependencies": {
             "valenced.api": {
@@ -427,7 +427,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.file-name-cleaner@1.0.1.zip",
-          "sha256": "0295202d17fd57e479cae81c7c42e476a1896438f82ef68f63970b61fae45e96",
+          "sha256": "a22ac2a22a32555347c366bc88b1257f3e2df4062de6cb123f18d5f5d5761799",
           "size": 964,
           "dependencies": {
             "valenced.api": {
@@ -450,7 +450,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.hex-color-converter@1.0.1.zip",
-          "sha256": "c9ec3dd5764d9ab4318518817dfb660a38fbf7a6b0109dbb7326ae3d97aeeef7",
+          "sha256": "3e7135f7440531b6300327c0440fca143b6f36bcfe8c7a75092fe1f9c6ec9f30",
           "size": 970,
           "dependencies": {
             "valenced.api": {
@@ -473,7 +473,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.html-entity-encoder@1.0.1.zip",
-          "sha256": "7889ddfbf42036630f5802e66a8928008ef34a82c0bf670a59564e58d81904f2",
+          "sha256": "a42044ebf8f7d1f240a62539de53235cab41d72656caadda85d3398e8bfbccb7",
           "size": 909,
           "dependencies": {
             "valenced.api": {
@@ -496,7 +496,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.invite-link-builder@1.0.1.zip",
-          "sha256": "6655e9985d659a52e4be87eba6ad822be2dcb4032f4c92ba85398fe7e2aff34b",
+          "sha256": "cebe91e140c3e9ab652c628f8c709ebb8b5e95757ac6f28eb78fafa6e51ae335",
           "size": 1001,
           "dependencies": {
             "valenced.api": {
@@ -519,7 +519,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.json-formatter@1.0.1.zip",
-          "sha256": "8759fb6064d880eba38644620acc85c570d4e96cae0b72a7e10812c79c1c5dda",
+          "sha256": "3123ecd45a23fa170d42274c9ab26cae6b9fd2fe3bbfd9b7ccf53900846fa71d",
           "size": 897,
           "dependencies": {
             "valenced.api": {
@@ -542,7 +542,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.line-sorter@1.0.1.zip",
-          "sha256": "baf08ba2b7b17bfec37db49feff27eedcab9de26c58933ef705f08f3a0d79d0a",
+          "sha256": "3fb1994e4584610b5c0019c7e1181e1b74fc33c96c40edd6dceec26b1b3669ef",
           "size": 867,
           "dependencies": {
             "valenced.api": {
@@ -565,7 +565,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.link-cleaner@1.0.1.zip",
-          "sha256": "36c62b9f39042aebfa6f76d420112ccdd50f719d936830509db7e31a9bfd0df4",
+          "sha256": "f57321be06ba963dd61a49af84936453d402164389d0e4e4f47733bde0ec44d7",
           "size": 1049,
           "dependencies": {
             "valenced.api": {
@@ -588,7 +588,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.list-numberer@1.0.1.zip",
-          "sha256": "d3f7ba96d92f88fd64485372470f07d82f5534fd7c174ab136e766a2c6cea006",
+          "sha256": "6f92eeb5b0311004b4bd35b905605d20c201ba3b8dad864a17080bb1441f93d4",
           "size": 893,
           "dependencies": {
             "valenced.api": {
@@ -611,7 +611,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.markdown-checklist@1.0.1.zip",
-          "sha256": "6570b36f319a0a5b10332086de61dcd04b25566be227c1285f995f4b22135227",
+          "sha256": "1f2d63cfb3ed0bf95b7295dc94c4dde5ea41b30fbee7dc87cd5f552ea1b074ff",
           "size": 918,
           "dependencies": {
             "valenced.api": {
@@ -634,7 +634,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.markdown-playground@1.0.1.zip",
-          "sha256": "0d648f8370b69b1d23da94cce97347a695d8a7bf2f553b8ed27ad586d1ea396f",
+          "sha256": "3c8ad2e27a9ebbdb9428e32abbd3f95f0b3f817115cbec42ec8509bf91851387",
           "size": 937,
           "dependencies": {
             "valenced.api": {
@@ -657,7 +657,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.morse-encoder@1.0.1.zip",
-          "sha256": "818bd3ba14c8f4dc4c32b6d7e7aa21e48e972b9579eac4dbb7092fefab9acdf1",
+          "sha256": "24030883be15581caa4b320a7869e6d173394ea48cf8f043f95bba17c788fb63",
           "size": 1052,
           "dependencies": {
             "valenced.api": {
@@ -680,7 +680,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.no-idle@1.0.1.zip",
-          "sha256": "23e2369f3f8887a92372404e4f4120d991d4ad90fcf30d2f63ccf497d368e3ab",
+          "sha256": "e082a2e5ab2a30628bdab27610b6901f037b615d5d911f2a0c3e96610ed79876",
           "size": 707,
           "dependencies": {
             "valenced.api": {
@@ -703,7 +703,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.password-generator@1.0.1.zip",
-          "sha256": "8f62e5a3493dcb5c87e7078bf403f046df819cb89d7cfb242942323e6461a99c",
+          "sha256": "774e58569cb1b5cbb306362ae506da5efdc7288a8daf6dc46d859dc52ab5d3db",
           "size": 1046,
           "dependencies": {
             "valenced.api": {
@@ -726,7 +726,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.percentage-calculator@1.0.1.zip",
-          "sha256": "d4eca112c3f6e42460c919ace81a2766f7d77523e5e6faa5f9f2bd6386ce200b",
+          "sha256": "c3fc8d470c7833f82b2264b036d1fd8ab49957232db97ec4087dc8ff7ab0ce86",
           "size": 934,
           "dependencies": {
             "valenced.api": {
@@ -749,7 +749,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.profile-card-preview@1.0.1.zip",
-          "sha256": "ff12c9b362a99a5d01158e5bd9a32aaf918e96b6f7ba66667d87210309c01060",
+          "sha256": "67591e64ecfea56619d4ec6cb4caaedf4d5475be6a39d9573cc815b47141a51d",
           "size": 933,
           "dependencies": {
             "valenced.api": {
@@ -772,7 +772,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.quote-formatter@1.0.1.zip",
-          "sha256": "2f8b025c3349a586b23eb2538e947f093308599001dd814c358e315e933baa9e",
+          "sha256": "80b21ce5fc43120872dcb9541fb17e505c093316e9b2690b6f14653eff78ec5f",
           "size": 882,
           "dependencies": {
             "valenced.api": {
@@ -795,7 +795,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.random-picker@1.0.1.zip",
-          "sha256": "dd8f290f4915b3040cf96e21d670ec6a582911882fa82e46cc221f94d0a93061",
+          "sha256": "d37a352c1a3eea4f17654680c07c143fecdaa4ead483e42366986b3afa990772",
           "size": 970,
           "dependencies": {
             "valenced.api": {
@@ -818,7 +818,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.rgb-to-hex@1.0.1.zip",
-          "sha256": "92e10c5fb7f9df6995a0842dab8a2a24c39d4badcc776a54f3d13a81e6bdd648",
+          "sha256": "775506836b0100d043e8ccb275b8e1d8213af41ec7bc6612cc867b5a17eae517",
           "size": 983,
           "dependencies": {
             "valenced.api": {
@@ -841,7 +841,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.rot13@1.0.1.zip",
-          "sha256": "8a8393ba07406afc34d5a9c9bffefe497eb558e30869a5672a463756e3531e26",
+          "sha256": "2cb57600c3467d94f1a7bb586dc813c7e207f030239a00da039c8382e6144ac2",
           "size": 901,
           "dependencies": {
             "valenced.api": {
@@ -864,7 +864,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.silent-typing@1.0.1.zip",
-          "sha256": "0340d6bd7a0baea05d8576c8e53fd8f3f83cf713c47fe5444a93784a7ed0c216",
+          "sha256": "480e906324e6380ae00c6615fc708acf456ca2d0529eceed8abcc5aed2c012cb",
           "size": 984,
           "dependencies": {
             "valenced.api": {
@@ -887,7 +887,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.slug-generator@1.0.1.zip",
-          "sha256": "63b4911d066fabbf1c48254aa94f1cd2ca005ee66eb51fafbdea1663e90faa28",
+          "sha256": "1acccfed60f66ffa9a2e9537c237791da93d7c64cff30527c2e8d94041b3a6b5",
           "size": 924,
           "dependencies": {
             "valenced.api": {
@@ -910,7 +910,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.snowflake-decoder@1.0.1.zip",
-          "sha256": "79372a2aee533ea626fa039947a9bc27d0ede3f77bd5452e93ab05ec89a02fc2",
+          "sha256": "e1a699b38cbc9e75a0c1661dff796d4d02495d2ef58021759553c3ee9c7da0b2",
           "size": 973,
           "dependencies": {
             "valenced.api": {
@@ -933,7 +933,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.status-draft-vault@1.0.1.zip",
-          "sha256": "271e66c5460c7b73a43b3730fe31dd8b3caf40503588353ae77d95e5f0036573",
+          "sha256": "fad73acbef09db4b2e3cdbdd23d964df458a1ba96cc22882614487cb6aaef899",
           "size": 912,
           "dependencies": {
             "valenced.api": {
@@ -956,7 +956,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.text-reverser@1.0.1.zip",
-          "sha256": "e92185ddb699fce8f6253db9bc61af29a9f9e52ceac47c950fff4d30a27bc865",
+          "sha256": "a8159ce17df105fdacc475ad0eca4e8c1182b56ed5ef1c20f349d1b8e19a8a07",
           "size": 848,
           "dependencies": {
             "valenced.api": {
@@ -979,7 +979,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.text-stats@1.0.1.zip",
-          "sha256": "4d67f06ce368f65a3c180ea99722de5590c887132014834d979c39e8e3ef288f",
+          "sha256": "4edb9dce3fc082c6fe6d9d399aa0db412bfe68e366b1bf80dad6cb6dca8ca770",
           "size": 991,
           "dependencies": {
             "valenced.api": {
@@ -1002,7 +1002,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.timestamp-generator@1.0.1.zip",
-          "sha256": "d003a23660681ace4b1d325300cfbb8d0434669033a7845a725bb717594abfc1",
+          "sha256": "723653e5730d980250dd2fa6680ca65b6b4713b3db9693260211a001222bda7a",
           "size": 960,
           "dependencies": {
             "valenced.api": {
@@ -1025,7 +1025,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.unix-time-converter@1.0.1.zip",
-          "sha256": "3c89159b116b0181bbbd65dff54389c61b5706693b18f1181c92bb251330d45c",
+          "sha256": "8f531ecb4a70a759f1d9e006dcd1da2c36a654d7258a9e59dcfd55eb4228cda9",
           "size": 968,
           "dependencies": {
             "valenced.api": {
@@ -1048,7 +1048,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.url-encoder@1.0.1.zip",
-          "sha256": "7fd35b025fd0b8248ad2309d340955caab6e7c68c85ef698bea96ee7537e1ea4",
+          "sha256": "387dfe557e1372826fba3ab58677a75235d01aaf0db429df898bbf220616df01",
           "size": 837,
           "dependencies": {
             "valenced.api": {
@@ -1071,7 +1071,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.whitespace-cleaner@1.0.1.zip",
-          "sha256": "7cc254786a57d6eec1097fd23f7f13b6bda01338baa3f39effa548c7798f7ae0",
+          "sha256": "a1f8a08e35796274318e225f8a2f3dd5eb3a1de37f07da9553d025c3eab153d7",
           "size": 894,
           "dependencies": {
             "valenced.api": {
@@ -1094,7 +1094,7 @@
       "versions": {
         "1.0.1": {
           "url": "https://tiktoknotificationtroll-wq.github.io/Valenced-Ultimate/pool/niche.word-frequency@1.0.1.zip",
-          "sha256": "9e40fc533cd2b1042d576fe2d0c7a6fce722b0408582ad946772fce3fc8674ed",
+          "sha256": "1561e6448cd517c198a28efafbb8afca7b7475a3b5fa76207c493d276d91e887",
           "size": 987,
           "dependencies": {
             "valenced.api": {
