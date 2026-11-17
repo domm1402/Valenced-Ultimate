@@ -53,7 +53,10 @@ val dommsGamesPresence = plugin {
             val startTime = (args.getOrNull(5) as? Number)?.toLong() ?: System.currentTimeMillis()
             require(appId.matches(Regex("[0-9]{17,20}"))) { "Enter a valid registered Discord Application ID" }
             require(gameName.isNotBlank() && gameName.length <= 128) { "Game name must be 1–128 characters" }
-            require(details.length <= 128 && state.length <= 128) { "Details and state must be 128 characters or fewer" }
+            val combinedDetails = if (details.isBlank()) gameName else "$gameName | $details"
+            require(combinedDetails.length in 2..128) { "Game name plus details must fit Discord’s 128-character activity limit" }
+            require(state.isEmpty() || state.length in 2..128) { "State must be empty or 2–128 characters" }
+            require(imageKey.length <= 256) { "Image asset key must be 256 characters or fewer" }
             check(PresenceNative.update(appId, gameName, details, state, imageKey, startTime)) {
                 "Discord did not accept the Rich Presence update. Check that Discord is installed, signed in, and the Application ID is valid."
             }
