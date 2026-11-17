@@ -55,9 +55,9 @@ const plugins = [
 function manifestFor(p) {
   return JSON.stringify({
     format: 1, id: p.id, name: p.name, description: p.description,
-    author: 'Niche Games', version: p.kind === 'presence' ? '1.0.6' : '1.0.2',
+    author: 'Niche Games', version: p.kind === 'presence' ? '1.0.7' : '1.0.2',
     dependencies: { 'valenced.api': { version: '>=1 <2' }, discord: { version: '*' } },
-    dist: { script: 'index.js' }
+    dist: p.kind === 'presence' ? { script: 'index.js', android: { path: 'android/plugin.jar', class: 'com.domms.presence.DommsGamesPresence' } } : { script: 'index.js' }
   }, null, 2) + '\n'
 }
 
@@ -130,6 +130,14 @@ const presenceSource = [
   "import { Design } from '@valenced/discord/design'",
   "import Page from '@valenced/components/Page'",
   "import { useEffect, useState } from 'react'",
+  "import { callNativeMethod } from '@valenced/modules/native'",
+  "",
+  "declare module '@valenced/modules/native' {",
+  "  export interface NativeMethods {",
+  "    'domms.presence.update': [[applicationId: string, gameName: string, details: string, state: string], { ok: boolean }]",
+  "    'domms.presence.clear': [[], { ok: boolean }]",
+  "  }",
+  "}",
   '',
   'type PresenceSettings = { game: string; applicationId: string; details: string; state: string }',
   'type Game = { name: string; id?: string; icon?: string | null; aliases?: string[] }',
@@ -147,7 +155,7 @@ const presenceSource = [
   '    return () => { active = false }',
   '  }, [])',
   '  const save = () => { api.jsonStorage.set({ game, applicationId, details, state }); setStatus("Activity profile saved.") }',
-  '  const update = () => { api.jsonStorage.set({ game, applicationId, details, state }); setStatus("Activity settings saved. Live publishing is disabled in this safe build.") }',
+  '  const update = async () => { api.jsonStorage.set({ game, applicationId, details, state }); try { await callNativeMethod("domms.presence.update", [applicationId.trim(), game.trim(), details.trim(), state.trim()]); setStatus("Discord Rich Presence update sent.") } catch (error) { setStatus("Could not publish activity: " + String(error)) } }',
   '  const clear = () => { setGame(""); setApplicationId("1571988102912675900"); setDetails(""); setState(""); api.jsonStorage.set({ game: "", applicationId: "1571988102912675900", details: "", state: "" }); setStatus("Activity settings cleared.") }',
   '  const matches = games.filter(g => (g.name + " " + (g.aliases ?? []).join(" ") + " " + (g.id ?? "")).toLowerCase().includes(game.toLowerCase())).slice(0, 12)',
   '  return <Page>',
