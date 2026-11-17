@@ -13,7 +13,7 @@
       "versions": {
         "1.1.0": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/domms.games.presence@1.1.0.zip",
-          "sha256": "8e074b0a2fd56cfa9f5abfb5b2b9b8a1d2197be4294f0d22c49f6acaace683f9",
+          "sha256": "7d5e7acf5d04d143672f6f61f0830bbf3c36efd85271e4b7b10b0d43df8df334",
           "size": 6641779,
           "dependencies": {
             "valenced.api": {
@@ -36,7 +36,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.activity-text-templates@1.0.2.zip",
-          "sha256": "ff1b3bf04f3d857aed9c5cbc7bc6ea094ad6f5f4cf83dcedf0d271b93c652e6a",
+          "sha256": "c5fd2023447bb9ea9ee7923e224da8c2d38d745b49f5ccb4e1a48d65adb078a2",
           "size": 969,
           "dependencies": {
             "valenced.api": {
@@ -59,7 +59,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.badge-gallery-preview@1.0.2.zip",
-          "sha256": "75a9a1dcff46f184d64a1245809477f8b0985cfd6d149b530459f6c0f6e54809",
+          "sha256": "b20981334e64859f0fc448c237a939fcb522bc7297e7e52eeda668af5cb475a6",
           "size": 1029,
           "dependencies": {
             "valenced.api": {
@@ -82,7 +82,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.base64-decoder@1.0.2.zip",
-          "sha256": "83c3c16b5d3ce3ef429dda8431128bd005692623ac9a4b4a0fc90a5ca8698a8c",
+          "sha256": "e31edf96d8337bf7affcd3469fe805c81999b83d70743ff09cff37d67ffb7c09",
           "size": 899,
           "dependencies": {
             "valenced.api": {
@@ -105,7 +105,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.base64-tool@1.0.2.zip",
-          "sha256": "3a05014ff73c16d14163c331d61c6b618fa26bcf99f8a3f59d82dccce96c32a5",
+          "sha256": "55a85cf42c93f1ecd7081fd0fde93d73498a017becaa6ec754cb09c8a85d3548",
           "size": 840,
           "dependencies": {
             "valenced.api": {
@@ -128,7 +128,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.binary-converter@1.0.2.zip",
-          "sha256": "52df348749eac127abeea25bad9401ec1cdf1843643ebaf36ba595ff7cf8c8b0",
+          "sha256": "46439e97d33b58abbf77beb24f0d3898e3d5818499fea408e1b85ba3bb5c4520",
           "size": 899,
           "dependencies": {
             "valenced.api": {
@@ -151,7 +151,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.bio-formatter@1.0.2.zip",
-          "sha256": "d02aca0d58d2e2e5ccde34db7e48e8f56500c7ed07d5c55dc3add03cc226842c",
+          "sha256": "57452513b031151638f3e657ea75db7c927774d6090b9d78a3ad46fd860b31c6",
           "size": 952,
           "dependencies": {
             "valenced.api": {
@@ -174,7 +174,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.case-converter@1.0.2.zip",
-          "sha256": "d441a42ec6d190b03e063eaf519e7e5fedea40de9dfb789777555c468906a27e",
+          "sha256": "5cf77e55aa0bebccc9779ef97452925779a48a995ee5662b84ac912568375db9",
           "size": 956,
           "dependencies": {
             "valenced.api": {
@@ -197,7 +197,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.character-counter@1.0.2.zip",
-          "sha256": "0cef1f82b19ced3412aff24559d7532b2b6dd78fbe511b692b71b29c4576af00",
+          "sha256": "e02100ee8b4f74f072257e80f78187a2f5025c6a24a8d39ae3650dfd4bb159a8",
           "size": 950,
           "dependencies": {
             "valenced.api": {
@@ -220,7 +220,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.css-gradient-builder@1.0.2.zip",
-          "sha256": "91e41aee71269fcbde1623084e054e1a7de5e7f04069ba541bd7ce8abd15b182",
+          "sha256": "199aa10e3fcde4f382e9467de391cad97584ac0879a4a351975d38673fc392f3",
           "size": 1034,
           "dependencies": {
             "valenced.api": {
@@ -243,7 +243,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.date-tag-builder@1.0.2.zip",
-          "sha256": "d125b197e87a89e02447afc2222e4ae3b15f7c5d11ca23ba29f43266dd32e297",
+          "sha256": "e7f31fa34e1c8f5b92d4d25d9b56b016183ff33712a6f08f93ced0aa1fb22d31",
           "size": 1001,
           "dependencies": {
             "valenced.api": {
@@ -266,7 +266,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.discord-game-catalog@1.0.2.zip",
-          "sha256": "814794fb18f69f6f4ae4afb1dbcbd7fe645347ac8309aeb017eff2a7e50a0b54",
+          "sha256": "b55070216c5b4fe9ff3805b442858b0a854a2483c7e81bed704958c56f569405",
           "size": 1409,
           "dependencies": {
             "valenced.api": {
@@ -289,7 +289,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.duplicate-line-remover@1.0.2.zip",
-          "sha256": "a4d73380ad850576f9bad115ee4e2b45e9f3eb5f2c75346ec6f2945805278064",
+          "sha256": "e6d4bd6b8fe696ca178f5e83210af0b04314160a5539f7967c2d9e9dfb977b8a",
           "size": 907,
           "dependencies": {
             "valenced.api": {
@@ -312,7 +312,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.embed-preview@1.0.2.zip",
-          "sha256": "f9685a55ac6652b94f1989bf677ef7090552f9083fa23b296586422ca6a178cc",
+          "sha256": "e8ed318b4ac0a3d22604358e6755c6e10218c78d809c69b2384485dfb1f8b6d9",
           "size": 959,
           "dependencies": {
             "valenced.api": {
@@ -335,7 +335,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.emoji-previewer@1.0.2.zip",
-          "sha256": "d5f1e96c95235be3061c53d26c955786331ec16eab17af5c0becadee27d73d0c",
+          "sha256": "175b7d681b0dfdb3f9b67a58fe1ad78bd9c3a359504cdeba349fe0f52c344139",
           "size": 933,
           "dependencies": {
             "valenced.api": {
@@ -358,7 +358,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.emoji-remover@1.0.2.zip",
-          "sha256": "7e9ea36ccdd33f8d99a0c37803df96963850a76e51335e221b6460c1ad6a0e72",
+          "sha256": "9201d929bd7b98699fb75d7c4c97a7e3dc487dbd3187116fe9c6a2fb51ea3e5b",
           "size": 907,
           "dependencies": {
             "valenced.api": {
@@ -381,7 +381,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.fake-nitro-preview@1.0.2.zip",
-          "sha256": "eab4189356882aa085b3f650d18ebd1d2b26cff27f319cfb70f1b61c411f7cc5",
+          "sha256": "6ac46a177034406baa8f39ac51fd90e313b9dddf0099aff9fd76a22bbcd19b7b",
           "size": 1001,
           "dependencies": {
             "valenced.api": {
@@ -404,7 +404,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.fake-nitro@1.0.2.zip",
-          "sha256": "5dfa5898f4a0f19a212fe707ca81d501a84b103938dadbea32409013df5bd666",
+          "sha256": "39a1dca3df0f3089308e143f0ac84c37300005dadab3c6331e29618daa3eeb66",
           "size": 1250,
           "dependencies": {
             "valenced.api": {
@@ -427,7 +427,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.file-name-cleaner@1.0.2.zip",
-          "sha256": "1e121d990b06744a53a93776e53a020444522eae7a8277653380cc258d43fc98",
+          "sha256": "fc71d8be7c3dca4e87677027101c5556e91dbddddd72f3d8601a0145ea2b9b7e",
           "size": 965,
           "dependencies": {
             "valenced.api": {
@@ -450,7 +450,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.fire-text-converter@1.0.2.zip",
-          "sha256": "2650776214595487d8252f90ac2d025ab6c62c923c723de301a2cce90901d5a8",
+          "sha256": "2cbcd7c330a784619100a370b2e38894a22daba706229bd66d5c784e8d420639",
           "size": 953,
           "dependencies": {
             "valenced.api": {
@@ -473,7 +473,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.gif-tag-organizer@1.0.2.zip",
-          "sha256": "94c3898a596a6fc59e94228be0955e6907bd0f5b926eb63f946c14f3e670f7d0",
+          "sha256": "10a82de90db8e7714485c76a9494e7d4ddd5d751e235d90b21ee68b111aed4df",
           "size": 1080,
           "dependencies": {
             "valenced.api": {
@@ -496,7 +496,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.hex-color-converter@1.0.2.zip",
-          "sha256": "4cb451c43e7ef2dbb4cc19b6375c993e94ed6e2e9b2a5be100a1a7e6e88c4ad8",
+          "sha256": "560a1ecbb51d66531bb58e963b04f42a51bd0aa652958756b5f4dbe0961f082a",
           "size": 970,
           "dependencies": {
             "valenced.api": {
@@ -519,7 +519,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.html-entity-encoder@1.0.2.zip",
-          "sha256": "ea346bd8c6b9b83b873bd49286e1bc391b97496e09e7fe6f429d447d72522ab1",
+          "sha256": "82671be196a764f24ef37c03e71bdcf77f1df5ba99357c16ff24cc5ba3a63063",
           "size": 909,
           "dependencies": {
             "valenced.api": {
@@ -542,7 +542,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.invite-link-builder@1.0.2.zip",
-          "sha256": "1e65dcd7519ccce8aec1fe2f56f7b5cc13fa745f6c4291e361cdcd21033cf3a0",
+          "sha256": "08f6eb6ef99e194853ec4b110a4141d171aa8865c3d3950392b3a440f1b77d36",
           "size": 1001,
           "dependencies": {
             "valenced.api": {
@@ -565,7 +565,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.json-formatter@1.0.2.zip",
-          "sha256": "6264bf444cd4edf208608e99246dd4b5ab9a319bb4377c6638bb7bd9ba8228a8",
+          "sha256": "e1fad4357573539cac6178ec90de53fc24411e9e18124b4734a5d7e8e357e2d2",
           "size": 898,
           "dependencies": {
             "valenced.api": {
@@ -588,7 +588,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.line-sorter@1.0.2.zip",
-          "sha256": "7634372764028844184c0c847a9e225c83856a4b6f9347596b137cd9a71a51bb",
+          "sha256": "02a49b518e66306578f4ee94b578623ec6ee90ac9a0b52779f78ff96b591f6eb",
           "size": 866,
           "dependencies": {
             "valenced.api": {
@@ -611,7 +611,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.link-cleaner@1.0.2.zip",
-          "sha256": "3da9dfa687522b23f663d1f3fe79828173a84e36bdec143ad5b7b1a2bc46640b",
+          "sha256": "7d9548115825a0b73ce07f05b184f0a5148037274c7650359a1935dfe4392025",
           "size": 1049,
           "dependencies": {
             "valenced.api": {
@@ -634,7 +634,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.list-numberer@1.0.2.zip",
-          "sha256": "d7e46886d503c6dff678571bf7429348c2cfe4caad16368a2260a6787d215c90",
+          "sha256": "81a08ce7fcbe0497d227eb9585bf6aecfc207dbc959037101b527fc629d06f5d",
           "size": 894,
           "dependencies": {
             "valenced.api": {
@@ -657,7 +657,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.markdown-checklist@1.0.2.zip",
-          "sha256": "bfed3555798c66a3c2e56464d7f8f740140038003a356280bd61a5129247b4a2",
+          "sha256": "70726f94301c78a3737c89d523bbd66cb762e27f4381809503ded2688ae1e8ea",
           "size": 918,
           "dependencies": {
             "valenced.api": {
@@ -680,7 +680,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.markdown-playground@1.0.2.zip",
-          "sha256": "467fd067ce0f3703b28e0f1efe8b1fa791ce1f08d7dd70d0864b3110aa14a98d",
+          "sha256": "7d61a312887d659c84be374d8dcd0386bc3f046856e741f569328d454864daab",
           "size": 938,
           "dependencies": {
             "valenced.api": {
@@ -703,7 +703,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.media-favourites-organizer@1.0.2.zip",
-          "sha256": "3603239778a48dc1354ee4eb08aa2bed7372119afc01459a6f75211d68028f4b",
+          "sha256": "8745a32fdd4270e65fd4f0c04cfddc335183944af7d7ef00f44ea1dac1fce3b0",
           "size": 1018,
           "dependencies": {
             "valenced.api": {
@@ -726,7 +726,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.message-splitter@1.0.2.zip",
-          "sha256": "a2b04c63da61fa6cdac4ef2d8f924a07c76444c649f731e9681265f9c0e38644",
+          "sha256": "d6bc3f14349b6bb9fed2b62ed24d0c777c9eccdbdbfd1d98ff21f8b8a01170d8",
           "size": 1098,
           "dependencies": {
             "valenced.api": {
@@ -749,7 +749,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.morse-encoder@1.0.2.zip",
-          "sha256": "54b2927f33ed195477302728b03042966760ac8de91fdbb862f869c10aeb892d",
+          "sha256": "55833e87dcfaed6adacd7caf74c7f60c266ff2ab65a4f7829000d8cf627ce344",
           "size": 1052,
           "dependencies": {
             "valenced.api": {
@@ -772,7 +772,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.no-idle@1.0.2.zip",
-          "sha256": "93c23eda39b90576a9a0d27d4b396aa3d4c2da7bf481f8b63a6b2b3930bd548f",
+          "sha256": "8451f37203d41d9fb0303c242941641fe703541b6bee8cf15fe2e41a1e8c69c8",
           "size": 707,
           "dependencies": {
             "valenced.api": {
@@ -795,7 +795,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.password-generator@1.0.2.zip",
-          "sha256": "159af76320b18ea5ff432bc7ece71ab8999b6935168dde8c3468056388b01f54",
+          "sha256": "e9c690a3b539fc14cb6c55c944406e89a3cfc26e89063b6a8541adbfa47307b0",
           "size": 1046,
           "dependencies": {
             "valenced.api": {
@@ -818,7 +818,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.pastel-name-generator@1.0.2.zip",
-          "sha256": "9f4bc590ee08a115a2d630f155ae8ff9fdac8a872aae862da62e2be6697a941e",
+          "sha256": "03bba7e4943e1048d5ca50b038f5941237253ab8ff2e0fc77db9f3bd06402899",
           "size": 990,
           "dependencies": {
             "valenced.api": {
@@ -841,7 +841,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.percentage-calculator@1.0.2.zip",
-          "sha256": "0093e6913a5aa21ceb30d17fa6ce562c3d399bcd1b48b50b6a23936e5e8e8ef8",
+          "sha256": "f3e85b660f3be71df0b3f991b03bf0a03d500c8b1c13b0c347611b0b5949b8bd",
           "size": 935,
           "dependencies": {
             "valenced.api": {
@@ -864,7 +864,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.profile-card-preview@1.0.2.zip",
-          "sha256": "8f9e678de843550c542fb97ee54769c62bb917bd76672742e8fe2b6a7552ea1d",
+          "sha256": "2fda4f482812c60c4953f8f02afa034e209c4bb7e8922fc939f4006517ced3c0",
           "size": 933,
           "dependencies": {
             "valenced.api": {
@@ -887,7 +887,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.quote-formatter@1.0.2.zip",
-          "sha256": "58f8da64e3ca32ab20eccc66b750fd8b72dedece9d92bcd638310ba89dc97bc1",
+          "sha256": "8ee1a18e9326e27440ddd0d35de8af47127e3229d8522a8e3b91872b118c5459",
           "size": 882,
           "dependencies": {
             "valenced.api": {
@@ -910,7 +910,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.random-picker@1.0.2.zip",
-          "sha256": "928a973d0e77d94ee00ecb02896d9693abd768db9b415d9f2188b55081e58c10",
+          "sha256": "efe96118e8948a081bcde4a9146e1d909e41b997e7943ecb02b41e8e83099d9f",
           "size": 972,
           "dependencies": {
             "valenced.api": {
@@ -933,7 +933,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.rgb-to-hex@1.0.2.zip",
-          "sha256": "96dc855d28077d5306832f6d656ae1aa001ea392f32130cfc2f09ab18321ce39",
+          "sha256": "59728302e2b83d53c03d74100ff7ab18c00362dd1b01e0fd0d3d273bdbb88708",
           "size": 983,
           "dependencies": {
             "valenced.api": {
@@ -956,7 +956,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.rot13@1.0.2.zip",
-          "sha256": "7b06bdd1913a50e40b57d01912e31c2be973f020294b9dd560e269790fecaf02",
+          "sha256": "8839a0a0a27e761c50a58b49bb3899047120f29de8ee9dc055cca5edabea8868",
           "size": 901,
           "dependencies": {
             "valenced.api": {
@@ -979,7 +979,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.server-notes-scratchpad@1.0.2.zip",
-          "sha256": "3c4692f926502f4227e6e2a24e70e9c280bb840485cf9793863f9ea143922ddd",
+          "sha256": "d97a4053f78dc5dd8b6dd889705d23386e8a48e26b2add73ebf979dfea56d955",
           "size": 1296,
           "dependencies": {
             "valenced.api": {
@@ -1002,7 +1002,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.silent-typing@1.0.2.zip",
-          "sha256": "3542206044dbc3711af596cddf398cee4897b5d87fece294070bfc7ce5f9634a",
+          "sha256": "eaa709dd824b33fb7e6b0993fb8b5332069a704e6e27ea0493b137f710df43c6",
           "size": 983,
           "dependencies": {
             "valenced.api": {
@@ -1025,7 +1025,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.slug-generator@1.0.2.zip",
-          "sha256": "27eb02a7085af0eb7c9ca22922e9db66537c90e4d55314425967d2b25ae2f47c",
+          "sha256": "b2d28395614c9b204120db87aff95c84819f61e0374227d6728b05aad8dc7cfd",
           "size": 924,
           "dependencies": {
             "valenced.api": {
@@ -1048,7 +1048,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.snowflake-decoder@1.0.2.zip",
-          "sha256": "35078a780c5e0b090a3e3c24d17343f6a6a8fa3642110e004dfa52488de45530",
+          "sha256": "e2cb8292cc872f2529ab9d1fbc0759603a9f02cef7c4a6cbda1607a720733db0",
           "size": 973,
           "dependencies": {
             "valenced.api": {
@@ -1071,7 +1071,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.status-draft-vault@1.0.2.zip",
-          "sha256": "af635595ca974759ec4b7c6c5abb63abe38386e9aae16f8263cfca3164fc0410",
+          "sha256": "bcc54ad8f93702622397e8b48d52fc950797a4eeb256c4f804d2ab2bd17e2f23",
           "size": 1143,
           "dependencies": {
             "valenced.api": {
@@ -1094,7 +1094,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.status-presets-draft@1.0.2.zip",
-          "sha256": "ba8b1613d5366659f336b7099939f3bdd9b4f76cb68dc53289618620904718e0",
+          "sha256": "6164a1bd3379afd97588a1d3ae839f6b0d93ddd4ef04f4a0ebde5d68f4419efa",
           "size": 1019,
           "dependencies": {
             "valenced.api": {
@@ -1117,7 +1117,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.text-replacer@1.0.2.zip",
-          "sha256": "8c334e6fa72e72ff839073671ec2021584c84cec47a7049e73c5af14ca552956",
+          "sha256": "7e4ebfe6094b05a40288ca4ccba10276895b4de6042e01f80e9ea217fbd028b9",
           "size": 1078,
           "dependencies": {
             "valenced.api": {
@@ -1140,7 +1140,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.text-reverser@1.0.2.zip",
-          "sha256": "4a22f9262ac21b627cd7520b67b8136e410a828a4228df2d9cd370c021092f27",
+          "sha256": "10be6f1082231ff0f13f11f61f3353dee7cfbb36e98ad7479ee4a7fe6db7a8ca",
           "size": 848,
           "dependencies": {
             "valenced.api": {
@@ -1163,7 +1163,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.text-stats@1.0.2.zip",
-          "sha256": "38f5daca79fcfddc1f24d3a703041aa57e8586f3118ff52927d697f89e574a20",
+          "sha256": "8d58a0e9b1a2bfbf8a50a8cb9d16dedf6ba5d60079f06cb3a5860d4064b75716",
           "size": 991,
           "dependencies": {
             "valenced.api": {
@@ -1186,7 +1186,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.timestamp-generator@1.0.2.zip",
-          "sha256": "dafa243b610eebbbad47753eebc5bd0f84ebc50a8a4ffd34f1a89fddb2f72cd5",
+          "sha256": "f12e6fa74f56bd0351106f7ac6950a37dbe10d6ef73c36d712b12217900c4b49",
           "size": 961,
           "dependencies": {
             "valenced.api": {
@@ -1209,7 +1209,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.timestamp-locale-tool@1.0.2.zip",
-          "sha256": "80b8fcc9fd756582e4d830b4d83b99359e0dd54181e3e3382d9a267621518e0a",
+          "sha256": "0250c28cb5354105e47e58757d2002016313c62d08ca9bd6203f8480c3cce5d5",
           "size": 1067,
           "dependencies": {
             "valenced.api": {
@@ -1232,7 +1232,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.unix-time-converter@1.0.2.zip",
-          "sha256": "c0e41c6d58fac1b262fb6e0e17d74404a7bf5b7181ea27b1a5f30ce6191ee5a0",
+          "sha256": "ebeb5e809ca5817431d6c7147399c1dc0533404615e54a980a80ee07f8e48365",
           "size": 968,
           "dependencies": {
             "valenced.api": {
@@ -1255,7 +1255,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.url-encoder@1.0.2.zip",
-          "sha256": "d08b203631351713ed6f2d81638ad7eada8b3a506f210ae2146aeb02b40d7dc1",
+          "sha256": "1c1fd53f3ae450785c5e5e396afcbcbf525f121f751dc6ec5a2b3acb59650775",
           "size": 837,
           "dependencies": {
             "valenced.api": {
@@ -1278,7 +1278,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.uwu-text-converter@1.0.2.zip",
-          "sha256": "03d8ed51a6cf77d61d45e5e5ea70ee13f4c124bf9d1c749e953338f3c2afaaf2",
+          "sha256": "c941d2a006d01d60895c3de7ab7c065c19511ae8b3f73db119202ec0529f3f36",
           "size": 976,
           "dependencies": {
             "valenced.api": {
@@ -1301,7 +1301,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.whitespace-cleaner@1.0.2.zip",
-          "sha256": "58da6796d78a490eb1783b96692e2db0691a174041a628ac0f1dfab8be42c72e",
+          "sha256": "6974508b7894143257478f05a17a7a5c7f6761255d5626621f08dc5101238833",
           "size": 894,
           "dependencies": {
             "valenced.api": {
@@ -1324,7 +1324,7 @@
       "versions": {
         "1.0.2": {
           "url": "https://domm1402.github.io/Valenced-Ultimate/pool/niche.word-frequency@1.0.2.zip",
-          "sha256": "e63a217560339e64f5b126daba7e5a973940e0d08236a436a68e4a41b5c09232",
+          "sha256": "41f35527ec85e9d2e1bd17286d8c211368e63db2435cb8946bb30ff852ed629f",
           "size": 987,
           "dependencies": {
             "valenced.api": {
