@@ -15,7 +15,7 @@ private object PresenceNative {
 }
 
 private fun loadSdk(activity: Activity, pluginDir: File) {
-    val abi = Build.SUPPORTED_ABIS.firstOrNull { it in setOf("arm64-v8a", "armeabi-v7a", "x86_64") }
+    val abi = Build.SUPPORTED_ABIS.firstOrNull { it in setOf("arm64-v8a") }
         ?: error("This device ABI is not packaged")
     val sdk = File(pluginDir, "lib/$abi/libdiscord_partner_sdk.so")
     val bridge = File(pluginDir, "lib/$abi/libdomms_presence.so")
