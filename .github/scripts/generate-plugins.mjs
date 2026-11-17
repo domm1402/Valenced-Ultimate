@@ -55,7 +55,7 @@ const plugins = [
 function manifestFor(p) {
   return JSON.stringify({
     format: 1, id: p.id, name: p.name, description: p.description,
-    author: 'Niche Games', version: p.kind === 'presence' ? '1.0.3' : '1.0.2',
+    author: 'Niche Games', version: p.kind === 'presence' ? '1.0.4' : '1.0.2',
     dependencies: { 'valenced.api': { version: '>=1 <2' }, discord: { version: '*' } },
     dist: { script: 'index.js', ...(p.kind === 'presence' ? { android: { path: 'android/plugin.jar', class: 'com.domms.presence.DommsGamesPresence' } } : {}) }
   }, null, 2) + '\n'
@@ -94,6 +94,7 @@ const catalogSource = [
   '',
   'function GameCatalogSettings() {',
   '  const [games, setGames] = useState<Game[]>([])',
+  '  const [selectedIcon, setSelectedIcon] = useState<string | null>(null)',
   "  const [query, setQuery] = useState('')",
   '  const [selected, setSelected] = useState<Game | null>(null)',
   "  const [status, setStatus] = useState('Loading Discord game catalog…')",
@@ -133,7 +134,7 @@ const presenceSource = [
   "import { callNativeMethod } from '@valenced/modules/native'",
   '',
   'type PresenceSettings = { game: string; applicationId: string; details: string; state: string }',
-  'type Game = { name: string; id?: string }',
+  'type Game = { name: string; id?: string; icon?: string | null; aliases?: string[] }',
   'function RichPresenceSettings({ api }: { api: any }) {',
   '  const saved = api.jsonStorage.use() as PresenceSettings | undefined',
   '  const [game, setGame] = useState(saved?.game ?? "")',
@@ -145,7 +146,7 @@ const presenceSource = [
   '  const [busy, setBusy] = useState(false)',
   '  useEffect(() => {',
   '    let active = true',
-  '    fetch("https://discord.com/api/v10/applications/detectable").then(r => { if (!r.ok) throw new Error("Discord game catalogue unavailable"); return r.json() }).then((data: Game[]) => { if (active) { setGames(Array.isArray(data) ? data : []); setStatus("Choose a game or enter a custom name.") } }).catch(() => { if (active) setStatus("Game catalogue unavailable. You can still enter any game name.") })',
+  '    fetch("https://discord.com/api/v10/applications/detectable").then(r => { if (!r.ok) throw new Error("Discord game catalogue unavailable"); return r.json() }).then((data: any[]) => { if (active) { const list = Array.isArray(data) ? data.map(app => ({ name: app.name ?? app.application?.name ?? "Unknown game", id: String(app.id ?? app.application_id ?? app.application?.id ?? ""), icon: app.icon ?? app.application?.icon ?? null, aliases: app.aliases ?? [] })).filter(g => g.id) : []; setGames(list); setStatus("Choose a game or enter a custom name.") } }).catch(() => { if (active) setStatus("Game catalogue unavailable. You can still enter a custom name.") })',
   '    return () => { active = false }',
   '  }, [])',
   '  const save = () => { api.jsonStorage.set({ game, applicationId, details, state }); setStatus("Activity profile saved.") }',
@@ -170,10 +171,11 @@ const presenceSource = [
   '  return <Page>',
   '    <Design.Text>Publish a real Discord Rich Presence using the Discord Social SDK. Discord must be installed and signed in on this Android device.</Design.Text>',
   '    <Design.TextInput label="Search or enter a game" placeholder="Minecraft, Fortnite, Roblox…" defaultValue={game} onChange={setGame} />',
-  '    {matches.map((g, i) => <Design.Button key={g.id ?? g.name + i} text={g.name + (g.id ? " · " + g.id : "")} onPress={() => { setGame(g.name); if (g.id) setApplicationId(g.id); }} />)}',
-  '    <Design.TextInput label="Selected game's Discord Application ID" placeholder="Auto-filled when you select a catalog game" defaultValue={applicationId} onChange={setApplicationId} />',
-  '    <Design.Text>Selecting a catalog game automatically fills its own Discord Application ID. Your supplied ID, 1571988102912675900, is the default for custom game names and can be edited. The selected game name is used as the activity name.</Design.Text>',
-  '    <Design.TextInput label="Details" placeholder="In a ranked match" defaultValue={details} onChange={setDetails} />',
+  '    {matches.map((g, i) => <Design.Button key={g.id ?? g.name + i} text={g.name + " · " + g.id} onPress={() => { setGame(g.name); setApplicationId(g.id ?? "1571988102912675900"); setSelectedIcon(g.icon ?? null); }} />)}',
+  "    <Design.TextInput label=\"Selected game's Discord Application ID\" placeholder=\"Auto-filled when you select a catalog game\" defaultValue={applicationId} onChange={setApplicationId} />',
+  '    <Design.Text>Pick a listed game to use its own Discord Application ID and show its game icon. For a custom activity, keep your ID 1571988102912675900 and enter any game name. You can edit the ID manually.</Design.Text>',
+  '    {selectedIcon && applicationId ? <img src={"https://cdn.discordapp.com/app-icons/" + applicationId + "/" + selectedIcon + ".png?size=256"} alt={game + " icon"} style={{ width: 112, height: 112, borderRadius: 18, objectFit: "cover" }} /> : null}',
+  '    <Design.TextInput label="Details" placeholder="In a ranked match" defaultValue={details} onChange={setDetails} />'
   '    <Design.TextInput label="State" placeholder="2v2 · Diamond" defaultValue={state} onChange={setState} />',
   '    <Design.Button text="Save Activity Profile" onPress={save} />',
   '    <Design.Button text={busy ? "Please wait…" : "Update Discord Presence"} onPress={update} />',
