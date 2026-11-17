@@ -267,6 +267,1111 @@ const silentSource = [
   ''
 ].join('\n')
 
+
+const extraPlugins = [
+  {
+    "slug": "welcome-message-builder",
+    "id": "niche.welcome-message-builder",
+    "name": "Welcome Message Builder",
+    "description": "Welcome Message Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.trim().split(/\\r?\\n/).filter(Boolean).map(x=>'- [ ] '+x.trim()).join('\\n') || 'Add tasks, one per line.'"
+  },
+  {
+    "slug": "farewell-message-builder",
+    "id": "niche.farewell-message-builder",
+    "name": "Farewell Message Builder",
+    "description": "Farewell Message Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.trim().split(/\\r?\\n/).filter(Boolean).map((x,i)=>(i+1)+'. '+x.trim()).join('\\n') || 'Add items, one per line.'"
+  },
+  {
+    "slug": "announcement-drafts",
+    "id": "niche.announcement-drafts",
+    "name": "Announcement Drafts",
+    "description": "Announcement Drafts is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.trim().split(/\\r?\\n/).filter(Boolean).map(x=>'• '+x.trim()).join('\\n') || 'Add items, one per line.'"
+  },
+  {
+    "slug": "event-planner",
+    "id": "niche.event-planner",
+    "name": "Event Planner",
+    "description": "Event Planner is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "'Characters: '+value.length+' | Words: '+(value.trim()?value.trim().split(/\\s+/).length:0)+' | Lines: '+(value?value.split(/\\r?\\n/).length:0)"
+  },
+  {
+    "slug": "poll-builder",
+    "id": "niche.poll-builder",
+    "name": "Poll Builder",
+    "description": "Poll Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "[...new Set(value.split(/\\r?\\n/).map(x=>x.trim()).filter(Boolean))].join('\\n') || 'Add lines to remove duplicates.'"
+  },
+  {
+    "slug": "giveaway-planner",
+    "id": "niche.giveaway-planner",
+    "name": "Giveaway Planner",
+    "description": "Giveaway Planner is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.split(/\\r?\\n/).map(x=>x.trim()).filter(Boolean).sort((a,b)=>a.localeCompare(b)).join('\\n') || 'Add lines to sort.'"
+  },
+  {
+    "slug": "server-rules-builder",
+    "id": "niche.server-rules-builder",
+    "name": "Server Rules Builder",
+    "description": "Server Rules Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.trim().replace(/\\s+/g,' ') || 'Enter text to clean.'"
+  },
+  {
+    "slug": "faq-builder",
+    "id": "niche.faq-builder",
+    "name": "FAQ Builder",
+    "description": "FAQ Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.trim().toLowerCase().replace(/(^|[.!?]\\s+)[a-z]/g,m=>m.toUpperCase()) || 'Enter text to format.'"
+  },
+  {
+    "slug": "support-ticket-template",
+    "id": "niche.support-ticket-template",
+    "name": "Support Ticket Template",
+    "description": "Support Ticket Template is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.trim().replace(/\\b\\w/g,c=>c.toUpperCase()) || 'Enter a title.'"
+  },
+  {
+    "slug": "bug-report-builder",
+    "id": "niche.bug-report-builder",
+    "name": "Bug Report Builder",
+    "description": "Bug Report Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.trim().split(/\\r?\\n/).map(x=>'> '+x).join('\\n') || 'Enter quote text.'"
+  },
+  {
+    "slug": "moderator-notes",
+    "id": "niche.moderator-notes",
+    "name": "Moderator Notes",
+    "description": "Moderator Notes is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split(/\\r?\\n/).filter(Boolean);return a.length?a.map((x,i)=>'PART '+(i+1)+': '+x).join('\\n'):'Add content.'})()"
+  },
+  {
+    "slug": "appeal-draft-helper",
+    "id": "niche.appeal-draft-helper",
+    "name": "Appeal Draft Helper",
+    "description": "Appeal Draft Helper is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split(',').map(x=>x.trim());return a.length>=2?a.join(' → '):'Enter at least two steps separated by commas.'})()"
+  },
+  {
+    "slug": "staff-handover-notes",
+    "id": "niche.staff-handover-notes",
+    "name": "Staff Handover Notes",
+    "description": "Staff Handover Notes is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split('|').map(x=>x.trim());return a.length>=2?'**'+a[0]+'**\\n'+a.slice(1).join('\\n'):'Use title | details.'})()"
+  },
+  {
+    "slug": "staff-rota-formatter",
+    "id": "niche.staff-rota-formatter",
+    "name": "Staff Rota Formatter",
+    "description": "Staff Rota Formatter is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split(',').map(Number);return a.length&&a.every(Number.isFinite)?'Total: '+a.reduce((x,y)=>x+y,0)+' | Average: '+(a.reduce((x,y)=>x+y,0)/a.length).toFixed(2):'Enter comma-separated numbers.'})()"
+  },
+  {
+    "slug": "incident-timeline",
+    "id": "niche.incident-timeline",
+    "name": "Incident Timeline",
+    "description": "Incident Timeline is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split(/\\r?\\n/).filter(Boolean);return a.length?a[Math.floor(Math.random()*a.length)]:'Add options, one per line.'})()"
+  },
+  {
+    "slug": "server-directory",
+    "id": "niche.server-directory",
+    "name": "Server Directory",
+    "description": "Server Directory is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split('|').map(x=>x.trim());return a.length===2?'https://discord.com/channels/@me/'+a[0]+'  '+a[1]:'Enter channel ID | label.'})()"
+  },
+  {
+    "slug": "channel-topic-builder",
+    "id": "niche.channel-topic-builder",
+    "name": "Channel Topic Builder",
+    "description": "Channel Topic Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.trim();return /^\\d{15,22}$/.test(a)?'<@'+a+'>':'Enter a numeric Discord user ID.'})()"
+  },
+  {
+    "slug": "role-description-builder",
+    "id": "niche.role-description-builder",
+    "name": "Role Description Builder",
+    "description": "Role Description Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split(',').map(Number);return a.length===2&&a.every(Number.isFinite)?'Each pays: '+(a[0]/a[1]).toFixed(2):'Enter total, people.'})()"
+  },
+  {
+    "slug": "server-setup-checklist",
+    "id": "niche.server-setup-checklist",
+    "name": "Server Setup Checklist",
+    "description": "Server Setup Checklist is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split(',').map(Number);return a.length===2&&a.every(Number.isFinite)?'Result: '+(a[0]*(1-a[1]/100)).toFixed(2):'Enter price, discount percent.'})()"
+  },
+  {
+    "slug": "onboarding-guide",
+    "id": "niche.onboarding-guide",
+    "name": "Onboarding Guide",
+    "description": "Onboarding Guide is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split(/\\r?\\n/).filter(Boolean);return a.length?'• '+a.join('\\n• '):'Add items.'})()"
+  },
+  {
+    "slug": "message-template-vault",
+    "id": "niche.message-template-vault",
+    "name": "Message Template Vault",
+    "description": "Message Template Vault is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.trim().split(/\\r?\\n/).filter(Boolean).map(x=>'- [ ] '+x.trim()).join('\\n') || 'Add tasks, one per line.'"
+  },
+  {
+    "slug": "quick-reply-builder",
+    "id": "niche.quick-reply-builder",
+    "name": "Quick Reply Builder",
+    "description": "Quick Reply Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.trim().split(/\\r?\\n/).filter(Boolean).map((x,i)=>(i+1)+'. '+x.trim()).join('\\n') || 'Add items, one per line.'"
+  },
+  {
+    "slug": "apology-draft-helper",
+    "id": "niche.apology-draft-helper",
+    "name": "Apology Draft Helper",
+    "description": "Apology Draft Helper is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.trim().split(/\\r?\\n/).filter(Boolean).map(x=>'• '+x.trim()).join('\\n') || 'Add items, one per line.'"
+  },
+  {
+    "slug": "de-escalation-helper",
+    "id": "niche.de-escalation-helper",
+    "name": "De-escalation Helper",
+    "description": "De-escalation Helper is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "'Characters: '+value.length+' | Words: '+(value.trim()?value.trim().split(/\\s+/).length:0)+' | Lines: '+(value?value.split(/\\r?\\n/).length:0)"
+  },
+  {
+    "slug": "boundary-message-helper",
+    "id": "niche.boundary-message-helper",
+    "name": "Boundary Message Helper",
+    "description": "Boundary Message Helper is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "[...new Set(value.split(/\\r?\\n/).map(x=>x.trim()).filter(Boolean))].join('\\n') || 'Add lines to remove duplicates.'"
+  },
+  {
+    "slug": "thank-you-note-builder",
+    "id": "niche.thank-you-note-builder",
+    "name": "Thank You Note Builder",
+    "description": "Thank You Note Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.split(/\\r?\\n/).map(x=>x.trim()).filter(Boolean).sort((a,b)=>a.localeCompare(b)).join('\\n') || 'Add lines to sort.'"
+  },
+  {
+    "slug": "welcome-dm-builder",
+    "id": "niche.welcome-dm-builder",
+    "name": "Welcome DM Builder",
+    "description": "Welcome DM Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.trim().replace(/\\s+/g,' ') || 'Enter text to clean.'"
+  },
+  {
+    "slug": "reminder-message-builder",
+    "id": "niche.reminder-message-builder",
+    "name": "Reminder Message Builder",
+    "description": "Reminder Message Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.trim().toLowerCase().replace(/(^|[.!?]\\s+)[a-z]/g,m=>m.toUpperCase()) || 'Enter text to format.'"
+  },
+  {
+    "slug": "status-draft-vault",
+    "id": "niche.status-draft-vault",
+    "name": "Status Draft Vault",
+    "description": "Status Draft Vault is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.trim().replace(/\\b\\w/g,c=>c.toUpperCase()) || 'Enter a title.'"
+  },
+  {
+    "slug": "profile-bio-helper",
+    "id": "niche.profile-bio-helper",
+    "name": "Profile Bio Helper",
+    "description": "Profile Bio Helper is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.trim().split(/\\r?\\n/).map(x=>'> '+x).join('\\n') || 'Enter quote text.'"
+  },
+  {
+    "slug": "game-night-planner",
+    "id": "niche.game-night-planner",
+    "name": "Game Night Planner",
+    "description": "Game Night Planner is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split(/\\r?\\n/).filter(Boolean);return a.length?a.map((x,i)=>'PART '+(i+1)+': '+x).join('\\n'):'Add content.'})()"
+  },
+  {
+    "slug": "looking-for-group-builder",
+    "id": "niche.looking-for-group-builder",
+    "name": "Looking For Group Builder",
+    "description": "Looking For Group Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split(',').map(x=>x.trim());return a.length>=2?a.join(' → '):'Enter at least two steps separated by commas.'})()"
+  },
+  {
+    "slug": "tournament-planner",
+    "id": "niche.tournament-planner",
+    "name": "Tournament Planner",
+    "description": "Tournament Planner is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split('|').map(x=>x.trim());return a.length>=2?'**'+a[0]+'**\\n'+a.slice(1).join('\\n'):'Use title | details.'})()"
+  },
+  {
+    "slug": "match-report-formatter",
+    "id": "niche.match-report-formatter",
+    "name": "Match Report Formatter",
+    "description": "Match Report Formatter is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split(',').map(Number);return a.length&&a.every(Number.isFinite)?'Total: '+a.reduce((x,y)=>x+y,0)+' | Average: '+(a.reduce((x,y)=>x+y,0)/a.length).toFixed(2):'Enter comma-separated numbers.'})()"
+  },
+  {
+    "slug": "scoreboard-builder",
+    "id": "niche.scoreboard-builder",
+    "name": "Scoreboard Builder",
+    "description": "Scoreboard Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split(/\\r?\\n/).filter(Boolean);return a.length?a[Math.floor(Math.random()*a.length)]:'Add options, one per line.'})()"
+  },
+  {
+    "slug": "game-session-log",
+    "id": "niche.game-session-log",
+    "name": "Game Session Log",
+    "description": "Game Session Log is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split('|').map(x=>x.trim());return a.length===2?'https://discord.com/channels/@me/'+a[0]+'  '+a[1]:'Enter channel ID | label.'})()"
+  },
+  {
+    "slug": "game-backlog-organiser",
+    "id": "niche.game-backlog-organiser",
+    "name": "Game Backlog Organiser",
+    "description": "Game Backlog Organiser is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.trim();return /^\\d{15,22}$/.test(a)?'<@'+a+'>':'Enter a numeric Discord user ID.'})()"
+  },
+  {
+    "slug": "clip-caption-builder",
+    "id": "niche.clip-caption-builder",
+    "name": "Clip Caption Builder",
+    "description": "Clip Caption Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split(',').map(Number);return a.length===2&&a.every(Number.isFinite)?'Each pays: '+(a[0]/a[1]).toFixed(2):'Enter total, people.'})()"
+  },
+  {
+    "slug": "stream-schedule-planner",
+    "id": "niche.stream-schedule-planner",
+    "name": "Stream Schedule Planner",
+    "description": "Stream Schedule Planner is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split(',').map(Number);return a.length===2&&a.every(Number.isFinite)?'Result: '+(a[0]*(1-a[1]/100)).toFixed(2):'Enter price, discount percent.'})()"
+  },
+  {
+    "slug": "gaming-goals-tracker",
+    "id": "niche.gaming-goals-tracker",
+    "name": "Gaming Goals Tracker",
+    "description": "Gaming Goals Tracker is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split(/\\r?\\n/).filter(Boolean);return a.length?'• '+a.join('\\n• '):'Add items.'})()"
+  },
+  {
+    "slug": "community-prompt-builder",
+    "id": "niche.community-prompt-builder",
+    "name": "Community Prompt Builder",
+    "description": "Community Prompt Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.trim().split(/\\r?\\n/).filter(Boolean).map(x=>'- [ ] '+x.trim()).join('\\n') || 'Add tasks, one per line.'"
+  },
+  {
+    "slug": "icebreaker-generator",
+    "id": "niche.icebreaker-generator",
+    "name": "Icebreaker Generator",
+    "description": "Icebreaker Generator is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.trim().split(/\\r?\\n/).filter(Boolean).map((x,i)=>(i+1)+'. '+x.trim()).join('\\n') || 'Add items, one per line.'"
+  },
+  {
+    "slug": "daily-question-builder",
+    "id": "niche.daily-question-builder",
+    "name": "Daily Question Builder",
+    "description": "Daily Question Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.trim().split(/\\r?\\n/).filter(Boolean).map(x=>'• '+x.trim()).join('\\n') || 'Add items, one per line.'"
+  },
+  {
+    "slug": "weekly-challenge-planner",
+    "id": "niche.weekly-challenge-planner",
+    "name": "Weekly Challenge Planner",
+    "description": "Weekly Challenge Planner is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "'Characters: '+value.length+' | Words: '+(value.trim()?value.trim().split(/\\s+/).length:0)+' | Lines: '+(value?value.split(/\\r?\\n/).length:0)"
+  },
+  {
+    "slug": "member-shoutout-builder",
+    "id": "niche.member-shoutout-builder",
+    "name": "Member Shoutout Builder",
+    "description": "Member Shoutout Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "[...new Set(value.split(/\\r?\\n/).map(x=>x.trim()).filter(Boolean))].join('\\n') || 'Add lines to remove duplicates.'"
+  },
+  {
+    "slug": "community-survey-builder",
+    "id": "niche.community-survey-builder",
+    "name": "Community Survey Builder",
+    "description": "Community Survey Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.split(/\\r?\\n/).map(x=>x.trim()).filter(Boolean).sort((a,b)=>a.localeCompare(b)).join('\\n') || 'Add lines to sort.'"
+  },
+  {
+    "slug": "event-feedback-form",
+    "id": "niche.event-feedback-form",
+    "name": "Event Feedback Form",
+    "description": "Event Feedback Form is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.trim().replace(/\\s+/g,' ') || 'Enter text to clean.'"
+  },
+  {
+    "slug": "attendance-list-formatter",
+    "id": "niche.attendance-list-formatter",
+    "name": "Attendance List Formatter",
+    "description": "Attendance List Formatter is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.trim().toLowerCase().replace(/(^|[.!?]\\s+)[a-z]/g,m=>m.toUpperCase()) || 'Enter text to format.'"
+  },
+  {
+    "slug": "volunteer-signup-builder",
+    "id": "niche.volunteer-signup-builder",
+    "name": "Volunteer Signup Builder",
+    "description": "Volunteer Signup Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.trim().replace(/\\b\\w/g,c=>c.toUpperCase()) || 'Enter a title.'"
+  },
+  {
+    "slug": "community-calendar",
+    "id": "niche.community-calendar",
+    "name": "Community Calendar",
+    "description": "Community Calendar is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.trim().split(/\\r?\\n/).map(x=>'> '+x).join('\\n') || 'Enter quote text.'"
+  },
+  {
+    "slug": "meeting-agenda-builder",
+    "id": "niche.meeting-agenda-builder",
+    "name": "Meeting Agenda Builder",
+    "description": "Meeting Agenda Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split(/\\r?\\n/).filter(Boolean);return a.length?a.map((x,i)=>'PART '+(i+1)+': '+x).join('\\n'):'Add content.'})()"
+  },
+  {
+    "slug": "meeting-notes-formatter",
+    "id": "niche.meeting-notes-formatter",
+    "name": "Meeting Notes Formatter",
+    "description": "Meeting Notes Formatter is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split(',').map(x=>x.trim());return a.length>=2?a.join(' → '):'Enter at least two steps separated by commas.'})()"
+  },
+  {
+    "slug": "action-item-extractor",
+    "id": "niche.action-item-extractor",
+    "name": "Action Item Extractor",
+    "description": "Action Item Extractor is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split('|').map(x=>x.trim());return a.length>=2?'**'+a[0]+'**\\n'+a.slice(1).join('\\n'):'Use title | details.'})()"
+  },
+  {
+    "slug": "decision-log-builder",
+    "id": "niche.decision-log-builder",
+    "name": "Decision Log Builder",
+    "description": "Decision Log Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split(',').map(Number);return a.length&&a.every(Number.isFinite)?'Total: '+a.reduce((x,y)=>x+y,0)+' | Average: '+(a.reduce((x,y)=>x+y,0)/a.length).toFixed(2):'Enter comma-separated numbers.'})()"
+  },
+  {
+    "slug": "project-brief-builder",
+    "id": "niche.project-brief-builder",
+    "name": "Project Brief Builder",
+    "description": "Project Brief Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split(/\\r?\\n/).filter(Boolean);return a.length?a[Math.floor(Math.random()*a.length)]:'Add options, one per line.'})()"
+  },
+  {
+    "slug": "project-roadmap",
+    "id": "niche.project-roadmap",
+    "name": "Project Roadmap",
+    "description": "Project Roadmap is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split('|').map(x=>x.trim());return a.length===2?'https://discord.com/channels/@me/'+a[0]+'  '+a[1]:'Enter channel ID | label.'})()"
+  },
+  {
+    "slug": "sprint-planner",
+    "id": "niche.sprint-planner",
+    "name": "Sprint Planner",
+    "description": "Sprint Planner is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.trim();return /^\\d{15,22}$/.test(a)?'<@'+a+'>':'Enter a numeric Discord user ID.'})()"
+  },
+  {
+    "slug": "daily-standup-formatter",
+    "id": "niche.daily-standup-formatter",
+    "name": "Daily Standup Formatter",
+    "description": "Daily Standup Formatter is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split(',').map(Number);return a.length===2&&a.every(Number.isFinite)?'Each pays: '+(a[0]/a[1]).toFixed(2):'Enter total, people.'})()"
+  },
+  {
+    "slug": "weekly-review-builder",
+    "id": "niche.weekly-review-builder",
+    "name": "Weekly Review Builder",
+    "description": "Weekly Review Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split(',').map(Number);return a.length===2&&a.every(Number.isFinite)?'Result: '+(a[0]*(1-a[1]/100)).toFixed(2):'Enter price, discount percent.'})()"
+  },
+  {
+    "slug": "progress-report-formatter",
+    "id": "niche.progress-report-formatter",
+    "name": "Progress Report Formatter",
+    "description": "Progress Report Formatter is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split(/\\r?\\n/).filter(Boolean);return a.length?'• '+a.join('\\n• '):'Add items.'})()"
+  },
+  {
+    "slug": "task-checklist-builder",
+    "id": "niche.task-checklist-builder",
+    "name": "Task Checklist Builder",
+    "description": "Task Checklist Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.trim().split(/\\r?\\n/).filter(Boolean).map(x=>'- [ ] '+x.trim()).join('\\n') || 'Add tasks, one per line.'"
+  },
+  {
+    "slug": "priority-sorter",
+    "id": "niche.priority-sorter",
+    "name": "Priority Sorter",
+    "description": "Priority Sorter is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.trim().split(/\\r?\\n/).filter(Boolean).map((x,i)=>(i+1)+'. '+x.trim()).join('\\n') || 'Add items, one per line.'"
+  },
+  {
+    "slug": "kanban-board-formatter",
+    "id": "niche.kanban-board-formatter",
+    "name": "Kanban Board Formatter",
+    "description": "Kanban Board Formatter is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.trim().split(/\\r?\\n/).filter(Boolean).map(x=>'• '+x.trim()).join('\\n') || 'Add items, one per line.'"
+  },
+  {
+    "slug": "goal-breakdown-helper",
+    "id": "niche.goal-breakdown-helper",
+    "name": "Goal Breakdown Helper",
+    "description": "Goal Breakdown Helper is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "'Characters: '+value.length+' | Words: '+(value.trim()?value.trim().split(/\\s+/).length:0)+' | Lines: '+(value?value.split(/\\r?\\n/).length:0)"
+  },
+  {
+    "slug": "deadline-reminder-builder",
+    "id": "niche.deadline-reminder-builder",
+    "name": "Deadline Reminder Builder",
+    "description": "Deadline Reminder Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "[...new Set(value.split(/\\r?\\n/).map(x=>x.trim()).filter(Boolean))].join('\\n') || 'Add lines to remove duplicates.'"
+  },
+  {
+    "slug": "routine-planner",
+    "id": "niche.routine-planner",
+    "name": "Routine Planner",
+    "description": "Routine Planner is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.split(/\\r?\\n/).map(x=>x.trim()).filter(Boolean).sort((a,b)=>a.localeCompare(b)).join('\\n') || 'Add lines to sort.'"
+  },
+  {
+    "slug": "study-session-planner",
+    "id": "niche.study-session-planner",
+    "name": "Study Session Planner",
+    "description": "Study Session Planner is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.trim().replace(/\\s+/g,' ') || 'Enter text to clean.'"
+  },
+  {
+    "slug": "pomodoro-planner",
+    "id": "niche.pomodoro-planner",
+    "name": "Pomodoro Planner",
+    "description": "Pomodoro Planner is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.trim().toLowerCase().replace(/(^|[.!?]\\s+)[a-z]/g,m=>m.toUpperCase()) || 'Enter text to format.'"
+  },
+  {
+    "slug": "habit-checklist-builder",
+    "id": "niche.habit-checklist-builder",
+    "name": "Habit Checklist Builder",
+    "description": "Habit Checklist Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.trim().replace(/\\b\\w/g,c=>c.toUpperCase()) || 'Enter a title.'"
+  },
+  {
+    "slug": "personal-notes-formatter",
+    "id": "niche.personal-notes-formatter",
+    "name": "Personal Notes Formatter",
+    "description": "Personal Notes Formatter is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.trim().split(/\\r?\\n/).map(x=>'> '+x).join('\\n') || 'Enter quote text.'"
+  },
+  {
+    "slug": "shopping-list-organiser",
+    "id": "niche.shopping-list-organiser",
+    "name": "Shopping List Organiser",
+    "description": "Shopping List Organiser is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split(/\\r?\\n/).filter(Boolean);return a.length?a.map((x,i)=>'PART '+(i+1)+': '+x).join('\\n'):'Add content.'})()"
+  },
+  {
+    "slug": "packing-checklist-builder",
+    "id": "niche.packing-checklist-builder",
+    "name": "Packing Checklist Builder",
+    "description": "Packing Checklist Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split(',').map(x=>x.trim());return a.length>=2?a.join(' → '):'Enter at least two steps separated by commas.'})()"
+  },
+  {
+    "slug": "travel-itinerary-formatter",
+    "id": "niche.travel-itinerary-formatter",
+    "name": "Travel Itinerary Formatter",
+    "description": "Travel Itinerary Formatter is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split('|').map(x=>x.trim());return a.length>=2?'**'+a[0]+'**\\n'+a.slice(1).join('\\n'):'Use title | details.'})()"
+  },
+  {
+    "slug": "trip-recap-builder",
+    "id": "niche.trip-recap-builder",
+    "name": "Trip Recap Builder",
+    "description": "Trip Recap Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split(',').map(Number);return a.length&&a.every(Number.isFinite)?'Total: '+a.reduce((x,y)=>x+y,0)+' | Average: '+(a.reduce((x,y)=>x+y,0)/a.length).toFixed(2):'Enter comma-separated numbers.'})()"
+  },
+  {
+    "slug": "meal-plan-formatter",
+    "id": "niche.meal-plan-formatter",
+    "name": "Meal Plan Formatter",
+    "description": "Meal Plan Formatter is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split(/\\r?\\n/).filter(Boolean);return a.length?a[Math.floor(Math.random()*a.length)]:'Add options, one per line.'})()"
+  },
+  {
+    "slug": "workout-log-builder",
+    "id": "niche.workout-log-builder",
+    "name": "Workout Log Builder",
+    "description": "Workout Log Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split('|').map(x=>x.trim());return a.length===2?'https://discord.com/channels/@me/'+a[0]+'  '+a[1]:'Enter channel ID | label.'})()"
+  },
+  {
+    "slug": "expense-list-formatter",
+    "id": "niche.expense-list-formatter",
+    "name": "Expense List Formatter",
+    "description": "Expense List Formatter is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.trim();return /^\\d{15,22}$/.test(a)?'<@'+a+'>':'Enter a numeric Discord user ID.'})()"
+  },
+  {
+    "slug": "shared-cost-splitter",
+    "id": "niche.shared-cost-splitter",
+    "name": "Shared Cost Splitter",
+    "description": "Shared Cost Splitter is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split(',').map(Number);return a.length===2&&a.every(Number.isFinite)?'Each pays: '+(a[0]/a[1]).toFixed(2):'Enter total, people.'})()"
+  },
+  {
+    "slug": "budget-planner",
+    "id": "niche.budget-planner",
+    "name": "Budget Planner",
+    "description": "Budget Planner is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split(',').map(Number);return a.length===2&&a.every(Number.isFinite)?'Result: '+(a[0]*(1-a[1]/100)).toFixed(2):'Enter price, discount percent.'})()"
+  },
+  {
+    "slug": "subscription-tracker-draft",
+    "id": "niche.subscription-tracker-draft",
+    "name": "Subscription Tracker Draft",
+    "description": "Subscription Tracker Draft is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split(/\\r?\\n/).filter(Boolean);return a.length?'• '+a.join('\\n• '):'Add items.'})()"
+  },
+  {
+    "slug": "profile-link-directory",
+    "id": "niche.profile-link-directory",
+    "name": "Profile Link Directory",
+    "description": "Profile Link Directory is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.trim().split(/\\r?\\n/).filter(Boolean).map(x=>'- [ ] '+x.trim()).join('\\n') || 'Add tasks, one per line.'"
+  },
+  {
+    "slug": "username-idea-builder",
+    "id": "niche.username-idea-builder",
+    "name": "Username Idea Builder",
+    "description": "Username Idea Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.trim().split(/\\r?\\n/).filter(Boolean).map((x,i)=>(i+1)+'. '+x.trim()).join('\\n') || 'Add items, one per line.'"
+  },
+  {
+    "slug": "nickname-generator",
+    "id": "niche.nickname-generator",
+    "name": "Nickname Generator",
+    "description": "Nickname Generator is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.trim().split(/\\r?\\n/).filter(Boolean).map(x=>'• '+x.trim()).join('\\n') || 'Add items, one per line.'"
+  },
+  {
+    "slug": "tagline-builder",
+    "id": "niche.tagline-builder",
+    "name": "Tagline Builder",
+    "description": "Tagline Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "'Characters: '+value.length+' | Words: '+(value.trim()?value.trim().split(/\\s+/).length:0)+' | Lines: '+(value?value.split(/\\r?\\n/).length:0)"
+  },
+  {
+    "slug": "creator-bio-builder",
+    "id": "niche.creator-bio-builder",
+    "name": "Creator Bio Builder",
+    "description": "Creator Bio Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "[...new Set(value.split(/\\r?\\n/).map(x=>x.trim()).filter(Boolean))].join('\\n') || 'Add lines to remove duplicates.'"
+  },
+  {
+    "slug": "streamer-about-builder",
+    "id": "niche.streamer-about-builder",
+    "name": "Streamer About Builder",
+    "description": "Streamer About Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.split(/\\r?\\n/).map(x=>x.trim()).filter(Boolean).sort((a,b)=>a.localeCompare(b)).join('\\n') || 'Add lines to sort.'"
+  },
+  {
+    "slug": "social-bio-drafts",
+    "id": "niche.social-bio-drafts",
+    "name": "Social Bio Drafts",
+    "description": "Social Bio Drafts is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.trim().replace(/\\s+/g,' ') || 'Enter text to clean.'"
+  },
+  {
+    "slug": "status-length-checker",
+    "id": "niche.status-length-checker",
+    "name": "Status Length Checker",
+    "description": "Status Length Checker is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.trim().toLowerCase().replace(/(^|[.!?]\\s+)[a-z]/g,m=>m.toUpperCase()) || 'Enter text to format.'"
+  },
+  {
+    "slug": "profile-bio-cleaner",
+    "id": "niche.profile-bio-cleaner",
+    "name": "Profile Bio Cleaner",
+    "description": "Profile Bio Cleaner is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.trim().replace(/\\b\\w/g,c=>c.toUpperCase()) || 'Enter a title.'"
+  },
+  {
+    "slug": "about-me-outline",
+    "id": "niche.about-me-outline",
+    "name": "About Me Outline",
+    "description": "About Me Outline is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.trim().split(/\\r?\\n/).map(x=>'> '+x).join('\\n') || 'Enter quote text.'"
+  },
+  {
+    "slug": "plugin-description-writer",
+    "id": "niche.plugin-description-writer",
+    "name": "Plugin Description Writer",
+    "description": "Plugin Description Writer is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split(/\\r?\\n/).filter(Boolean);return a.length?a.map((x,i)=>'PART '+(i+1)+': '+x).join('\\n'):'Add content.'})()"
+  },
+  {
+    "slug": "plugin-readme-builder",
+    "id": "niche.plugin-readme-builder",
+    "name": "Plugin README Builder",
+    "description": "Plugin README Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split(',').map(x=>x.trim());return a.length>=2?a.join(' → '):'Enter at least two steps separated by commas.'})()"
+  },
+  {
+    "slug": "plugin-release-notes",
+    "id": "niche.plugin-release-notes",
+    "name": "Plugin Release Notes",
+    "description": "Plugin Release Notes is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split('|').map(x=>x.trim());return a.length>=2?'**'+a[0]+'**\\n'+a.slice(1).join('\\n'):'Use title | details.'})()"
+  },
+  {
+    "slug": "plugin-install-guide",
+    "id": "niche.plugin-install-guide",
+    "name": "Plugin Install Guide",
+    "description": "Plugin Install Guide is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split(',').map(Number);return a.length&&a.every(Number.isFinite)?'Total: '+a.reduce((x,y)=>x+y,0)+' | Average: '+(a.reduce((x,y)=>x+y,0)/a.length).toFixed(2):'Enter comma-separated numbers.'})()"
+  },
+  {
+    "slug": "plugin-troubleshooting-guide",
+    "id": "niche.plugin-troubleshooting-guide",
+    "name": "Plugin Troubleshooting Guide",
+    "description": "Plugin Troubleshooting Guide is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split(/\\r?\\n/).filter(Boolean);return a.length?a[Math.floor(Math.random()*a.length)]:'Add options, one per line.'})()"
+  },
+  {
+    "slug": "plugin-test-plan",
+    "id": "niche.plugin-test-plan",
+    "name": "Plugin Test Plan",
+    "description": "Plugin Test Plan is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split('|').map(x=>x.trim());return a.length===2?'https://discord.com/channels/@me/'+a[0]+'  '+a[1]:'Enter channel ID | label.'})()"
+  },
+  {
+    "slug": "plugin-qa-checklist",
+    "id": "niche.plugin-qa-checklist",
+    "name": "Plugin QA Checklist",
+    "description": "Plugin QA Checklist is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.trim();return /^\\d{15,22}$/.test(a)?'<@'+a+'>':'Enter a numeric Discord user ID.'})()"
+  },
+  {
+    "slug": "plugin-feature-list",
+    "id": "niche.plugin-feature-list",
+    "name": "Plugin Feature List",
+    "description": "Plugin Feature List is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split(',').map(Number);return a.length===2&&a.every(Number.isFinite)?'Each pays: '+(a[0]/a[1]).toFixed(2):'Enter total, people.'})()"
+  },
+  {
+    "slug": "plugin-roadmap-builder",
+    "id": "niche.plugin-roadmap-builder",
+    "name": "Plugin Roadmap Builder",
+    "description": "Plugin Roadmap Builder is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split(',').map(Number);return a.length===2&&a.every(Number.isFinite)?'Result: '+(a[0]*(1-a[1]/100)).toFixed(2):'Enter price, discount percent.'})()"
+  },
+  {
+    "slug": "plugin-support-reply",
+    "id": "niche.plugin-support-reply",
+    "name": "Plugin Support Reply",
+    "description": "Plugin Support Reply is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "(()=>{const a=value.split(/\\r?\\n/).filter(Boolean);return a.length?'• '+a.join('\\n• '):'Add items.'})()"
+  },
+  {
+    "slug": "server-maintenance-plan",
+    "id": "niche.server-maintenance-plan",
+    "name": "Server Maintenance Plan",
+    "description": "Server Maintenance Plan is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.trim().split(/\\r?\\n/).filter(Boolean).map(x=>'- [ ] '+x.trim()).join('\\n') || 'Add tasks, one per line.'"
+  },
+  {
+    "slug": "channel-cleanup-planner",
+    "id": "niche.channel-cleanup-planner",
+    "name": "Channel Cleanup Planner",
+    "description": "Channel Cleanup Planner is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.trim().split(/\\r?\\n/).filter(Boolean).map((x,i)=>(i+1)+'. '+x.trim()).join('\\n') || 'Add items, one per line.'"
+  },
+  {
+    "slug": "role-audit-checklist",
+    "id": "niche.role-audit-checklist",
+    "name": "Role Audit Checklist",
+    "description": "Role Audit Checklist is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.trim().split(/\\r?\\n/).filter(Boolean).map(x=>'• '+x.trim()).join('\\n') || 'Add items, one per line.'"
+  },
+  {
+    "slug": "permission-review-notes",
+    "id": "niche.permission-review-notes",
+    "name": "Permission Review Notes",
+    "description": "Permission Review Notes is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "'Characters: '+value.length+' | Words: '+(value.trim()?value.trim().split(/\\s+/).length:0)+' | Lines: '+(value?value.split(/\\r?\\n/).length:0)"
+  },
+  {
+    "slug": "privacy-checklist",
+    "id": "niche.privacy-checklist",
+    "name": "Privacy Checklist",
+    "description": "Privacy Checklist is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "[...new Set(value.split(/\\r?\\n/).map(x=>x.trim()).filter(Boolean))].join('\\n') || 'Add lines to remove duplicates.'"
+  },
+  {
+    "slug": "accessibility-checklist",
+    "id": "niche.accessibility-checklist",
+    "name": "Accessibility Checklist",
+    "description": "Accessibility Checklist is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.split(/\\r?\\n/).map(x=>x.trim()).filter(Boolean).sort((a,b)=>a.localeCompare(b)).join('\\n') || 'Add lines to sort.'"
+  },
+  {
+    "slug": "mobile-ui-review",
+    "id": "niche.mobile-ui-review",
+    "name": "Mobile UI Review",
+    "description": "Mobile UI Review is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.trim().replace(/\\s+/g,' ') || 'Enter text to clean.'"
+  },
+  {
+    "slug": "performance-checklist",
+    "id": "niche.performance-checklist",
+    "name": "Performance Checklist",
+    "description": "Performance Checklist is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.trim().toLowerCase().replace(/(^|[.!?]\\s+)[a-z]/g,m=>m.toUpperCase()) || 'Enter text to format.'"
+  },
+  {
+    "slug": "release-readiness-checklist",
+    "id": "niche.release-readiness-checklist",
+    "name": "Release Readiness Checklist",
+    "description": "Release Readiness Checklist is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.trim().replace(/\\b\\w/g,c=>c.toUpperCase()) || 'Enter a title.'"
+  },
+  {
+    "slug": "backup-checklist",
+    "id": "niche.backup-checklist",
+    "name": "Backup Checklist",
+    "description": "Backup Checklist is a local Valenced helper for drafting, organising or formatting Discord community content. It does not send messages or change server settings.",
+    "kind": "simple",
+    "label": "Text or details",
+    "placeholder": "Enter details here…",
+    "expression": "value.trim().split(/\\r?\\n/).map(x=>'> '+x).join('\\n') || 'Enter quote text.'"
+  }
+]
+plugins.push(...extraPlugins)
+
 await rm('plugins', { recursive: true, force: true })
 await mkdir('plugins', { recursive: true })
 for (const p of plugins) {
@@ -276,5 +1381,5 @@ for (const p of plugins) {
   await writeFile(join(dir, 'manifest.json'), manifestFor(p))
   await writeFile(join(dir, 'js/index.tsx'), src)
 }
-if (plugins.length !== 58) throw new Error('Expected 58 plugin definitions; found ' + plugins.length)
+if (plugins.length !== 168) throw new Error('Expected 168 plugin definitions; found ' + plugins.length)
 console.log('Generated ' + plugins.length + ' Valenced plugin folders.')
